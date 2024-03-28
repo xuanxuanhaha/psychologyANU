@@ -1,0 +1,19 @@
+Signup
+    createUser (Users.php)
+        1. create user
+        2. send welcome email
+        3. sessionStart, session 1 create record
+
+
+Session 1:
+    1. startat time: user session 1 create time
+    2. Send reminder email, if has no finishat time. For 7 days, one email every day
+    3. sessionFinish, session 2 create record, with start at time as session 1 finish time
+
+
+
+Session create => check if userid and sessionid not exist, create session, with only startat
+Session start => update lastopenat / startat / firstopenat timezone
+Session end => send session finish email,  update finished session, create next session.
+
+

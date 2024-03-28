@@ -1,0 +1,17 @@
+
+.bigSpeechBox {
+    display: flex;
+}
+
+.bigSpeechBox span button {
+    background-color: transparent !important;
+    display: none;
+  }
+  .bigSpeechBox span button:hover {
+    background-color: transparent !important;
+    display: none;
+  }
+  .playBtn{
+    background-color: transparent;
+    border: 1px solid transparent;
+  }

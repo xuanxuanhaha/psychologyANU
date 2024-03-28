@@ -1,0 +1,40 @@
+.container_clock_time{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    margin-top: 2vh;
+}
+.clock_left{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.oclock{
+    width: 30px;
+    height:30px;
+}
+
+.time_right{
+    text-align: center;
+    color: #290a26;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 15px;
+  }
+
+  @media screen and (max-width: 620px) {
+    .time_right{
+        font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 460px){
+    .clock_left{
+        margin-right: 0px;
+    }
+    .time_right{
+        font-size: 15px;
+    }
+  }  

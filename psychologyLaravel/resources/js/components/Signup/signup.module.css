@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  .grid_container_sign_log_btn{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .background_image {
+    background: url('./../../assets/login/background_up_blue_light.png') no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .block {
+    height: 40px;
+  }
+  .whole_border{
+    width: 81%;max-width: 1200px;margin: auto
+  }
+  .img_background {
+    width: 100%;
+  }
+  
+  .img_container {
+    display: flex;
+    justify-content: center;
+  }
+  .p1_container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  
+  .p1_word_style {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #0054b4;
+  }
+  
+  .sign_log_box{
+    background: white;
+    width: 50%;
+    margin: auto;
+    max-width: 800px;
+    min-width: 500px;
+    padding-bottom: 30px;
+    margin-top: 60px;
+  }
+  .choosed_btn_div{
+    text-align: center;
+    color: #290a26;
+    font-size: 25px;
+    font-weight: 800;
+    background: white;
+    padding: 15px;
+    cursor: pointer;
+  }
+  .not_choosed_btn_div{
+    text-align: center;
+    color: #290a26;
+    font-size: 25px;
+    font-weight: 800;
+    background: #e8e7e5;
+    padding: 15px;
+    cursor: not-allowed;
+    border: 1px solid transparent
+  }
+  .row{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .input_boxes{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .icons_left{
+    width: 66px;
+    height: 66px;
+    border: 2px solid lightgrey;
+  }
+  .inputs_right{
+    width: calc(100% - 66px);
+  }
+
+  .grid_container_icon_input{
+    /* display: grid;
+    grid-template-columns: 15% 85%; */
+  }
+  .icon_class{
+    width: 50px;
+    margin-left: 7px;
+    margin-top: 7px;
+  }
+  .input_boxes_row{
+    /* width: 80%; */
+    margin: auto;
+    margin-top: 20px;
+  }
+  .input_class{
+    /* height: 66px;
+    margin-left: -2px;
+    border: 2px solid lightgrey;
+    width: 93%;
+    padding-left: 20px; */
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    margin-left: -2px;
+    padding-left: 10px;
+  }
+  .sign_up_btn{
+    width: 100%;
+    background: #0054b4;
+    font-size: 25px;
+    padding: 10px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 0;
+  }
+  .sign_up_btn:hover{
+    color: white;
+  }
+  .already_word{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  .already_word a{
+    color: #0054b4;
+    cursor: pointer;
+  }
+  
+  .width50{
+    /*width: 50%;*/
+  }
+  .grid-container-checkbox-remember{
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  .grid-container-checkbox-forgot{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .forgot_text{
+    /*width: 50%;*/
+    text-align: right;
+    color: #0054b4;
+    padding-top: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .forgot_text:hover .forgot_link{
+    text-decoration: underline;
+  }
+
+  .lefticons{
+    width: 50px;
+    border: 1px solid black;
+    height: 66px;
+  }
+  .rightinputs{
+    width: calc(100% - 50px);
+    border: 1px solid black;
+    height: 66px;
+  }
+  
+  
+  /*lable标签的大小、位置、背景颜色更改，在css选择时，“+”代表相邻元素，即当前元素的下一元素*/
+  #color-input-red +label{
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    /* position: absolute; */
+    top: 2px;
+    left: 0;
+    border: 2px solid #0054b4;
+    background: white;
+    border-radius: 5px;
+  }
+  .chat-button-location-radio-input{
+    display: none;
+  }
+  
+  /*当input框为选中状态时，lable标签的样式，其中在css选择时，“：”表示当前input框的值，即checked；
+        该部分主要对显示的“对号”的大限居中方式，显示颜色进行了设置*/
+  #color-input-red:checked +label::before{
+    display: block;
+    content: "\2714";
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background: #0054b4;
+  }
+  .remember_me{
+    font-size: 16px;
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+  .inputError{
+    /* width: 78%; */
+    margin: auto;
+    background-color: #0054b4;
+    color: white;
+    padding: 5px;
+  }
+  .confirmSend {
+    /* width: 78%; */
+    margin: auto;
+    background-color: #0054b4;
+    color: white;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .login{
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #0054b4;
+    font-weight: 800;
+    cursor: not-allowed;
+  }
+  .isstudent_icon_class{
+    width: 20px;
+  }
+  .isstudent_box{
+    text-align: right;
+    cursor: initial;
+  }
+
+  .onlyStudentBox {
+    width: fit-content !important;
+    margin-left: auto;
+  }
+  .onlyStudentWording{
+    cursor: initial;
+  }
+  .eachBlock{
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 1250px) {
+    .p1_word_style{
+      font-size: 35px;
+    }
+  }
+  
+  @media screen and (max-width: 1055px) {
+    .p1_word_style{
+      font-size: 35px;
+    }
+    .p1_container{
+      height: 80px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .p1_word_style {
+      font-size: 30px;
+    }
+    .sign_up_btn{
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width: 620px) {
+    
+    .whole_border{
+      width: 91%;
+    }
+    .p1_word_style{
+      font-size: 25px;
+    }
+    .sign_log_box{
+      width: 90%;
+      margin: auto;
+      min-width: 90%;
+      max-width: 90%;
+      margin-top: 50px;
+    }
+    .input_class{
+      font-size: 18px;
+    }
+    .sign_up_btn{
+      font-size: 20px;
+    }
+  }
+  @media screen and (min-width: 553px) {
+    .mobile_only{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 552px) {
+  .desktop_tablet_only{
+    display: none;
+  }
+    .forgot_text{
+      text-align: left;
+    }
+    .grid-container-checkbox-remember{
+      display: grid;
+      grid-template-columns: 15% 75%;
+    }
+  }
+  @media screen and (max-width: 460px){
+    .p1_word_style{
+      font-size: 22px;
+    }
+    .choosed_btn_div{
+      font-size: 20px;
+    }
+    .not_choosed_btn_div{
+      font-size: 20px;
+    }
+    .sign_up_btn{
+      font-size: 20px;
+    }
+    .already_word{
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 410px) {
+    .p1_container {
+      flex-direction: column;
+    }
+  
+    .p1_word_style {
+      font-size: 20px;
+      text-align: center;
+    }
+    .input_class{
+      font-size: 15px;
+    }
+    .input_boxes{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .input_boxes_row{
+      width: 100%;
+    }
+    .sign_up_btn{
+      font-size: 18px;
+    }
+    .p1_container{
+      margin-bottom: 30px;
+    }
+  }
+  

@@ -1,0 +1,57 @@
+
+.button_word_style{
+    min-width: 300px;;
+    background: #0054b4;
+    font-size: 25px;
+    padding: 10px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 0;
+    margin: auto;
+    margin-top: 8vh;
+    cursor: pointer;
+}
+.controverse_button_word_style{
+    min-width: 300px;;
+    border: 2px solid #0054b4;
+    background-color: transparent;
+    font-size: 25px;
+    padding: 10px;
+    color: #0054b4;
+    font-weight: bold;
+    border-radius: 0;
+    margin: auto;
+    margin-top: 8vh;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.round{
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 768px){
+    .button_word_style{
+        font-size: 20px;
+    }
+    .controverse_button_word_style{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .button_word_style{
+        font-size: 15px;
+    }
+    .controverse_button_word_style{
+        font-size: 20px;
+    }
+}

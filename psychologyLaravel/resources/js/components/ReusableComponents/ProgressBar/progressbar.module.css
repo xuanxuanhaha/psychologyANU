@@ -1,0 +1,23 @@
+.progress_div{
+    font-size: 25px;
+    padding-top: 30px;
+}
+.progress_background{
+    background-color: #f1f1f1;
+}
+.progress_bar{
+    height: 24px;font-size: 15px;text-align: center;background: #0054b4;color: white;border-radius: 5px;padding: initial;
+}
+
+@media screen and (max-width: 620px) {
+    .progress_bar{
+        font-size: 12px;
+        padding-top: 3px;
+        }
+}
+@media screen and (max-width: 460px){
+    .progress_bar{
+        font-size: 8px;
+        padding-top: 3px;
+      }
+}

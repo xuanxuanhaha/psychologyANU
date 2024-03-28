@@ -1,0 +1,92 @@
+.background{
+    width:100%;
+  }
+  .navbarSection{
+    z-index: 999;width: 100%
+  }
+  
+  .assessment_row_1_background{
+    width: 100%;
+    background-color: rgba(0, 84, 180, 0.2);
+  }
+  
+  .assessment_row_1_container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .anu_logo{
+    max-width: 180px;
+  }
+  
+  .container_icon_word{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .icon_logo{
+    width: 30px;
+  }
+  
+  .Tina_left{
+    font-size: 20px;
+    color: #0054b4;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .icons_right{
+    width: auto;
+  }
+  
+  div.block{
+    width: 100%;
+    height: 10vh;
+  }
+  
+  @media screen and (max-width: 768px) {
+   .icon_logo{
+     width: 20px;
+   }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .Tina_left{
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 460px){
+    /*.assessment_row_1_container{*/
+    /*  flex-wrap: wrap;*/
+    /*  justify-content: flex-start;*/
+    /*}*/
+    /*.container_icon_word{*/
+    /*  justify-content: flex-start;*/
+    /*}*/
+    /*.anu_logo{*/
+    /* width: 20%;*/
+    /*}*/
+    /*.icons_logo{*/
+    /*  width: 10px;*/
+    /*  height: 10px;*/
+    /*}*/
+    .anu_logo{
+      width: 150px;
+    }
+  }
+  @media screen and (max-width: 410px) {
+    .Tina_left{
+      font-size: 15px;
+    }
+    .anu_logo{
+      width: 120px;
+    }
+  }
+  

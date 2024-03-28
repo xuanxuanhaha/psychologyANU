@@ -1,0 +1,2 @@
+[2023-08-13T06:20:39+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+[2023-08-13T06:22:53+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
