@@ -3,7 +3,7 @@ import styles from './typography.module.css';
 
 const Typography = (props) => {
   const { title, position, children, className, color, contentwidth } = props
-  const colorCode = color === 'primary'? '#0054b4' :'black'
+  const colorCode = color === 'primary'? '#7758df' :'black'
 
   const wordInFormat = (children) => {
     if(title === 'title'){

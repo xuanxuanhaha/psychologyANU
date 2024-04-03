@@ -6,7 +6,7 @@
     background-color: #f1f1f1;
 }
 .progress_bar{
-    height: 24px;font-size: 15px;text-align: center;background: #0054b4;color: white;border-radius: 5px;padding: initial;
+    height: 24px;font-size: 15px;text-align: center;background: #7758df;color: white;border-radius: 5px;padding: initial;
 }
 
 @media screen and (max-width: 620px) {

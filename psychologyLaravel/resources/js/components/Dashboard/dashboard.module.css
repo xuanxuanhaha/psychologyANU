@@ -2,7 +2,7 @@
     z-index: 999;width: 100%
   }
   .background_image {
-    background: url('./../../assets/assessment/background.jpg') no-repeat center;
+    background: url('./../../assets/assessment/background_purple.jpg') no-repeat center;
     background-size: cover;
     position: relative;
   }
@@ -11,7 +11,7 @@
   }
   
   .question_content{
-    color: #0054b4;
+    color: #7758df;
     font-size: 22px;
     width: 100%;
     margin: auto;
@@ -22,7 +22,7 @@
     width: 100%;
     font-weight: 400;
     white-space: pre-line;
-    border: 3px solid #0054b4;
+    border: 3px solid #7758df;
     border-radius: 10px;
     padding: 20px;
     margin-top: 30px;

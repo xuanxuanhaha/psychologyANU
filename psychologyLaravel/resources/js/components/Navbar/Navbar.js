@@ -3,8 +3,8 @@ import styles from './navbar.module.css';
 import anulogo from './../../assets/ANUlogo.jpg';
 // import montreallogo from './../../assets/montreallogo.jpg'
 
-// import peopleicon from './../../assets/assessment/person.png';
-import peopleicon from './../../assets/assessment/personicon.png';
+import peopleicon from './../../assets/assessment/person.png';
+// import peopleicon from './../../assets/assessment/personicon.png';
 
 import { useSelector } from 'react-redux';
 
@@ -28,8 +28,8 @@ const Navbar = () => {
             </div>
             <div className={styles.container_icon_word}>
               <div className={styles.Tina_left}>
-                {/* Hello */}
-                Bonjour
+                Hello
+                {/* Bonjour */}
                 , {userData ? userData.username : username}!
               </div>
               <div className={styles.icons_right}>

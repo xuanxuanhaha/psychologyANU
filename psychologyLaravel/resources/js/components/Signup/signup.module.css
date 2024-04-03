@@ -121,7 +121,7 @@ body {
   }
   .sign_up_btn{
     width: 100%;
-    background: #0054b4;
+    background: #7758df;
     font-size: 25px;
     padding: 10px;
     border: 1px solid white;
@@ -138,7 +138,7 @@ body {
     font-size: 16px;
   }
   .already_word a{
-    color: #0054b4;
+    color: #7758df;
     cursor: pointer;
   }
   
@@ -156,7 +156,7 @@ body {
   .forgot_text{
     /*width: 50%;*/
     text-align: right;
-    color: #0054b4;
+    color: #7758df;
     padding-top: 5px;
     font-size: 16px;
     cursor: pointer;
@@ -186,7 +186,7 @@ body {
     /* position: absolute; */
     top: 2px;
     left: 0;
-    border: 2px solid #0054b4;
+    border: 2px solid #7758df;
     background: white;
     border-radius: 5px;
   }
@@ -202,7 +202,7 @@ body {
     text-align: center;
     font-size: 16px;
     color: white;
-    background: #0054b4;
+    background: #7758df;
   }
   .remember_me{
     font-size: 16px;
@@ -212,14 +212,14 @@ body {
   .inputError{
     /* width: 78%; */
     margin: auto;
-    background-color: #0054b4;
+    background-color: #7758df;
     color: white;
     padding: 5px;
   }
   .confirmSend {
     /* width: 78%; */
     margin: auto;
-    background-color: #0054b4;
+    background-color: #7758df;
     color: white;
     padding: 5px;
     margin-top: 20px;
@@ -228,7 +228,7 @@ body {
   .login{
     background-color: transparent;
     border: 1px solid transparent;
-    color: #0054b4;
+    color: #7758df;
     font-weight: 800;
     cursor: not-allowed;
   }

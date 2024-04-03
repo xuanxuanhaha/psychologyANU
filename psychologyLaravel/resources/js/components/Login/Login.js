@@ -165,7 +165,7 @@ const Login = (props) => {
                 </div>
                 <div className={styles.forgot_text}>
                   <i>
-                    <a onClick={goToForgetPassword} className={styles.forgot_link} style={{ color: '#0054b4' }}>
+                    <a onClick={goToForgetPassword} className={styles.forgot_link} style={{ color: '#7758df' }}>
                       Forgot your password?
                       {/* Mot de passe oublié */}
                     </a>

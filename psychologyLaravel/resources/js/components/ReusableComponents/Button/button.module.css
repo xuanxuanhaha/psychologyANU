@@ -1,7 +1,7 @@
 
 .button_word_style{
     min-width: 300px;;
-    background: #0054b4;
+    background: #7758df;
     font-size: 25px;
     padding: 10px;
     border: 1px solid white;
@@ -14,11 +14,11 @@
 }
 .controverse_button_word_style{
     min-width: 300px;;
-    border: 2px solid #0054b4;
+    border: 2px solid #7758df;
     background-color: transparent;
     font-size: 25px;
     padding: 10px;
-    color: #0054b4;
+    color: #7758df;
     font-weight: bold;
     border-radius: 0;
     margin: auto;

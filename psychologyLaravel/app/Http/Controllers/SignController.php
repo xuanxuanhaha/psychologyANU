@@ -65,6 +65,7 @@ class SignController extends Controller
             if(isset($data['isstudent'])) {
                 if($userId){
                     $data['username'] = $userId;
+                    $data['language'] = 'English';
                     $user->createUser($data);
                 }
             }

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import styles from './progressbar.module.css';
 
 const ProgressBar = (props) => {
-  const { percentageNo, langrage } = props
+  const { percentageNo, language } = props
 
   return (  
     <div className={styles.progress_div}>
         <b className={styles.progress_wording_b}>
           {
-            langrage === 'English' ?
+            language === 'English' ?
             'PROGRESS STATUS:' :
             'Statut du progrès'
           }

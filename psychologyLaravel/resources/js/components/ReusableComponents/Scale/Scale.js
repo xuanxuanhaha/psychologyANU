@@ -24,7 +24,7 @@ const Scale = (props) => {
       getAriaValueText={(value) => `${value}`}
       valueLabelDisplay="on"
       step={step}
-      style={{ color: '#0054b4' }}
+      style={{ color: '#7758df' }}
       marks={customMarks}
       min={min}
       max={max}
