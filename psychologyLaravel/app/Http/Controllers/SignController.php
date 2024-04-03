@@ -16,8 +16,17 @@ class SignController extends Controller
         if(empty($attributes['email']) || empty($attributes['password'])){
             return response()->json(['error' => 'Invalid credentials. Please try again.'], 401);
         }else{
+            $userIdRecord = UserIds::where('code', $attributes['email'])->first();
+            $usernameid = null;
+            if($userIdRecord){
+                $usernameid = $userIdRecord->id;
+            }
 
-            if($user = Users::where('email', $attributes['email'])->first()){
+            $user = Users::where('email', $attributes['email'])->first();
+            if(!$user && $usernameid){
+                $user = Users::where('username', $usernameid)->first();
+            }
+            if($user){
                 if(Hash::check($attributes['password'], $user['password'])){
                     return array('success'=> true, 'user'=> $user);
                 }else{
