@@ -15,11 +15,13 @@ const Signup = () => {
   const navigate = useNavigate();
 
   const [isStudent, setIsStudent] = useState(false);
+  const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [userConfirmPassword, setUserConfirmPassword] = useState('');
   const [isStudentError, setIsStudentError] = useState(false);
   const [emailUsedError, setEmailUsedError] = useState(false);
+  const [userNameError, setUserNameError] = useState(false);
   const [userEmailError, setUserEmailError] = useState(false);
   const [userPasswordError, setUserPasswordError] = useState(false);
   const [userConfirmPasswordError, setUserConfirmPasswordError] = useState(false);
@@ -33,12 +35,13 @@ const Signup = () => {
   const signUpClick = async () => {
     await signUpCheck();
     console.log('uncaught is student', isStudent)
-    if (isStudentError || emailUsedError || userEmailError || userPasswordError || userConfirmPasswordError) {
+    if (isStudentError || emailUsedError || userNameError || userEmailError || userPasswordError || userConfirmPasswordError) {
       console.log('go back to feel');
       return;
-    } else if (isStudent && userEmail!== '' && userPassword !== '' && userConfirmPassword === userPassword){
+    } else if (isStudent && userEmail!== '' && userName!='' && userPassword !== '' && userConfirmPassword === userPassword){
       console.log('ready to sign up', {
         isStudent,
+        userName,
         userEmail,
         userPassword,
         userConfirmPassword
@@ -52,6 +55,7 @@ const Signup = () => {
   const signUpCheck = () => {
     isStudentValidJudge();
     userEmailValidJudge();
+    userNameValidJudge();
     userPasswordValidJudge();
     userConfirmPasswordJudge();
   };
@@ -60,6 +64,7 @@ const Signup = () => {
     const data = {
       isstudent: isStudent,
       password: userPassword,
+      username: userName,
       email: userEmail,
       confirmpassword: userConfirmPassword
     };
@@ -71,8 +76,13 @@ const Signup = () => {
       const response = await axios.post('/api/users', data);
       console.log('uncaught hi ', response);
       if (response.data.error) {
-        setEmailUsedError(true);
+        if(response.data.error === 'Email Exist') {
+          setEmailUsedError(true);
+        }else if(response.data.error === 'User Id is invalid') {
+          setUserNameError(true)
+        }
         setConfirmSend('');
+
       } else {
         setConfirmSend('Your email has been sent');
       }
@@ -98,6 +108,14 @@ const Signup = () => {
       setUserEmailError(true);
     }
   };
+
+  const userNameValidJudge = () => {
+    if(userName!== '') {
+      setUserNameError(false);
+    }else{
+      setUserNameError(true);
+    }
+  }
 
   const userPasswordValidJudge = () => {
     if (userPassword && userPassword.length > 3) {
@@ -149,6 +167,32 @@ const Signup = () => {
           </div>
 
           <div className={styles.input_boxes}>
+
+            <div className={styles.eachBlock}>
+                <Grid container>
+                  <Grid item className={styles.icons_left}>
+                    <img src={peopleicon} className={styles.icon_class} alt="icon" />
+                  </Grid>
+                  <Grid item className={styles.inputs_right}>
+                    <input
+                      type="text"
+                      placeholder="ID"
+                      className={styles.input_class}
+                      value={userName}
+                      style={{ border: '2px solid lightgrey' }}
+                      onChange={(e) => {
+                        setUserName(e.target.value);
+                        setUserNameError(false);
+                      }}
+                    />
+                  </Grid>
+                </Grid>
+                <div className={styles.inputError} hidden={!userNameError}>
+                  User Id is invalid.
+                </div>
+              </div>
+
+              
             <div className={styles.eachBlock}>
               <Grid container>
                 <Grid item className={styles.icons_left}>
@@ -241,8 +285,8 @@ const Signup = () => {
                   }}
                   checked={isStudent}
                 />
-                {/* <Typography className={styles.onlyStudentWording}>&nbsp;&nbsp;I am student</Typography> */}
-                <Typography className={styles.onlyStudentWording}>&nbsp;&nbsp;Je suis un.e étudiant.e</Typography>
+                <Typography className={styles.onlyStudentWording}>&nbsp;&nbsp;I am student</Typography>
+                {/* <Typography className={styles.onlyStudentWording}>&nbsp;&nbsp;Je suis un.e étudiant.e</Typography> */}
 
               </Grid>
             </div>

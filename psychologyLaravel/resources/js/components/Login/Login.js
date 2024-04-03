@@ -118,7 +118,7 @@ const Login = (props) => {
                         setInputHasError(false)
                     }}
                     type="text"
-                    placeholder="Email"
+                    placeholder="ID or Email"
                     // placeholder="courriel"
                     className={styles.input_class}
                   />

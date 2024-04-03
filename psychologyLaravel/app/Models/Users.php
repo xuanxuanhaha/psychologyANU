@@ -8,6 +8,7 @@ use App\Mail\WelcomeEmail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Hash;
+use App\Models\UserIds;
 
 
 class Users extends Model
@@ -21,6 +22,11 @@ class Users extends Model
     public function createUser (array $attributes = []) {
         $attributes['password'] = Hash::make($attributes['password']);
         $user = self::create($attributes);
+        $userId = UserIds::find($attributes['username']);
+        $userId->available = 0;
+        $userId->save();
+
+        
         $this->sendWelcomeEmail($user);
     
 

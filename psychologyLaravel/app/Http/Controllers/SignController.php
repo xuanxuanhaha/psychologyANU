@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Users;
+use App\Models\UserIds;
+
 use Illuminate\Support\Facades\Hash;
 
 class SignController extends Controller
@@ -37,14 +39,25 @@ class SignController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        if (!$data['isstudent'] || !$data['password'] || !$data['email'] || !$data['confirmpassword']) {
+        if (!$data['isstudent'] || !$data['username'] || !$data['password'] || !$data['email'] || !$data['confirmpassword']) {
             return array(['success'=> false, 'error'=> 'data invalid']);
         }
+        $userId = null;
+        $userIdAvailable = UserIds::where('code', $data['username'])->where('available', 1);
+        if(!$userIdAvailable->exists()){
+            return array('success'=>false, 'error'=>'User Id is invalid');
+        }else{
+            $userId = $userIdAvailable->first()->id;
+        }
+
         $user = new Users();
         $userExists = Users::where('email', $data['email'])->exists();
         if(!$userExists) {
             if(isset($data['isstudent'])) {
-                $user->createUser($data);
+                if($userId){
+                    $data['username'] = $userId;
+                    $user->createUser($data);
+                }
             }
         }else{
             return array('success'=>false, 'error'=>'Email Exist');
