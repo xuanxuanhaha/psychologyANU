@@ -51,7 +51,7 @@ const Login = (props) => {
                 dispatch(loginSuccess());
                 localStorage.setItem('isAuthenticated', 'true');
                 navigate('/dashboard');
-                const userData = { username: username, userid: response.data.user.id, language: response.data.user.language };
+                const userData = { username: username, userid: response.data.user.id, language: response.data.user.language, group: response.data.user.group };
 
                 props.loginSuccess(userData);
 

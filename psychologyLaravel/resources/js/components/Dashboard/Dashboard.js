@@ -12,6 +12,8 @@ const Dashboard = () => {
   // const language = userData.language
   const [language, setLanguage] = useState('French')
 
+  const [userGroup, setUserGroup] = useState(0)
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const screenHeight = window.innerHeight;
@@ -19,6 +21,7 @@ const Dashboard = () => {
 
     if(userData){
       getUserSessionInfo
+      setUserGroup(userData.group)
     }
   }, []);
 
@@ -26,6 +29,7 @@ const Dashboard = () => {
     if(userData && sessionId === null){
       getUserSessionInfo()
       setLanguage(userData.language)
+      setUserGroup(userData.group)
     }
   }, [userData]);
 
@@ -57,7 +61,11 @@ const Dashboard = () => {
 
   const goToSession = (sessionNumber) => {
     console.log('1 uncaught')
-    navigate(`/session${sessionNumber}`);
+    if(userGroup === 1) { // BASCSI
+      navigate(`/session${sessionNumber}`);
+    }else{
+      console.log('uncaught usergroup', userGroup)
+    }
 
   };
 

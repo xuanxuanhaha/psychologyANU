@@ -16,7 +16,7 @@ class Users extends Model
     use SoftDeletes;
 
     protected $table = 'c_users';
-    protected $fillable = ['username', 'email', 'password', 'language'];
+    protected $fillable = ['username', 'email', 'password', 'language', 'group'];
     protected $hidden = ['password'];
 
     public function createUser (array $attributes = []) {
