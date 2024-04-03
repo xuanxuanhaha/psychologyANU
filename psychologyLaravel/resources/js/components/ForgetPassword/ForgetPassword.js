@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './forgetpassword.module.css';
-// import ANUlogo from './../../assets/ANUlogo.jpg';
-import montreallogo from './../../assets/montreallogo.jpg'
+import ANUlogo from './../../assets/ANUlogo.jpg';
+// import montreallogo from './../../assets/montreallogo.jpg'
 
 import emailicon from './../../assets/login/email_icon.png';
 import lockericon from './../../assets/login/locker_icon.png';
@@ -63,14 +63,14 @@ const ForgetPassword = (props) => {
           <div className={styles.block}></div>
           <div className={styles.img_background}>
             <div className={styles.img_container}>
-              <img src={montreallogo} style={{ width: '200px' }} alt="image here" />
+              <img src={ANUlogo} style={{ width: '200px' }} alt="image here" />
             </div>
           </div>
   
           <div className={styles.p1_container}>
             <div className={styles.p1_word_style}>
-              {/* Learning to Thrive: An Online Intervention Program for Mental Health and Well-being */}
-              Apprendre à s'épanouir : un programme d’intervention en ligne pour la santé mentale et le bien-être.
+              Learning to Thrive: An Online Intervention Program for Mental Health and Well-being
+              {/* Apprendre à s'épanouir : un programme d’intervention en ligne pour la santé mentale et le bien-être. */}
             </div>
           </div>
 
@@ -95,8 +95,8 @@ const ForgetPassword = (props) => {
                         setInputHasError(false)
                     }}
                     type="text"
-                    // placeholder="Email"
-                    placeholder="courriel"
+                    placeholder="Email"
+                    // placeholder="courriel"
                     className={styles.input_class}
                   />
                 </div>

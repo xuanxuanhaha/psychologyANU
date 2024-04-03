@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './login.module.css';
-// import ANUlogo from './../../assets/ANUlogo.jpg';
-import montreallogo from './../../assets/montreallogo.jpg'
+import ANUlogo from './../../assets/ANUlogo.jpg';
+// import montreallogo from './../../assets/montreallogo.jpg'
 
 import emailicon from './../../assets/login/email_icon.png';
 import lockericon from './../../assets/login/locker_icon.png';
@@ -77,14 +77,14 @@ const Login = (props) => {
           <div className={styles.block}></div>
           <div className={styles.img_background}>
             <div className={styles.img_container}>
-              <img src={montreallogo} style={{ width: '200px' }} alt="image here" />
+              <img src={ANUlogo} style={{ width: '200px' }} alt="image here" />
             </div>
           </div>
   
           <div className={styles.p1_container}>
             <div className={styles.p1_word_style}>
-              {/* Learning to Thrive: An Online Intervention Program for Mental Health and Well-being */}
-              Apprendre à s'épanouir : un programme d’intervention en ligne pour la santé mentale et le bien-être.
+              Learning to Thrive: An Online Intervention Program for Mental Health and Well-being
+              {/* Apprendre à s'épanouir : un programme d’intervention en ligne pour la santé mentale et le bien-être. */}
             </div>
           </div>
   
@@ -93,12 +93,12 @@ const Login = (props) => {
             {/* button box */}
             <div className={styles.grid_container_sign_log_btn}>
               <div className={styles.not_choosed_btn_div} onClick={goToSignUp}>
-                {/* Sign up */}
-                créer un compte
+                Sign up
+                {/* créer un compte */}
               </div>
               <div className={styles.choosed_btn_div} onClick={goToLogIn}>
-                {/* Log in */}
-                se connecter
+                Log in
+                {/* se connecter */}
               </div>
             </div>
   
@@ -118,8 +118,8 @@ const Login = (props) => {
                         setInputHasError(false)
                     }}
                     type="text"
-                    // placeholder="Email"
-                    placeholder="courriel"
+                    placeholder="Email"
+                    // placeholder="courriel"
                     className={styles.input_class}
                   />
                 </div>
@@ -166,8 +166,8 @@ const Login = (props) => {
                 <div className={styles.forgot_text}>
                   <i>
                     <a onClick={goToForgetPassword} className={styles.forgot_link} style={{ color: '#0054b4' }}>
-                      {/* Forgot your password? */}
-                      Mot de passe oublié
+                      Forgot your password?
+                      {/* Mot de passe oublié */}
                     </a>
                   </i>
                 </div>
@@ -202,8 +202,8 @@ const Login = (props) => {
   
               <div className={styles.input_boxes_row}>
                 <button className={`${styles.btn} ${styles.sign_up_btn}`} onClick={submitLogIn}>
-                  {/* Log in */}
-                  Se connecter
+                  Log in
+                  {/* Se connecter */}
                 </button>
               </div>
 
@@ -214,12 +214,12 @@ const Login = (props) => {
             {/* Already have an account */}
             <div className={styles.already_word}>
               <p>
-                {/* Don't have an account?  */}
-                Vous n’avez pas de compte ?
+                Don't have an account? 
+                {/* Vous n’avez pas de compte ? */}
                 <button className={styles.login} onClick={goToSignUp}>
                 <b>
-                  {/* Sign Up */}
-                  S’inscrire
+                  Sign Up
+                  {/* S’inscrire */}
                   </b>
               </button>
               </p>

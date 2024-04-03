@@ -18,7 +18,7 @@ class Users extends Migration
             $table->string('username')->nullable();
             $table->string('email');
             $table->longText('password');
-            $table->string('language')->default('French');
+            $table->string('language')->default('English');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->softDeletes();

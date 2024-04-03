@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './home.module.css'; // Assuming the CSS file is named home.module.css
-// import ANUlogo from './../../assets/ANUlogo.jpg';
-import montreallogo from './../../assets/montreallogo.jpg'
+import ANUlogo from './../../assets/ANUlogo.jpg';
+// import montreallogo from './../../assets/montreallogo.jpg'
 
 import ReactDOM from "react-dom";
 
@@ -24,28 +24,41 @@ function Home() {
             <div className={styles.block}></div>
 
             <div className={styles.img_background}>
-            <div className={styles.img_container}>
-                <img src={montreallogo} style={{ width: '300px' }} alt="image here" />
-            </div>
+                <div className={styles.img_container}>
+                    <img src={ANUlogo} style={{ width: '300px' }} alt="image here" />
+                </div>
             </div>
 
             <div className={styles.p1_container}>
-            {/* <div className={styles.p1_word_style}>COPING WITH ACADEMIC WORRY</div> */}
-            <div className={styles.p1_word_style}>Apprendre à s’épanouir</div>
+
+            <br />
+            <br />
+            <br />
+                <br />
+                <div className={styles.p1_word_style}>Learning to Thrive:</div>
+                <br />
+                <div className={styles.p1_word_style}>Coping with Academic Worry and Enhancing Your Social Connectedness</div>
+            {/* <div className={styles.p1_word_style}>Apprendre à s’épanouir</div> */}
 
             </div>
 
-            <div className={styles.p2_container}>
-            {/* <div className={styles.p2_word_style}>Welcome!</div> */}
-            <div className={styles.p2_word_style}>Bienvenue!</div>
+            <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-            </div>
-
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
             <div className={styles.button_container}>
             <div className={styles.login_btn_div}>
                 <button className={`${styles.btn} ${styles.login_button}`} onClick={goToLogIn}>
-                {/* Log in */} 
-                Se connecter
+                Log in 
+                {/* Se connecter */}
                 </button>
             </div>
 
@@ -53,8 +66,8 @@ function Home() {
 
             <div>
                 <button className={`${styles.btn} ${styles.sign_button}`} onClick={goToSignUp}>
-                {/* Sign up */}
-                S’enregistrer
+                Sign up
+                {/* S’enregistrer */}
                 </button>
             </div>
             </div>

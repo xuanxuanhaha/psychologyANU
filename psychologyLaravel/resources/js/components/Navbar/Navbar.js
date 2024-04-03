@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './navbar.module.css';
-// import anulogo from './../../assets/ANUlogo.jpg';
-import montreallogo from './../../assets/montreallogo.jpg'
+import anulogo from './../../assets/ANUlogo.jpg';
+// import montreallogo from './../../assets/montreallogo.jpg'
 
 // import peopleicon from './../../assets/assessment/person.png';
 import peopleicon from './../../assets/assessment/personicon.png';
@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className={styles.assessment_row_1_background}>
           <div className={styles.assessment_row_1_container} id="assessment_row_1_container_id" style={{ height: '100px' }}>
             <div className={styles.logo_container}>
-              <img src={montreallogo} className={styles.anu_logo} alt="ANU Logo" />
+              <img src={anulogo} className={styles.anu_logo} alt="ANU Logo" />
             </div>
             <div className={styles.container_icon_word}>
               <div className={styles.Tina_left}>

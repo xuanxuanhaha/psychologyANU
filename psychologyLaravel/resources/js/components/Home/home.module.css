@@ -1,7 +1,7 @@
 .background {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,84,180,0.2);
+    background-color: #7358df;
   }
   .whole_border{
     width: 81%;max-width: 1200px;margin: auto
@@ -25,7 +25,7 @@
     margin-top: 30px;
     width: 100%;
     height: 100px;
-    display: flex;
+    display: block;
     justify-content: center;
     flex-wrap: nowrap;
   }
@@ -33,7 +33,8 @@
   .p1_word_style {
     font-size: 50px;
     font-weight: 800;
-    color: rgba(0,84,180);
+    color: white;
+    text-align: center;
   }
   
   .p2_container {
@@ -66,12 +67,12 @@
   
   .login_button {
     width: 250px;
-    background-color: rgba(0,84,180);
+    background-color: white;
     margin-right: 20px;
     font-size: 25px;
     padding: 10px;
-    border: 1px solid rgba(0,84,180);
-    color: white;
+    border: 1px solid white;
+    color: #7358df;
     font-weight: bold;
     margin-left: 20px;
     border-radius: 0;
@@ -84,14 +85,14 @@
     margin-right: 20px;
     font-size: 25px;
     padding: 10px;
-    border: 2px solid rgba(0,84,180);
-    color: rgba(0,84,180);
+    border: 2px solid white;
+    color: white;
     font-weight: bold;
     border-radius: 0;
   }
   
   .or_word{
-    font-size: 30px; font-weight: bold;color: rgba(0,84,180)
+    font-size: 30px; font-weight: bold;color: white
   }
   
   @media screen and (max-width: 1055px) {
