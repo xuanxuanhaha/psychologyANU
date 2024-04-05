@@ -76,10 +76,28 @@ const Session4 = () => {
               }
             </Typography>
             <br />
-            <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
-            </div>
+            <Typography title={'content'} position={'left'} color={'primary'} >
+              {
+                language === 'English' ?
+                <p>Let’s review your goal and check how you practiced the scheduled activity(ties) prior to Session 5.</p>
+                :
+                <p>Premièrement, as-tu ton planificateur d’activités avec toi pour cette séance ? Assure-toi de les avoir accessibles puisque tu en auras de besoin pour l’exercice ci-dessous.</p>
+              }
+            </Typography>
             </div>
 
+            <div className={styles.containerheadset}>
+          <Typography title={'description'} position={'center'}>
+            {
+              language === 'English' ? 
+              'This session may include audios, please use your earphone.' :
+              'Cette session pourrait inclure des sections audio, assure-toi d’avoir des écouteurs.'
+            }
+              
+          </Typography>
+          </div>
+          <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
+          </div>
         </div>
     
   );

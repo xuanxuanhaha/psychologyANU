@@ -60,6 +60,7 @@ import Session4Worksheet1end from './Session4Folder/Session4Worksheet1end/Sessio
 import Session4End from './Session4Folder/Session4End/Session4End';
 
 import DataGenerate from './DataGenerate/DataGenerate'
+import Session5End from './Session5Folder/Session5End/Session5End';
 
 
 
@@ -506,7 +507,26 @@ function Example() {
                             )
                           }
                         />
-
+                      <Route
+                        path="/session5"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session4 />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session5end"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session5End />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
 
 
 

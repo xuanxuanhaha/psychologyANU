@@ -21,7 +21,8 @@ const Session4Worksheet1end = () => {
   }, []);
 
   const next = () => {
-    navigate(`/session4end`);
+    // navigate(`/session4end`);
+    navigate(`/session5end`);
   };
 
   return (
@@ -34,7 +35,7 @@ const Session4Worksheet1end = () => {
           <Typography title={'subtitle'} position={'left'}>
             {
               language === 'English' ?
-              'Fourth Session' :
+              'Fifth Session' :
               'Quatrième session'
             }
           </Typography>
