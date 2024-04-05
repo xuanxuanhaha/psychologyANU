@@ -63,7 +63,7 @@ class SessionController extends Controller
         }
         $nextsessionId = $finishedSession + 1;
         $disableNextSessionBtn = true;
-        if($nextsessionId > 2){
+        if($nextsessionId > 1){
             $epochTime = time();
 
             // User can see session 3, 4, only when sessionreminderemailsent
@@ -198,9 +198,9 @@ class SessionController extends Controller
         // session 1 -> 2: 0 seconds
         
         if ($sessionid === 1) {
-            return 0;
+            return 120;
         } else if($sessionid === 2){
-            return 0;
+            return 120;
         } else if($sessionid === 3) { // session 2 -> 3: 6 days
             return 120; // Todo: use 6 minutes to do testing
             // return 518400;

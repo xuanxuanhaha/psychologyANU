@@ -39,7 +39,7 @@ const Session1worksheet4Q1 = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session1End`);
+    // navigate(`/session1End`);
   };
 
   return (
