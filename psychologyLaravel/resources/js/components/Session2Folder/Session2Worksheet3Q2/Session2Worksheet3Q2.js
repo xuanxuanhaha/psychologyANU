@@ -114,7 +114,9 @@ const Session2Worksheet3Q2 = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session2summary`);
+    // navigate(`/session2summary`);
+        navigate(`/session3End`);
+
   };
 
   const changeTableAnwser =(outerKey, innerKey, value) => {
@@ -181,13 +183,13 @@ const Session2Worksheet3Q2 = () => {
           <Typography title={'subtitle'} position={'left'}>
             {
               language === 'English' ?
-              'Second Session'
+              'Third Session'
               :
               'Deuxième session'
             }
             </Typography>
 
-          <ProgressBar percentageNo={84} language={language} />
+          <ProgressBar percentageNo={100} language={language} />
 
           <Typography title={'content'} position={'left'}  contentwidth={'100%'}>
               {

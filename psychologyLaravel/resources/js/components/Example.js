@@ -274,7 +274,8 @@ function Example() {
                         path="/session2worksheet3start"
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
-                              <Session2Worksheet3start />
+                              // <Session2Worksheet3start />
+                              <Session3 />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
@@ -324,7 +325,8 @@ function Example() {
                         path="/session3"
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
-                              <Session3 />
+                              // <Session3 />
+                              <Session2Worksheet3start />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
