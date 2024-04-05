@@ -93,7 +93,7 @@ const Session1Grading = () => {
             }
           </Typography>
 
-          <ProgressBar percentageNo={10} language={language} />
+          <ProgressBar percentageNo={20} language={language} />
           <BorderContent>
             {
               language === 'English' ?

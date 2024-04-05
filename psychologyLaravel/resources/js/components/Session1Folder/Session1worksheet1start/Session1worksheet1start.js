@@ -40,7 +40,7 @@ const Session1worksheet1start = () => {
             }
           </Typography>
 
-          <ProgressBar percentageNo={20} language={language} />
+          <ProgressBar percentageNo={40} language={language} />
 
 
           <div>

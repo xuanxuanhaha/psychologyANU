@@ -98,7 +98,7 @@ const Session1WorksheetQ1 = () => {
             }
           </Typography>
 
-          <ProgressBar percentageNo={30} language={language} />
+          <ProgressBar percentageNo={60} language={language} />
 
 
           <div className={styles.question_content}>

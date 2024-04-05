@@ -131,7 +131,7 @@ const Session1worksheet2Q1 = () => {
             }
           </Typography>
 
-          <ProgressBar percentageNo={50} language={language} />
+          <ProgressBar percentageNo={100} language={language} />
 
             <Typography title={'content'} position={'center'} color={'primary'}>
               <b>EXERCISE A</b>

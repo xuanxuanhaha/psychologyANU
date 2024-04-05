@@ -36,7 +36,7 @@ const Session1WorksheetQ2 = () => {
           if(response.data){
             if(response.data.sessionresponse.response){
               const questionanswer = JSON.parse(response.data.sessionresponse.response)
-              setQuestionIssue(questionanswer.q2)
+              setQuestionIssue(questionanswer.q1)
             }
           }
         })
@@ -131,7 +131,7 @@ const Session1WorksheetQ2 = () => {
           </Typography>
 
 
-          <ProgressBar percentageNo={40} language={language} />
+          <ProgressBar percentageNo={80} language={language} />
 
 
           <div className={styles.question_content}>
