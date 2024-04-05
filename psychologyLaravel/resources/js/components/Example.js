@@ -162,7 +162,8 @@ function Example() {
                         path="/session1worksheet2q2"
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
-                              <Session1Worksheet2Q2 />
+                              // <Session1Worksheet2Q2 />
+                              <Session2 /> // swap path with Session1Worksheet2Q2 component
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
@@ -222,7 +223,8 @@ function Example() {
                         path="/session2"
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
-                              <Session2 />
+                              // <Session2 />
+                              <Session1Worksheet2Q2 />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )

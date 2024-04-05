@@ -93,7 +93,7 @@ const Dashboard = () => {
 
             <button disabled={sessionId !== 3 || disableNextSessionBtn} id="session3" className={`${styles.question_wording} ${(sessionId !== 3 || disableNextSessionBtn) && styles.question_wording_disabled}`} onClick={() => goToSession(3)}>
               {
-                language === 'English' ? "Session 2" : 'Séance 3'
+                language === 'English' ? "Session 3" : 'Séance 3'
               }
             </button>
 

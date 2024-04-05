@@ -33,7 +33,7 @@ const Session1worksheet4Start = () => {
     jumptonextpage()
   };
   const jumptonextpage = () => {
-    navigate(`/session1worksheet4q1`);
+    navigate(`/session2worksheet1q1`);
   };
 
   return (
@@ -45,13 +45,13 @@ const Session1worksheet4Start = () => {
           <Typography title={'subtitle'} position={'left'}>
           {
               language === 'English' ?
-              'First Session'
+              'Second Session'
               :
               'Première session'
             }
           </Typography>
 
-          <ProgressBar percentageNo={90} language={language} />
+          <ProgressBar percentageNo={60} language={language} />
 
           <Typography title={'content'} position={'left'} color={'primary'} >
               {
@@ -96,15 +96,15 @@ const Session1worksheet4Start = () => {
                 <p>Tes groupes t’aident à faire du sens de <b>quelles</b> actions et valeurs sont importantes et <b>pourquoi</b> elles sont importantes. Par exemple, le groupe de ton cours de statistiques te dit <b>qu’est-ce qui</b> est important pour ce groupe (bien faire des statistiques) et <b>pourquoi</b> cela est important (parce que cela fait partie de ton parcours, parce que c’est important en science). Autrement dit, être membre d’un groupe t'aide à créer <b>des objectifs et des valeurs clairs</b>, des instructions claires sur <b>ce qui est important et pourquoi</b>. Cette information aide en guidant tes objectifs personnels, tes valeurs et tes comportements.</p>
               }
           </Typography>
-          {/* <Typography title={'content'} position={'left'} color={'primary'} >
+          <Typography title={'content'} position={'left'} color={'primary'} >
               {
                 language === 'English' ?
                 <p>The following exercise is designed to help you think about how your groups’ goals and values may be aligned with your own goals and values.</p>
                 :
                 <p>The following exercise ... Need Translate!!!!</p>
               }
-          </Typography> */}
-            <Button word={'Suivant'} onClick={next} position={'center'} outlook={'round'} />
+          </Typography>
+            <Button word={language === 'English' ? 'Question B-2' : 'Suivant'} onClick={next} position={'center'} outlook={'round'} />
 
             </div>
             </div>

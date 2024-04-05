@@ -131,7 +131,7 @@ const Session2Worksheet2Q1 = () => {
               }
             </Typography>
 
-            <ProgressBar percentageNo={36} language={language} />
+            <ProgressBar percentageNo={84} language={language} />
 
             <BorderContent>
                 {

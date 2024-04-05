@@ -134,7 +134,7 @@ const Session2Worksheet2Q2 = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session2worksheet3start`);
+    navigate(`/session2end`);
   };
 
   const openDialogWithTemplateRef = () => {
@@ -156,7 +156,7 @@ const Session2Worksheet2Q2 = () => {
                 Second Session
             </Typography>
 
-            <ProgressBar percentageNo={48} language={language} />
+            <ProgressBar percentageNo={100} language={language} />
 
             <BorderContent>
                 {

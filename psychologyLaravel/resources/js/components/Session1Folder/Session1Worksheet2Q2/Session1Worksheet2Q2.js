@@ -29,6 +29,24 @@ const Session1worksheet2Q2 = () => {
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
 
+
+    if(userData){
+      const data = {
+          'userid': userData.userid,
+          'sessionid': 2,
+          'start': true
+      }
+      axios.post(`/api/sessions`, data)
+        .then(response => {
+          console.log('uncaught response', response)
+          
+        })
+        .catch(error => {
+          // Handle any errors
+          console.error(error);
+        });
+  }
+
   }, []);
 
   const next = () => {
@@ -47,13 +65,13 @@ const Session1worksheet2Q2 = () => {
           <Typography title={'subtitle'} position={'left'}>
             {
               language === 'English' ?
-              'First Session'
+              'Second Session'
               :
               'Première session'
             }
           </Typography>
 
-          <ProgressBar percentageNo={60} language={language} />
+          <ProgressBar percentageNo={12} language={language} />
 
           <Typography title={'content'} position={'left'} color={'primary'} >
               {

@@ -251,13 +251,13 @@ const Session2worksheet1Q1 = () => {
             <Typography title={'subtitle'} position={'left'}>
             {
               language === 'English' ?
-              'First Session'
+              'Second Session'
               :
               'Première session'
             }
             </Typography>
 
-            <ProgressBar percentageNo={12} language={language} />
+            <ProgressBar percentageNo={60} language={language} />
 
             
             <BorderContent>

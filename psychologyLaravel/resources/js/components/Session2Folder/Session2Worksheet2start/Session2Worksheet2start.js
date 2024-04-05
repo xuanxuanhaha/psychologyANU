@@ -56,13 +56,13 @@ const Session1worksheet2Q1 = () => {
             }
           </Typography>
 
-          <ProgressBar percentageNo={24} language={language} />
+          <ProgressBar percentageNo={72} language={language} />
             
             <br />
             <br />
             <Typography title={'content'} position={'center'} color={'primary'}>
                 {
-                    language === 'english' ?
+                    language === 'English' ?
                     <b>Resources Provided by Groups</b>
                     : <b>Ressources fournies par les groupes</b>
                 }
