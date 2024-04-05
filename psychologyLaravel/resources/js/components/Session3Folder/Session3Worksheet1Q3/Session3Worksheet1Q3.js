@@ -54,12 +54,12 @@ const Session3Worksheet1Q3 = () => {
                 <Typography title={'subtitle'} position={'left'}>
                     {
                         language === 'English' ? 
-                        'Third Session' :
+                        'Fourth Session' :
                         'Troisième session'
                     }
                 </Typography>
 
-                <ProgressBar percentageNo={70} language={language} />
+                <ProgressBar percentageNo={80} language={language} />
 
                 <Typography title={'content'} position={'center'} color={'primary'}>EXCERCISE D-3</Typography>
                 <br />

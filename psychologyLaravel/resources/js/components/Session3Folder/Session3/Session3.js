@@ -18,10 +18,29 @@ const Session3 = () => {
     window.scrollTo(0, 0);
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
+
+
+    if(userData){
+      const data = {
+          'userid': userData.userid,
+          'sessionid': 4,
+          'start': true
+      }
+      axios.post(`/api/sessions`, data)
+        .then(response => {
+          console.log('uncaught response', response)
+          
+        })
+        .catch(error => {
+          // Handle any errors
+          console.error(error);
+        });
+  }
   }, []);
 
   const next = () => {
-    navigate(`/session3review`);
+    // navigate(`/session3review`);
+    navigate('/session4intro');
 
   };
   return (
@@ -52,12 +71,12 @@ const Session3 = () => {
 
           <div className={styles.containerheadset}>
           <Typography title={'description'} position={'center'}>
-              {
-                language === 'English' ?
-                'In the last sessions, we saw how academic worry is related to avoidance. We also learned that groups can helps us understand who we are, our goals and values, and be better prepared to attain these goals. You then created a plan that has the potential to help you succeed at addressing your academic worry. Today you will learn another new skill through the exercises below: Self-compassion. '
-                :
-                'Durant les dernières séances, nous avons vu comment l’inquiétude scolaire est reliée à l’évitement. Nous avons aussi appris que les groupes peuvent nous aider à comprendre qui nous sommes, nos objectifs et nos valeurs, et à être mieux préparé pour atteindre ces objectifs. Tu as, ensuite, créé un plan qui a le potentiel de t’aider à faire face à ton inquiétude scolaire.'
-              }
+            {
+              language === 'English' ? 
+              'This session may include audios, please use your earphone.' :
+              'Cette session pourrait inclure des sections audio, assure-toi d’avoir des écouteurs.'
+            }
+              
           </Typography>
           </div>
             

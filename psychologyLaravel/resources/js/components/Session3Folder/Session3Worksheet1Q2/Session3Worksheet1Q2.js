@@ -182,12 +182,12 @@ const Session3Worksheet1Q2 = () => {
                 <Typography title={'subtitle'} position={'left'}>
                 {
                   language === 'English' ? 
-                  'Third Session' :
+                  'Fourth Session' :
                   'Troisième session'
                 }
                 </Typography>
 
-                <ProgressBar percentageNo={56} language={language} />
+                <ProgressBar percentageNo={60} language={language} />
 
                 <BorderContent className={styles.greyBorderContent}>
                     {

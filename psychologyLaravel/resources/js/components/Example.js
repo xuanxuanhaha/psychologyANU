@@ -51,6 +51,7 @@ import Session3Worksheet1end from './Session3Folder/Session3Worksheet1end/Sessio
 import Session3End from './Session3Folder/Session3End/Session3End';
 
 import Session4 from './Session4Folder/Session4/Session4';
+import Session4Intro from './Session4Folder/Session4Intro/Session4Intro';
 import Session4Review from './Session4Folder/Session4Review/Session4Review';
 import Session4Review2 from './Session4Folder/Session4Review2/Session4Review2';
 import Session4Worksheet1Start from './Session4Folder/Session4Worksheet1Start/Session4Worksheet1Start';
@@ -275,7 +276,8 @@ function Example() {
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               // <Session2Worksheet3start />
-                              <Session3 />
+                              // <Session3 />
+                              <Session4 />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
@@ -417,12 +419,23 @@ function Example() {
                         path="/session4"
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
-                              <Session4 />
+                              // <Session4 />
+                              <Session3 />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
                           }
                         />
+                      <Route
+                        path="/session4intro"
+                        element={
+                          isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                            <Session4Intro />
+                          ) : (
+                            <Navigate to="/login" replace state={{ from: '/protected' }} />
+                          )
+                        }
+                      />
                       <Route
                         path="/session4review"
                         element={
