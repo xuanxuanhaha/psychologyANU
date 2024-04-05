@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Séance 4 – Fin du programme </title>
+    <title>Séance 5 – Fin du programme </title>
     <style>
         /* Add your custom styles here */
         body {
@@ -72,14 +72,15 @@
     </style>
 </head>
 <body>
-<div class="container">
+    <div class="container">
         <img src="http://35.182.37.175/images/montreallogo.jpg" alt="Website Logo" class="logo">
         <p>Bonjour, </p>
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Excellent travail pour la troisième séance de l’outil Apprendre à s’épanouir de l’UdeM! Nous espérons sincèrement que tu as trouvé ceci utile pour diminuer ton inquiétude scolaire. </p>
-        <p>La dernière séance est bloquée jusqu’à la semaine prochaine puisqu’il y a des compétences à mettre en pratique. N’oublie pas de remplir les fiches incluses dans le programme pendant cette semaine pour maximiser ce que l’outil t’offre. Tu recevras un courriel dans 6 à 7 jours pour te rappeler que tu as accès à la dernière séance. </p>
-        <p>Si tu as des questions ou des préoccupations, n’hésite pas à nous laisser savoir, nous sommes là pour t’accompagner. Tu peux nous rejoindre au <a href="mailto:apprendreasepanouir@umontreal.ca">apprendreasepanouir@umontreal.ca</a>.</p>
-        <p>Nous te remercions encore de ta participation active et nous avons hâte de te voir la semaine prochaine pour notre dernière rencontre! </p>
+        <p class="content">
+            Congratulations on completing Session 5! Please go to <a href="http://ls.sondages.umontreal.ca/882837?lang=fr">Other Links</a>.
+        </p>
+        <p>Félicitations ! Tu viens de finir la dernière séance de l’outil Apprendre à s’épanouir de l’UdeM ! Merci d’y avoir participé. À travers cet outil, tu as pu développer des compétences et prendre connaissances des ressources qui te sont disponibles. Nous t’encourageons à poursuivre l’utilisation de ses compétences et ses ressources dans tes études.</p>
+        <p>Nous te souhaitons une belle continuation dans le reste de tes études! Nous espérons que tu as apprécié notre outil. Si tu as des questions ou des préoccupations, n’hésite pas à nous contacter au <a href="mailto:apprendreasepanouir@umontreal.ca">apprendreasepanouir@umontreal.ca</a>. </p>
         <p>Cordialement,</p>
         <p>L’équipe de Apprendre à s’épanouir</p>
     </div>

@@ -9,6 +9,7 @@ use App\Mail\Session1Finish;
 use App\Mail\Session2Finish;
 use App\Mail\Session3Finish;
 use App\Mail\Session4Finish;
+use App\Mail\Session5Finish;
 use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
 use App\Models\SessionReminderEmailStatus;
@@ -66,7 +67,7 @@ class SessionController extends Controller
         if($nextsessionId > 2){
             $epochTime = time();
 
-            // User can see session 3, 4, only when sessionreminderemailsent
+            // User can see session 3, 4, 5, only when sessionreminderemailsent
             $sessionStart = UserSessions::where('sessionid', $nextsessionId)
                 ->where('userid', $userid)
                 ->where('startat', '<', $epochTime)
@@ -158,6 +159,8 @@ class SessionController extends Controller
                         Mail::to($user->email)->send(new Session3Finish($user));
                     }else if ($attributes['sessionid'] === 4){
                         Mail::to($user->email)->send(new Session4Finish($user));
+                    }else if ($attributes['sessionid'] === 5){
+                        Mail::to($user->email)->send(new Session5Finish($user));
                     }
                     $mailSentTime = time();
 
@@ -184,7 +187,7 @@ class SessionController extends Controller
                 'sessionfinishemailsenttime' => $mailSentTime
             ]);
 
-            if($attributes['sessionid'] < 4){
+            if($attributes['sessionid'] < 5){
                 $this->sessionCreate(array('userid' =>  $attributes['userid'], 'sessionid' => $attributes['sessionid'] + 1)); // user can start session 1 once sign up.
             }
 
@@ -205,6 +208,9 @@ class SessionController extends Controller
             return 120; // Todo: use 6 minutes to do testing
             // return 518400;
         } else if($sessionid === 4) { // session 3 -> 4: 6 days
+            return 120; // Todo: use 6 minutes to do testing
+            // return 518400;
+        } else if($sessionid === 5) { // session 4 -> 5: 6 days
             return 120; // Todo: use 6 minutes to do testing
             // return 518400;
         }
