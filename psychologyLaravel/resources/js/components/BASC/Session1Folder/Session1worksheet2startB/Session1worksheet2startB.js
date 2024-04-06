@@ -22,7 +22,7 @@ const Session1worksheet2startB = () => {
   }, []);
 
   const goToSession1Grading = () => {
-    navigate(`/session1worksheet2q1`);
+    navigate(`/session1worksheet2q1b`);
 
   };
 
