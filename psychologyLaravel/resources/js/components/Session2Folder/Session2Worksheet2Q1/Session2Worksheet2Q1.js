@@ -39,7 +39,7 @@ const Session2Worksheet2Q1 = () => {
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
 
-    axios.get(`/api/sessionresponse/1?userid=${userData.userid}&&questionno=session1worksheet3q1`)
+    axios.get(`/api/sessionresponse/2?userid=${userData.userid}&&questionno=session1worksheet3q1`)
     .then(response => {
     if(response.data){
         if(response.data.sessionresponse.response){
@@ -55,7 +55,7 @@ const Session2Worksheet2Q1 = () => {
     console.error(error);
     });
 
-    axios.get(`/api/sessionresponse/1?userid=${userData.userid}&&questionno=session2worksheet2q1`)
+    axios.get(`/api/sessionresponse/2?userid=${userData.userid}&&questionno=session2worksheet2q1`)
     .then(response => {
     if(response.data){
         if(response.data.sessionresponse.response){
@@ -98,7 +98,7 @@ const Session2Worksheet2Q1 = () => {
     console.log('data uncaught')
     const data = {
         'userid': userData.userid,
-        'sessionid': 1,
+        'sessionid': 2,
         'questionno': 'session2worksheet2q1',
         'response': {'q1': questionA, 'q2': questionB, 'q3': questionC}
     }
