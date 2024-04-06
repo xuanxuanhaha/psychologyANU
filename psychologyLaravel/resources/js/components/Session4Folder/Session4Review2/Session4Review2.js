@@ -57,7 +57,7 @@ const Session4Review2 = () => {
           console.error(error);
         });
 
-        axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session3worksheet1q4`)
+        axios.get(`/api/sessionresponse/4?userid=${userData.userid}&&questionno=session3worksheet1q4`)
         .then(response => {
           if(response.data){
               if(response.data.sessionresponse.response){
@@ -72,7 +72,7 @@ const Session4Review2 = () => {
           console.error(error);
         });
 
-        axios.get(`/api/sessionresponse/4?userid=${userData.userid}&&questionno=session4Review2`)
+        axios.get(`/api/sessionresponse/5?userid=${userData.userid}&&questionno=session4Review2`)
         .then(response => {
         if(response.data){
             if(response.data.sessionresponse.response){
@@ -101,7 +101,7 @@ const Session4Review2 = () => {
   const passData = () => {
     const data = {
         'userid': userData.userid,
-        'sessionid': 4,
+        'sessionid': 5,
         'questionno': 'session4Review2',
         'response': {'q1': tableAnswers}
     }

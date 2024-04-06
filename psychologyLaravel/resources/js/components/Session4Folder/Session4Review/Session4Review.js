@@ -58,7 +58,7 @@ const Session4Review = () => {
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
 
-    axios.get(`/api/sessionresponse/2?userid=${userData.userid}&&questionno=session2worksheet3q1`)
+    axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session2worksheet3q1`)
     .then(response => {
       if(response.data){
           if(response.data.sessionresponse.response){
@@ -73,7 +73,7 @@ const Session4Review = () => {
       console.error(error);
     });
 
-    axios.get(`/api/sessionresponse/2?userid=${userData.userid}&&questionno=session2worksheet3q2`)
+    axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session2worksheet3q2`)
           .then(response => {
             if(response.data){
                 if(response.data.sessionresponse.response){
@@ -89,7 +89,7 @@ const Session4Review = () => {
             console.error(error);
           });
     
-    axios.get(`/api/sessionresponse/4?userid=${userData.userid}&&questionno=session4Review`)
+    axios.get(`/api/sessionresponse/5?userid=${userData.userid}&&questionno=session4Review`)
     .then(response => {
       if(response.data){
           if(response.data.sessionresponse.response){
@@ -114,7 +114,7 @@ const Session4Review = () => {
   const passData = () => {
     const data = {
         'userid': userData.userid,
-        'sessionid': 4,
+        'sessionid': 5,
         'questionno': 'session4Review',
         'response': {'q1': tableAnswers}
     }
