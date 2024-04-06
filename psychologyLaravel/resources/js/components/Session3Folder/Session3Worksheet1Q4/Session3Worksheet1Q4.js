@@ -46,7 +46,7 @@ const Session3Worksheet1Q4 = () => {
           if(response.data){
             if(response.data.sessionresponse.response){
               const questionanswer = JSON.parse(response.data.sessionresponse.response)
-              setQuestionIssue(questionanswer.q2)
+              setQuestionIssue(questionanswer.q1)
             }
           }
         })
@@ -55,7 +55,7 @@ const Session3Worksheet1Q4 = () => {
           console.error(error);
         });
 
-        axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session3worksheet1q4`)
+        axios.get(`/api/sessionresponse/4?userid=${userData.userid}&&questionno=session3worksheet1q4`)
         .then(response => {
           if(response.data){
               if(response.data.sessionresponse.response){
@@ -84,7 +84,7 @@ const Session3Worksheet1Q4 = () => {
   const passData = () => {
     const data = {
         'userid': userData.userid,
-        'sessionid': 3,
+        'sessionid': 4,
         'questionno': 'session3worksheet1q4',
         'response': {'q1': tableAnswers}
     }

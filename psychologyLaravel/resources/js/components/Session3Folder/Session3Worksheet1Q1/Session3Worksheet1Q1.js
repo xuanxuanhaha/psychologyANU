@@ -69,7 +69,7 @@ const Session3Worksheet1Q1 = () => {
       if(response.data){
         if(response.data.sessionresponse.response){
           const questionanswer = JSON.parse(response.data.sessionresponse.response)
-          setQuestionIssue(questionanswer.q2)
+          setQuestionIssue(questionanswer.q1)
         }
       }
     })
@@ -78,7 +78,7 @@ const Session3Worksheet1Q1 = () => {
       console.error(error);
     });
 
-    axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session3Worksheet1Q1`)
+    axios.get(`/api/sessionresponse/4?userid=${userData.userid}&&questionno=session3Worksheet1Q1`)
     .then(response => {
     if(response.data){
         if(response.data.sessionresponse.response){
@@ -122,7 +122,7 @@ const Session3Worksheet1Q1 = () => {
     console.log('data uncaught')
     const data = {
         'userid': userData.userid,
-        'sessionid': 3,
+        'sessionid': 4,
         'questionno': 'session3Worksheet1Q1',
         'response': {'q1': questionA, 'q2': questionB, 'q3': questionC}
     }
