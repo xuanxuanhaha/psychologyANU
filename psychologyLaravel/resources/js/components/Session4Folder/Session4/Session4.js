@@ -27,7 +27,22 @@ const Session4 = () => {
     window.scrollTo(0, 0);
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
-
+    if(userData){
+      const data = {
+          'userid': userData.userid,
+          'sessionid': 5,
+          'start': true
+      }
+      axios.post(`/api/sessions`, data)
+        .then(response => {
+          console.log('uncaught response', response)
+          
+        })
+        .catch(error => {
+          // Handle any errors
+          console.error(error);
+        });
+  }
   }, []);
 
   const next = () => {
