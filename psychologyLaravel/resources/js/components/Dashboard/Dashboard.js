@@ -63,7 +63,10 @@ const Dashboard = () => {
     console.log('1 uncaught')
     if(userGroup === 1) { // BASCSI
       navigate(`/session${sessionNumber}`);
-    }else{
+    } else if(userGroup === 2) { // BASC
+      navigate(`/session${sessionNumber}B`);
+    }
+    else{
       console.log('uncaught usergroup', userGroup)
     }
 

@@ -29,6 +29,10 @@ import Session2Worksheet2Q1 from './Session2Folder/Session2Worksheet2Q1/Session2
 import Session2Worksheet2Q2 from './Session2Folder/Session2Worksheet2Q2/Session2Worksheet2Q2'
 import Session2Worksheet3start from './Session2Folder/Session2Worksheet3start/Session2Worksheet3start'
 
+// BASC
+import Session1B from './BASC/Session1Folder/Session1B/Session1B'
+import Session1GradingB from  './BASC/Session1Folder/Session1GradingB/Session1GradingB'
+
 import { useSelector, useDispatch } from 'react-redux';
 import { store, persistor } from './store';
 import { Provider } from 'react-redux';
@@ -90,6 +94,7 @@ function Example() {
                             )
                           }
                         />
+                {/* BASCSI */}
                     <Route
                         path="/session1"
                         element={
@@ -529,9 +534,29 @@ function Example() {
                         />
 
 
+                      {/* BASC */}
+                      <Route
+                        path="/session1B"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session1B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session1gradingb"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session1GradingB />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
 
 
-                        
                 </Routes>
             </AuthProvider>
         </BrowserRouter>

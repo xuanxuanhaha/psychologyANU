@@ -43,17 +43,17 @@ function Home() {
             </div>
 
             <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+        <br />
+        <br />
+        <br />
+        <br />
+         <br />
             <div className={styles.button_container}>
             <div className={styles.login_btn_div}>
                 <button className={`${styles.btn} ${styles.login_button}`} onClick={goToLogIn}>
