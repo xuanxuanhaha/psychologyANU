@@ -27,7 +27,7 @@ const CountdownTimer = ({ initialCount }) => {
 
   return (
     <div>
-      <h1>Time Left: {timeLeft} seconds</h1>
+        Time Left: {timeLeft} seconds
     </div>
   );
 };

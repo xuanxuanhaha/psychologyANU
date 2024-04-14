@@ -286,3 +286,20 @@ body {
     top: 0;
     width: 100px;
   }
+  .disabled_button{
+    background-color: lightgrey;
+    cursor: not-allowed !important;
+    color: white;
+    min-width: 300px;
+    font-size: 25px;
+    padding: 10px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 0;
+    margin: auto;
+    margin-top: 8vh;
+  }
+  .urlLink{
+    color: black
+  }

@@ -19,6 +19,8 @@ const Session2Worksheet1B = () => {
   const audioUrl = 'http://35.182.37.175/audios/guidedmeditation.mp3';
   const audioRef = useRef(null);
 
+  const [linkClicked, setLinkClicked] = useState(0)
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const screenHeight = window.innerHeight;
@@ -49,6 +51,8 @@ const Session2Worksheet1B = () => {
   };
 
   const handleStartSession = () => {
+    setLinkClicked(true)
+
     audioRef.current.play().then(() => {
       audioRef.current.pause(); // Play and pause to unlock further playback
       setSessionStarted(true);
@@ -71,14 +75,16 @@ const Session2Worksheet1B = () => {
    
             {/* <Button word="Start Session" onClick={handleStartSession} position={'center'} /> */}
 
+            {
             <Typography title={'content'} position={'left'} color={'primary'}>
               {/* Time Left: {formatTime(seconds)} */}
-              <CountdownTimer initialCount={63} /> {/* Start countdown from 60 seconds */}
-
+              <CountdownTimer initialCount={80} /> {/* Start countdown from 60 seconds */}
             </Typography>
+          }
+          <br />
 
             <div>
-            <Typography title={'content'} position={'left'} color={'primary'}>
+            <Typography title={'content'} position={'left'} >
             {
                   language === 'English' ?
                   'Please choose any of the tasks and play them till you are told the session is over.'
@@ -89,7 +95,7 @@ const Session2Worksheet1B = () => {
           </div>
           <br />
           <div>
-            <Typography title={'content'} position={'left'} color={'primary'}>
+            <Typography title={'content'} position={'left'}>
             {
                   language === 'English' ?
                   'Here is the link for the website.'
@@ -99,18 +105,25 @@ const Session2Worksheet1B = () => {
             </Typography>
           </div>
           <br />
+
           <div>
-            <Typography title={'content'} position={'left'} color={'primary'}>
+            <Typography title={'content'} position={'left'}>
             {
                   language === 'English' ?
-                  <u><li><a href="https://www.eatforhealth.gov.au/" target="_blank" onClick={handleStartSession}><u>Eat for Health</u></a></li></u>
+                  <u><li><a href="https://www.eatforhealth.gov.au/" target="_blank" className={styles.urlLink} onClick={handleStartSession}><u>Eat for Health</u></a></li></u>
                   :
                   'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
                 }
             </Typography>
           </div>
   
-          <Button word={language === 'English' ? 'Start Worksheet1' : 'Commencer Fiche 1'} onClick={jump} position={'center'} />
+          {
+            linkClicked ? 
+            <Button word={language === 'English' ? 'NEXT' : 'Commencer Fiche 1'} onClick={jump} position={'center'} />
+            :
+            <Button word={language === 'English' ? 'NEXT' : 'Commencer Fiche 1'} className={styles.disabled_button} position={'center'} />
+          }
+          
         </div>
       </div>
     </div>
