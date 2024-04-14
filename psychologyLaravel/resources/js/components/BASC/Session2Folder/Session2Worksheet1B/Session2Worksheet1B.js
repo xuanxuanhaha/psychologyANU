@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import Button from '../../../ReusableComponents/Button/Button';
 import ProgressBar from '../../../ReusableComponents/ProgressBar/ProgressBar';
 import Typography from '../../../ReusableComponents/Typography/Typography';
+import CountdownTimer from './CountdownTimer';
 
 const Session2Worksheet1B = () => {
   const navigate = useNavigate();
@@ -71,7 +72,9 @@ const Session2Worksheet1B = () => {
             {/* <Button word="Start Session" onClick={handleStartSession} position={'center'} /> */}
 
             <Typography title={'content'} position={'left'} color={'primary'}>
-              Time Left: {formatTime(seconds)}
+              {/* Time Left: {formatTime(seconds)} */}
+              <CountdownTimer initialCount={63} /> {/* Start countdown from 60 seconds */}
+
             </Typography>
 
             <div>
