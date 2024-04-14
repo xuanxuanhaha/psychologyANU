@@ -37,6 +37,8 @@ import Session1WorksheetQ1B from './BASC/Session1Folder/Session1WorksheetQ1B/Ses
 import Session1WorksheetQ2B from './BASC/Session1Folder/Session1WorksheetQ2B/Session1WorksheetQ2B'
 import Session1worksheet2startB from './BASC/Session1Folder/Session1worksheet2startB/Session1worksheet2startB'
 import Session1worksheet2Q1B from './BASC/Session1Folder/Session1worksheet2Q1B/Session1worksheet2Q1B'
+import Session2B from './BASC/Session2Folder/Session2B/Session2B'
+import Session2Worksheet1B from './BASC/Session2Folder/Session2Worksheet1B/Session2Worksheet1B'
 
 import { useSelector, useDispatch } from 'react-redux';
 import { store, persistor } from './store';
@@ -610,6 +612,28 @@ function Example() {
                             )
                           }
                         />
+                      <Route
+                        path="/session2b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session2B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session2worksheet1b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session2Worksheet1B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+
+
                 </Routes>
             </AuthProvider>
         </BrowserRouter>
