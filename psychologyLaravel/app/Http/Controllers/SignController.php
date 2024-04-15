@@ -25,6 +25,7 @@ class SignController extends Controller
             $user = Users::where('email', $attributes['email'])->first();
             if(!$user && $usernameid){
                 $user = Users::where('username', $usernameid)->first();
+                $user->group = $userIdRecord->group;
             }
             if($user){
                 if(Hash::check($attributes['password'], $user['password'])){
@@ -64,9 +65,8 @@ class SignController extends Controller
         if(!$userExists) {
             if(isset($data['isstudent'])) {
                 if($userId){
-                    $data['username'] = $userId;
+                    $data['username'] = $userId; // id in c_ids table
                     $data['language'] = 'English';
-                    $data['group'] = $this->pickRandomNumber();
                     $user->createUser($data);
                 }
             }
@@ -75,43 +75,5 @@ class SignController extends Controller
         }
         
         return array('success'=> true);
-    }
-
-    private function pickRandomNumber() {
-        // Your numbers array
-        $numbers = Users::pluck('group')->toArray();
-
-        // Desired percentages
-        $desiredPercentages = [1 => 60, 2 => 20, 3 => 20];
-
-        // Calculate the current percentages
-        $countValues = array_count_values($numbers);
-        $total = count($numbers);
-        $currentPercentages = [];
-        foreach ($countValues as $number => $count) {
-            $currentPercentages[$number] = ($count / $total) * 100;
-        }
-
-        // Adjusted array to maintain the desired distribution
-        $adjustedNumbers = [];
-
-        // Populate the adjusted array based on current percentages
-        foreach ($desiredPercentages as $number => $desiredPercentage) {
-            $currentPercentage = $currentPercentages[$number] ?? 0;
-            if ($currentPercentage < $desiredPercentage) {
-                // If the current percentage is less than the desired, increase the probability of this number
-                $adjustedNumbers = array_merge($adjustedNumbers, array_fill(0, $desiredPercentage - $currentPercentage, $number));
-            }
-        }
-
-        // If adjustedNumbers is empty, it means all numbers are above their desired percentages. You can pick any.
-        if (empty($adjustedNumbers)) {
-            $adjustedNumbers = [1, 2, 3];
-        }
-
-        // Randomly pick a number from the adjusted array
-        $group_number = $adjustedNumbers[array_rand($adjustedNumbers)];
-
-        return $group_number;
     }
 }
