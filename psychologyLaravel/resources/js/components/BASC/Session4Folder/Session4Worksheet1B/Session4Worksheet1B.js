@@ -137,7 +137,7 @@ const Session4Worksheet1B = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session3worksheet1q2`);
+    navigate(`/session4worksheet2b`);
   };
 
   const openDialogWithTemplateRef = () => {
@@ -178,7 +178,7 @@ const Session4Worksheet1B = () => {
             <Typography title={'subtitle'} position={'left'}>
             {
               language === 'English' ? 
-              'Third Session' :
+              'Fourth Session' :
               'Troisième session'
             }
             </Typography>

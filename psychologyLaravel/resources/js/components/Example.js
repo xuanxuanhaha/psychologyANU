@@ -45,6 +45,9 @@ import Session3Worksheet2B from './BASC/Session3Folder/Session3Worksheet2B/Sessi
 import Session3Worksheet3B from './BASC/Session3Folder/Session3Worksheet3B/Session3Worksheet3B'
 import Session4B from './BASC/Session4Folder/Session4B/Session4B'
 import Session4Worksheet1B from './BASC/Session4Folder/Session4Worksheet1B/Session4Worksheet1B'
+import Session4Worksheet2B from './BASC/Session4Folder/Session4Worksheet2B/Session4Worksheet2B'
+import Session4Worksheet3B from './BASC/Session4Folder/Session4Worksheet3B/Session4Worksheet3B'
+import Session4Worksheet4B from './BASC/Session4Folder/Session4Worksheet4B/Session4Worksheet4B'
 
 
 
@@ -700,6 +703,37 @@ function Example() {
                             )
                           }
                         />
+                      <Route
+                        path="/session4worksheet2b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session4Worksheet2B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session4worksheet3b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session4Worksheet3B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session4worksheet4b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session4Worksheet4B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+
                 </Routes>
             </AuthProvider>
         </BrowserRouter>
