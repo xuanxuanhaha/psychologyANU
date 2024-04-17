@@ -43,7 +43,8 @@ import Session3B from './BASC/Session3Folder/Session3B/Session3B'
 import Session3Worksheet1B from './BASC/Session3Folder/Session3Worksheet1B/Session3Worksheet1B'
 import Session3Worksheet2B from './BASC/Session3Folder/Session3Worksheet2B/Session3Worksheet2B'
 import Session3Worksheet3B from './BASC/Session3Folder/Session3Worksheet3B/Session3Worksheet3B'
-
+import Session4B from './BASC/Session4Folder/Session4B/Session4B'
+import Session4Worksheet1B from './BASC/Session4Folder/Session4Worksheet1B/Session4Worksheet1B'
 
 
 
@@ -679,7 +680,26 @@ function Example() {
                             )
                           }
                         />
-
+                      <Route
+                        path="/session4b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session4B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session4worksheet1b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session4Worksheet1B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
                 </Routes>
             </AuthProvider>
         </BrowserRouter>
