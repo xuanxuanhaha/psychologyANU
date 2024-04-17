@@ -50,6 +50,10 @@ import Session4Worksheet3B from './BASC/Session4Folder/Session4Worksheet3B/Sessi
 import Session4Worksheet4B from './BASC/Session4Folder/Session4Worksheet4B/Session4Worksheet4B'
 import Session5B from './BASC/Session5Folder/Session5B/Session5B'
 import Session5Worksheet1B from './BASC/Session5Folder/Session5Worksheet1B/Session5Worksheet1B'
+import Session5Worksheet2B from './BASC/Session5Folder/Session5Worksheet2B/Session5Worksheet2B'
+import Session5Worksheet3B from './BASC/Session5Folder/Session5Worksheet3B/Session5Worksheet3B'
+import Session5Worksheet4B from './BASC/Session5Folder/Session5Worksheet4B/Session5Worksheet4B'
+import Session5Worksheet5B from './BASC/Session5Folder/Session5Worksheet5B/Session5Worksheet5B'
 
 
 
@@ -755,7 +759,46 @@ function Example() {
                             )
                           }
                         />
-
+                      <Route
+                        path="/session5worksheet2b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session5Worksheet2B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session5worksheet3b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session5Worksheet3B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session5worksheet4b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session5Worksheet4B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session5worksheet5b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session5Worksheet5B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
                 </Routes>
             </AuthProvider>
         </BrowserRouter>
