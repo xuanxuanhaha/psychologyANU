@@ -48,6 +48,8 @@ import Session4Worksheet1B from './BASC/Session4Folder/Session4Worksheet1B/Sessi
 import Session4Worksheet2B from './BASC/Session4Folder/Session4Worksheet2B/Session4Worksheet2B'
 import Session4Worksheet3B from './BASC/Session4Folder/Session4Worksheet3B/Session4Worksheet3B'
 import Session4Worksheet4B from './BASC/Session4Folder/Session4Worksheet4B/Session4Worksheet4B'
+import Session5B from './BASC/Session5Folder/Session5B/Session5B'
+import Session5Worksheet1B from './BASC/Session5Folder/Session5Worksheet1B/Session5Worksheet1B'
 
 
 
@@ -674,7 +676,7 @@ function Example() {
                           }
                         />
                       <Route
-                        path="/sessioneworksheet3b"
+                        path="/session3worksheet3b"
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               <Session3Worksheet3B />
@@ -728,6 +730,26 @@ function Example() {
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               <Session4Worksheet4B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session5b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session5B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session5worksheet1b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session5Worksheet1B />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )

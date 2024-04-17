@@ -115,7 +115,7 @@ const Session3Worksheet2B = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/sessioneworksheet3b`);
+    navigate(`/session3worksheet3b`);
   };
 
 
