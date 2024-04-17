@@ -77,7 +77,6 @@ const Session2Worksheet1B = () => {
 
             {
             <Typography title={'content'} position={'left'} color={'primary'}>
-              {/* Time Left: {formatTime(seconds)} */}
               <CountdownTimer initialCount={80} /> {/* Start countdown from 60 seconds */}
             </Typography>
           }

@@ -25,9 +25,20 @@ const CountdownTimer = ({ initialCount }) => {
     return () => clearInterval(interval);
   }, []);
 
+  function formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    let remainingSeconds = seconds % 60;
+
+    // Adding leading zero if the number is less than 10
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    remainingSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
+
+    return minutes + ':' + remainingSeconds;
+}
+
   return (
     <div>
-        Time Left: {timeLeft} seconds
+        Time Left: {formatTime(timeLeft)}
     </div>
   );
 };
