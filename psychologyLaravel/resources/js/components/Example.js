@@ -41,6 +41,10 @@ import Session2B from './BASC/Session2Folder/Session2B/Session2B'
 import Session2Worksheet1B from './BASC/Session2Folder/Session2Worksheet1B/Session2Worksheet1B'
 import Session3B from './BASC/Session3Folder/Session3B/Session3B'
 import Session3Worksheet1B from './BASC/Session3Folder/Session3Worksheet1B/Session3Worksheet1B'
+import Session3Worksheet2B from './BASC/Session3Folder/Session3Worksheet2B/Session3Worksheet2B'
+import Session3Worksheet3B from './BASC/Session3Folder/Session3Worksheet3B/Session3Worksheet3B'
+
+
 
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -650,6 +654,26 @@ function Example() {
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               <Session3Worksheet1B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session3worksheet2b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session3Worksheet2B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/sessioneworksheet3b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session3Worksheet3B />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
