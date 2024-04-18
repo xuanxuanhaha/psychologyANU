@@ -96,6 +96,8 @@ import Session1Worksheet1StartC from './C/Session1Folder/Session1Worksheet1Start
 import Session1WorksheetQ1C from './C/Session1Folder/Session1WorksheetQ1C/Session1WorksheetQ1C'
 import Session1WorksheetQ2C from './C/Session1Folder/Session1WorksheetQ2C/Session1WorksheetQ2C'
 import Session1WorksheetQ3C from './C/Session1Folder/Session1WorksheetQ3C/Session1WorksheetQ3C'
+import Session2C from './C/Session2Folder/Session2C/Session2C'
+import Session2Worksheet1C from './C/Session2Folder/Session2Worksheet1C/Session2Worksheet1C'
 
 
 
@@ -864,6 +866,26 @@ function Example() {
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               <Session1WorksheetQ3C />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session2C"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session2C />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session2worksheet1c"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session2Worksheet1C />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
