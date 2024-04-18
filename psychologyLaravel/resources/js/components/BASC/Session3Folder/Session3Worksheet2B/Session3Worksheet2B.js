@@ -471,7 +471,7 @@ const Session3Worksheet2B = () => {
                       <td>
                         {
                           tableAnswers.length > 1 &&
-                          <Button className={styles.btn} word={language === 'Englis' ? 'Delete' : 'Effacer'}  onClick={() => removeRow(index)} position={'center'} />
+                          <Button className={styles.btn} word={language === 'English' ? 'Delete' : 'Effacer'}  onClick={() => removeRow(index)} position={'center'} />
                         }
                       </td>
                     </tr>

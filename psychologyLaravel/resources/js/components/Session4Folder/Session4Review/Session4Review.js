@@ -479,7 +479,7 @@ const Session4Review = () => {
             {/* <Button word={'Exercise B-1'} onClick={next} position={'center'} outlook={'round'} /> */}
             <div className={styles.flex}>
                 <div className={styles.twoBtns}><Button word={language === 'English' ? 'Download Template' : 'Télécharger gabarit'} onClick={downloadCSV} controverse position={'left'} /></div>
-                <div className={styles.twoBtns}><Button word={language === 'English' ? 'Exercise C-1' : 'Suivant'} onClick={next} position={'right'} /></div>
+                <div className={styles.twoBtns}><Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'right'} /></div>
             </div>
             </div>
             </div>

@@ -65,6 +65,7 @@ const Session1B = () => {
             }
           <IconWordGrid imgsrc={lockericon} word={'12-15 mins'} />
           <div className={styles.containerheadset}>
+
           <Typography title={'description'} position={'center'}>
             {
               language === 'English' ? 

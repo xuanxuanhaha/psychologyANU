@@ -60,7 +60,7 @@ const Session4Worksheet1Start = () => {
             </Typography>
           </div>
 
-          <Button word={language === 'English' ? 'Start Worksheet1' : 'Commencer Fiche 1'} onClick={goToSession1WorksheetQ1} position={'center'} />
+          <Button word={language === 'English' ? 'NEXT' : 'Commencer Fiche 1'} onClick={goToSession1WorksheetQ1} position={'center'} />
 
         </div>
       </div>

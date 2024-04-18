@@ -52,7 +52,7 @@ const Session3 = () => {
           <Typography title={'title'}  position={'center'} color={'primary'}>
             {
                 language === 'English' ?
-                'Worksheet 3'
+                'Worksheet 2'
                 :
                 'Fiche 3'
             }
