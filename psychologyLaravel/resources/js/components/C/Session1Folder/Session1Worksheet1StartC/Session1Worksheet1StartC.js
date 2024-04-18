@@ -21,7 +21,7 @@ const Session1worksheet1startC = () => {
   }, []);
 
   const goToSession1WorksheetQ1 = () => {
-    navigate(`/session1worksheetq1b`);
+    navigate(`/session1worksheetq1c`);
   };
 
   return (

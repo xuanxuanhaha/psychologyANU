@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './session2worksheet1b.module.css';
+import styles from './session1worksheetq3c.module.css';
 import Navbar from '../../../Navbar/Navbar';
 import { useSelector } from 'react-redux';
 import Button from '../../../ReusableComponents/Button/Button';
@@ -8,7 +8,7 @@ import ProgressBar from '../../../ReusableComponents/ProgressBar/ProgressBar';
 import Typography from '../../../ReusableComponents/Typography/Typography';
 import CountdownTimer from '../../../ReusableComponents/CountdownTimer/CountdownTimer';
 
-const Session2Worksheet1B = () => {
+const Session1WorksheetQ3C = () => {
   const navigate = useNavigate();
   const userData = useSelector(state => state.auth.user);
   const language = userData.language;
@@ -60,7 +60,7 @@ const Session2Worksheet1B = () => {
   };
 
   const jump = () => {
-    navigate(`/session2end`);
+    navigate(`/session1end`);
   };
 
   return (
@@ -129,4 +129,4 @@ const Session2Worksheet1B = () => {
   );
 };
 
-export default Session2Worksheet1B;
+export default Session1WorksheetQ3C;
