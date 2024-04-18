@@ -101,6 +101,7 @@ import Session2Worksheet1C from './C/Session2Folder/Session2Worksheet1C/Session2
 import Session3C from './C/Session3Folder/Session3C/Session3C'
 import Session4C from './C/Session4Folder/Session4C/Session4C'
 import Session4Worksheet1C from './C/Session4Folder/Session4Worksheet1C/Session4Worksheet1C'
+import Session5C from './C/Session5Folder/Session5C/Session5C'
 
 
 
@@ -925,7 +926,16 @@ function Example() {
                             )
                           }
                         />
-
+                      <Route
+                        path="/session5C"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session5C />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
                 </Routes>
             </AuthProvider>
         </BrowserRouter>
