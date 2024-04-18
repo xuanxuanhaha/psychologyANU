@@ -22,40 +22,22 @@ class CreateIDTable extends Migration
         });
 
 
-        $totalEntries = 100;
-        $group1Count = (int) ($totalEntries * 0.60);
-        $group2Count = (int) ($totalEntries * 0.20);
-        $group3Count = $totalEntries - $group1Count - $group2Count;
+        $pattern = '213132123213231123321123';
+        $codes = [];
 
-        // Insert entries for Group 1
-        for ($i = 0; $i < $group1Count; $i++) {
-            \DB::table('c_ids')->insert([
-                'code' => Number::random(10), // Adjust length as needed
-                'group' => 1,
+        // Generate 72 random 6-digit numbers
+        for ($i = 0; $i < 72; $i++) {
+            $group = $pattern[$i % strlen($pattern)];  // Cycle through the pattern
+            $codes[] = [
+                'code' => random_int(100000, 999999),
+                'group' => $group,
                 'created_at' => now(),
                 'updated_at' => now()
-            ]);
+            ];
         }
 
-        // Insert entries for Group 2
-        for ($i = 0; $i < $group2Count; $i++) {
-            \DB::table('c_ids')->insert([
-                'code' => Number::random(10),
-                'group' => 2,
-                'created_at' => now(),
-                'updated_at' => now()
-            ]);
-        }
-
-        // Insert entries for Group 3
-        for ($i = 0; $i < $group3Count; $i++) {
-            \DB::table('c_ids')->insert([
-                'code' => Number::random(10),
-                'group' => 3,
-                'created_at' => now(),
-                'updated_at' => now()
-            ]);
-        }
+        // Insert the data into the database
+        \DB::table('c_ids')->insert($codes);
     
 
     }
