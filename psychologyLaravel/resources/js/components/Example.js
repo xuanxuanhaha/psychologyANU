@@ -29,34 +29,6 @@ import Session2Worksheet2Q1 from './Session2Folder/Session2Worksheet2Q1/Session2
 import Session2Worksheet2Q2 from './Session2Folder/Session2Worksheet2Q2/Session2Worksheet2Q2'
 import Session2Worksheet3start from './Session2Folder/Session2Worksheet3start/Session2Worksheet3start'
 
-// BASC
-import Session1B from './BASC/Session1Folder/Session1B/Session1B'
-import Session1GradingB from  './BASC/Session1Folder/Session1GradingB/Session1GradingB'
-import Session1worksheet1startB from './BASC/Session1Folder/Session1worksheet1startB/Session1worksheet1startB'
-import Session1WorksheetQ1B from './BASC/Session1Folder/Session1WorksheetQ1B/Session1WorksheetQ1B'
-import Session1WorksheetQ2B from './BASC/Session1Folder/Session1WorksheetQ2B/Session1WorksheetQ2B'
-import Session1worksheet2startB from './BASC/Session1Folder/Session1worksheet2startB/Session1worksheet2startB'
-import Session1worksheet2Q1B from './BASC/Session1Folder/Session1worksheet2Q1B/Session1worksheet2Q1B'
-import Session2B from './BASC/Session2Folder/Session2B/Session2B'
-import Session2Worksheet1B from './BASC/Session2Folder/Session2Worksheet1B/Session2Worksheet1B'
-import Session3B from './BASC/Session3Folder/Session3B/Session3B'
-import Session3Worksheet1B from './BASC/Session3Folder/Session3Worksheet1B/Session3Worksheet1B'
-import Session3Worksheet2B from './BASC/Session3Folder/Session3Worksheet2B/Session3Worksheet2B'
-import Session3Worksheet3B from './BASC/Session3Folder/Session3Worksheet3B/Session3Worksheet3B'
-import Session4B from './BASC/Session4Folder/Session4B/Session4B'
-import Session4Worksheet1B from './BASC/Session4Folder/Session4Worksheet1B/Session4Worksheet1B'
-import Session4Worksheet2B from './BASC/Session4Folder/Session4Worksheet2B/Session4Worksheet2B'
-import Session4Worksheet3B from './BASC/Session4Folder/Session4Worksheet3B/Session4Worksheet3B'
-import Session4Worksheet4B from './BASC/Session4Folder/Session4Worksheet4B/Session4Worksheet4B'
-import Session5B from './BASC/Session5Folder/Session5B/Session5B'
-import Session5Worksheet1B from './BASC/Session5Folder/Session5Worksheet1B/Session5Worksheet1B'
-import Session5Worksheet2B from './BASC/Session5Folder/Session5Worksheet2B/Session5Worksheet2B'
-import Session5Worksheet3B from './BASC/Session5Folder/Session5Worksheet3B/Session5Worksheet3B'
-import Session5Worksheet4B from './BASC/Session5Folder/Session5Worksheet4B/Session5Worksheet4B'
-import Session5Worksheet5B from './BASC/Session5Folder/Session5Worksheet5B/Session5Worksheet5B'
-
-
-
 import { useSelector, useDispatch } from 'react-redux';
 import { store, persistor } from './store';
 import { Provider } from 'react-redux';
@@ -89,6 +61,39 @@ import Session4End from './Session4Folder/Session4End/Session4End';
 
 import DataGenerate from './DataGenerate/DataGenerate'
 import Session5End from './Session5Folder/Session5End/Session5End';
+
+// BASC
+import Session1B from './BASC/Session1Folder/Session1B/Session1B'
+import Session1GradingB from  './BASC/Session1Folder/Session1GradingB/Session1GradingB'
+import Session1worksheet1startB from './BASC/Session1Folder/Session1worksheet1startB/Session1worksheet1startB'
+import Session1WorksheetQ1B from './BASC/Session1Folder/Session1WorksheetQ1B/Session1WorksheetQ1B'
+import Session1WorksheetQ2B from './BASC/Session1Folder/Session1WorksheetQ2B/Session1WorksheetQ2B'
+import Session1worksheet2startB from './BASC/Session1Folder/Session1worksheet2startB/Session1worksheet2startB'
+import Session1worksheet2Q1B from './BASC/Session1Folder/Session1worksheet2Q1B/Session1worksheet2Q1B'
+import Session2B from './BASC/Session2Folder/Session2B/Session2B'
+import Session2Worksheet1B from './BASC/Session2Folder/Session2Worksheet1B/Session2Worksheet1B'
+import Session3B from './BASC/Session3Folder/Session3B/Session3B'
+import Session3Worksheet1B from './BASC/Session3Folder/Session3Worksheet1B/Session3Worksheet1B'
+import Session3Worksheet2B from './BASC/Session3Folder/Session3Worksheet2B/Session3Worksheet2B'
+import Session3Worksheet3B from './BASC/Session3Folder/Session3Worksheet3B/Session3Worksheet3B'
+import Session4B from './BASC/Session4Folder/Session4B/Session4B'
+import Session4Worksheet1B from './BASC/Session4Folder/Session4Worksheet1B/Session4Worksheet1B'
+import Session4Worksheet2B from './BASC/Session4Folder/Session4Worksheet2B/Session4Worksheet2B'
+import Session4Worksheet3B from './BASC/Session4Folder/Session4Worksheet3B/Session4Worksheet3B'
+import Session4Worksheet4B from './BASC/Session4Folder/Session4Worksheet4B/Session4Worksheet4B'
+import Session5B from './BASC/Session5Folder/Session5B/Session5B'
+import Session5Worksheet1B from './BASC/Session5Folder/Session5Worksheet1B/Session5Worksheet1B'
+import Session5Worksheet2B from './BASC/Session5Folder/Session5Worksheet2B/Session5Worksheet2B'
+import Session5Worksheet3B from './BASC/Session5Folder/Session5Worksheet3B/Session5Worksheet3B'
+import Session5Worksheet4B from './BASC/Session5Folder/Session5Worksheet4B/Session5Worksheet4B'
+import Session5Worksheet5B from './BASC/Session5Folder/Session5Worksheet5B/Session5Worksheet5B'
+
+
+// C
+import Session1C from './C/Session1Folder/Session1C/Session1C'
+import Session1GradingC from './C/Session1Folder/Session1GradingC/Session1GradingC'
+import Session1Worksheet1StartC from './C/Session1Folder/Session1Worksheet1StartC/Session1Worksheet1StartC'
+
 
 
 
@@ -799,6 +804,40 @@ function Example() {
                             )
                           }
                         />
+
+
+                      {/* C */}
+                      <Route
+                        path="/session1C"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session1C />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session1gradingc"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session1GradingC />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session1worksheet1startc"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session1Worksheet1StartC />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+
                 </Routes>
             </AuthProvider>
         </BrowserRouter>

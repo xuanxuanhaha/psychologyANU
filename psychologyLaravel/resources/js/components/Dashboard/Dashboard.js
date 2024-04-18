@@ -67,7 +67,7 @@ const Dashboard = () => {
       navigate(`/session${sessionNumber}B`);
     }
     else{
-      console.log('uncaught usergroup', userGroup)
+      navigate(`/session${sessionNumber}C`);
     }
 
   };
