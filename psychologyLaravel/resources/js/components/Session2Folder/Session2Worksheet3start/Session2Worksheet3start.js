@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import Button from '../../ReusableComponents/Button/Button';
 import ProgressBar from '../../ReusableComponents/ProgressBar/ProgressBar';
 import Typography from '../../ReusableComponents/Typography/Typography';
+import HeadphoneSvg from '../../ReusableComponents/HeadphoneSvg/HeadphoneSvg';
 
 const Session2Worksheet3start = () => {
   const navigate = useNavigate();
@@ -70,6 +71,8 @@ const Session2Worksheet3start = () => {
                 }
             </Typography>
           </div>
+
+          <HeadphoneSvg />
 
           <Button word={'Exercise C-1'} onClick={next} position={'center'} />
 

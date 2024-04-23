@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import Button from '../../../ReusableComponents/Button/Button';
 
 import Typography from '../../../ReusableComponents/Typography/Typography';
+import HeadphoneSvg from '../../../ReusableComponents/HeadphoneSvg/HeadphoneSvg';
 
 const Session5B = () => {
   const navigate = useNavigate();
@@ -91,16 +92,8 @@ const Session5B = () => {
             </Typography>
             </div>
 
-            <div className={styles.containerheadset}>
-          <Typography title={'description'} position={'center'}>
-            {
-              language === 'English' ? 
-              'This session may include audios, please use your earphone.' :
-              'Cette session pourrait inclure des sections audio, assure-toi d’avoir des écouteurs.'
-            }
-              
-          </Typography>
-          </div>
+           <HeadphoneSvg />
+           
           <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
           </div>
         </div>

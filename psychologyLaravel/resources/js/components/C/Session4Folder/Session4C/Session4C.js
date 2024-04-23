@@ -8,6 +8,7 @@ import IconWordGrid from '../../../ReusableComponents/IconWordGrid/IconWordGrid'
 
 import Typography from '../../../ReusableComponents/Typography/Typography';
 import lockericon from './../../../../assets/assessment/oclock.jpg';
+import HeadphoneSvg from '../../../ReusableComponents/HeadphoneSvg/HeadphoneSvg';
 
 const Session4C = () => {
   const navigate = useNavigate();
@@ -76,16 +77,7 @@ const Session4C = () => {
             
             </div>
 
-            <div className={styles.containerheadset}>
-          <Typography title={'description'} position={'center'}>
-            {
-              language === 'English' ? 
-              'This session may include audios, please use your earphone.' :
-              'Cette session pourrait inclure des sections audio, assure-toi d’avoir des écouteurs.'
-            }
-              
-          </Typography>
-          </div>
+            <HeadphoneSvg />
           <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
           </div>
         </div>

@@ -16,6 +16,7 @@ import BorderContent from '../../ReusableComponents/BorderContent/BorderContent'
 import TextField from '../../ReusableComponents/TextField/TextField';
 import Helppop from '../../ReusableComponents/Helppop/Helppop';
 import Scale from '../../ReusableComponents/Scale/Scale';
+import HeadphoneSvg from '../../ReusableComponents/HeadphoneSvg/HeadphoneSvg';
 
 const Session4 = () => {
   const navigate = useNavigate();
@@ -101,16 +102,8 @@ const Session4 = () => {
             </Typography>
             </div>
 
-            <div className={styles.containerheadset}>
-          <Typography title={'description'} position={'center'}>
-            {
-              language === 'English' ? 
-              'This session may include audios, please use your earphone.' :
-              'Cette session pourrait inclure des sections audio, assure-toi d’avoir des écouteurs.'
-            }
-              
-          </Typography>
-          </div>
+            <HeadphoneSvg />
+            
           <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
           </div>
         </div>

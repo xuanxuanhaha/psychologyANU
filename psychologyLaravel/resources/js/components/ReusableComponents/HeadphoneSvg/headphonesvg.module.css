@@ -1,0 +1,16 @@
+
+.containerheadset{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: baseline;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+.containerheadset p{
+    font-size: 18px;
+}

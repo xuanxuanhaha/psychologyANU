@@ -7,6 +7,7 @@ import lockericon from './../../../../assets/assessment/oclock.jpg';
 import Button from '../../../ReusableComponents/Button/Button';
 import Typography from '../../../ReusableComponents/Typography/Typography';
 import IconWordGrid from '../../../ReusableComponents/IconWordGrid/IconWordGrid';
+import HeadphoneSvg from '../../../ReusableComponents/HeadphoneSvg/HeadphoneSvg';
 
 const Session1B = () => {
   const navigate = useNavigate();
@@ -64,18 +65,9 @@ const Session1B = () => {
               </Typography>
             }
           <IconWordGrid imgsrc={lockericon} word={'12-15 mins'} />
-          <div className={styles.containerheadset}>
+          
+          <HeadphoneSvg />
 
-          <Typography title={'description'} position={'center'}>
-            {
-              language === 'English' ? 
-              'This session may include audios, please use your earphone.' :
-              'Cette session pourrait inclure des sections audio, assure-toi d’avoir des écouteurs.'
-            }
-              
-          </Typography>
-          </div>
-            
           <Button word={
               language === 'English' ?
               'Start Now'
