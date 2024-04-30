@@ -34,7 +34,7 @@ class ForgetPasswordMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Apprendre à s’épanouir - mot de passe')
+        return $this->subject('Learning To Thrive - Forget password')
         ->view('emails.forgetpassword');
     }
 }

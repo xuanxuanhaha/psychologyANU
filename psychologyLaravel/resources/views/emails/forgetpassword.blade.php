@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Apprendre à s’épanouir - mot de passe</title>
+    <title>Learning To Thrive - Forget Password</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
