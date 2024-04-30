@@ -1,0 +1,49 @@
+nohup: schedule_work.sh: No such file or directory
+nohup: schedule_work.sh: No such file or directory
+nohup: schedule_work.sh: No such file or directory
+nohup: ./schedule_work.sh: Permission denied
+nohup: schedule_work.sh: No such file or directory
+nohup: ./schedule_work.sh: Permission denied
+Schedule worker started successfully.
+
+[2023-11-10T13:26:00+00:00] Execution #1 output:
+[2023-11-10T13:26:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:27:00+00:00] Execution #2 output:
+[2023-11-10T13:27:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:28:00+00:00] Execution #3 output:
+[2023-11-10T13:28:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:29:00+00:00] Execution #4 output:
+[2023-11-10T13:29:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:30:00+00:00] Execution #5 output:
+[2023-11-10T13:30:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:31:00+00:00] Execution #6 output:
+[2023-11-10T13:31:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:32:00+00:00] Execution #7 output:
+[2023-11-10T13:32:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:33:00+00:00] Execution #8 output:
+[2023-11-10T13:33:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:34:00+00:00] Execution #9 output:
+[2023-11-10T13:34:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:35:00+00:00] Execution #10 output:
+[2023-11-10T13:35:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:36:00+00:00] Execution #11 output:
+[2023-11-10T13:36:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:37:00+00:00] Execution #12 output:
+[2023-11-10T13:37:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:38:00+00:00] Execution #13 output:
+[2023-11-10T13:38:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
+
+[2023-11-10T13:39:00+00:00] Execution #14 output:
+[2023-11-10T13:39:00+00:00] Running scheduled command: '/usr/bin/php' 'artisan' send:session_start_reminder > '/dev/null' 2>&1
