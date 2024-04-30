@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Séance 5 – Fin du programme </title>
+    <title>Learning To Thrive Session 5</title>
     <style>
         /* Add your custom styles here */
         body {
@@ -73,16 +73,17 @@
 </head>
 <body>
     <div class="container">
-        <img src="http://35.182.37.175/images/montreallogo.jpg" alt="Website Logo" class="logo">
-        <p>Bonjour, </p>
+    <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
+        <p>Hello, </p>
         <!-- <p>Dear {{ $user->email }},</p> -->
         <p class="content">
-            Congratulations on completing Session 5! Please go to <a href="http://ls.sondages.umontreal.ca/882837?lang=fr">Other Links</a>.
+            Congratulations on completing Session 5!
+             <!-- Please go to <a href="http://ls.sondages.umontreal.ca/882837?lang=fr">Other Links</a>. -->
         </p>
-        <p>Félicitations ! Tu viens de finir la dernière séance de l’outil Apprendre à s’épanouir de l’UdeM ! Merci d’y avoir participé. À travers cet outil, tu as pu développer des compétences et prendre connaissances des ressources qui te sont disponibles. Nous t’encourageons à poursuivre l’utilisation de ses compétences et ses ressources dans tes études.</p>
-        <p>Nous te souhaitons une belle continuation dans le reste de tes études! Nous espérons que tu as apprécié notre outil. Si tu as des questions ou des préoccupations, n’hésite pas à nous contacter au <a href="mailto:apprendreasepanouir@umontreal.ca">apprendreasepanouir@umontreal.ca</a>. </p>
-        <p>Cordialement,</p>
-        <p>L’équipe de Apprendre à s’épanouir</p>
+        <p>Congratulations! You have just finished the last session of the Learning To Thrive! Thank you for participating. Through this tool, you have been able to develop skills and become aware of the resources available to you. We encourage you to continue using these skills and resources in your studies.</p>
+        <p>We wish you continued success in the rest of your studies! We hope you enjoyed our tool. If you have any questions or concerns, do not hesitate to contact us at <a href="mailto:zhangqixuan17@gmail.ccom">zhangqixuan17@gmail.com</a>.</p>
+        <p>Sincerely,</p>
+        <p>Learning To Thrive</p>
     </div>
 </body>
 </html>

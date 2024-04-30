@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Apprendre à s’épanouir -Tu es connecté.e!</title>
+    <title>Learning To Thrive Welcome!</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -46,13 +46,13 @@
 </head>
 <body>
     <div class="container">
-        <img src="http://35.182.37.175/images/montreallogo.jpg" alt="Website Logo" class="logo">
+    <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Bonjour,</p>
-        <p>Bienvenue à Apprendre à s’épanouir !</p>
-        <p>Tu t’es bien connecté.e à l’outil. Tu peux maintenant effectuer ta première séance. Nous espérons que cet outil te permettra d’atteindre tes objectifs en rapport avec l’inquiétude scolaire. Si tu as des questions ou des préoccupations, n’hésite pas à nous contacter au <a href="mailto:apprendreasepanouir@umontreal.ca">apprendreasepanouir@umontreal.ca</a>.</p>
-        <p>Cordialement</p>
-        <p>L’équipe de Apprendre à s’épanouir</p>
+        <p>Hello,</p>
+        <p>Welcome to Learning To Thrive !</p>
+        <p>You have successfully logged into the tool. You can now start your first session. We hope this tool will help you achieve your goals related to academic anxiety. If you have any questions or concerns, do not hesitate to contact us at<a href="mailto:zhangqixuan17@gmail.com">zhangqixuan17@gmail.com</a>.</p>
+        <p>Sincerely</p>
+        <p>Learning To Thrive</p>
         <!-- <div class="footer">
             <p>&copy; {{ date('Y') }} Your Website. All rights reserved.</p>
         </div> -->

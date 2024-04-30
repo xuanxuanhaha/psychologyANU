@@ -46,13 +46,13 @@
 </head>
 <body>
     <div class="container">
-        <img src="http://35.182.37.175/images/montreallogo.jpg" alt="Website Logo" class="logo" />
+        <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Bonjour,</p>
+        <p>Hello,</p>
         <!-- <p>Please click here to <a href='{{ $resetLink }}'>Reset Password</a>.</p> -->
-        <p>Tu as soumis une demande de changement de mot de passe. <a href='{{ $resetLink }}'>Voici le lien pour le changer</a>.</p>
-        <p>Bonne journée,</p>
-        <p>L’équipe de Apprendre à s’épanouir</p>
+        <p>You have submitted a request to change your password. <a href='{{ $resetLink }}'>Reset Link</a>.</p>
+        <p>Have a good day,</p>
+        <p>Learning To Thrive</p>
         <!-- <div class="footer">
             <p>&copy; {{ date('Y') }} Your Website. All rights reserved.</p>
         </div> -->

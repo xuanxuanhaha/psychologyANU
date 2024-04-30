@@ -16,7 +16,7 @@ const Session5C = () => {
   const [sessionId, setSessionId] = useState(0);
   const [seconds, setSeconds] = useState(80);
   const [sessionStarted, setSessionStarted] = useState(false);
-  const audioUrl = 'http://35.182.37.175/audios/guidedmeditation.mp3';
+  const audioUrl = 'http://3.25.76.79/audios/BASC_guided_thought_script.wav';
   const audioRef = useRef(null);
 
   const [linkClicked, setLinkClicked] = useState(0)

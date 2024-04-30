@@ -46,10 +46,10 @@
 </head>
 <body>
     <div class="container">
-        <img src="http://35.182.37.175/images/montreallogo.jpg" alt="Website Logo" class="logo">
+        <img src="http://3.25.76.79/images/montreallogo.jpg" alt="Website Logo" class="logo">
         <p>Bonjour, </p>
         <p>Ceci est un rappel que nous attendons que tu reviennes à Apprendre à s'épanouir pour terminer la session {{ $user->sessionid }}. Reviens et continue ton voyage avec nous afin de mieux vivre ton parcours académique.</p>
-        <p>Pour continuer, tu peux aller a <a href="http://35.182.37.175/dashboard">dashboard</a>.</p>
+        <p>Pour continuer, tu peux aller a <a href="http://3.25.76.79/dashboard">dashboard</a>.</p>
         <p>Cordialement,</p>
         <p>L’équipe de Apprendre à s’épanouir</p>
     </div>

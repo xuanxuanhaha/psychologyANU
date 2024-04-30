@@ -75,7 +75,7 @@ const Session3Worksheet1Q3 = () => {
                 </Typography>
                 <br />
                 <div className={styles.audioBtnBox}>
-                    <AudioPlayer audioPath={'http://35.182.37.175/audios/guidedmeditation.mp3'} />
+                    <AudioPlayer audioPath={'http://3.25.76.79/audios/BASC_guided_thought_script.wav'} />
                 </div>
                 <BorderContent className={styles.greyBorderContent}>
                    

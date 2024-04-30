@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Apprendre à s’épanouir -Séance 2</title>
+    <title>Learning To Thrive Session 2</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -46,16 +46,16 @@
 </head>
 <body>
     <div class="container">
-        <img src="http://35.182.37.175/images/montreallogo.jpg" alt="Website Logo" class="logo">
-        <p>Bonjour, </p>
+        <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
+        <p>Hello, </p>
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Félicitations d’avoir accompli la deuxième séance! Nous espérons que tu as trouvé cette séance instructive et que tu remarques ton progrès. </p>
-        <p>La prochaine séance est bloquée puisque cette semaine il y a quelques tâches à mettre en pratique. N’oublie pas de remplir les fiches incluses dans le programme pendant cette semaine pour maximiser ce que l’outil t’offre. Tu recevras un courriel dans 6 à 7 jours pour te rappeler que tu as accès à la troisième séance.</p>
-        <p>Nous tenons à te remercier pour ton engagement soutenu et nous espérons que tu es satisfaite avec ton expérience jusqu’à maintenant.</p>
-        <p>Si tu as des questions sur l’outil ou sur la suite n’hésitez pas à nous contacter au <a href="mailto:apprendreasepanouir@umontreal.ca">apprendreasepanouir@umontreal.ca</a>.</p>
-        <p>Au plaisir de te voir la semaine prochaine!</p>
-        <p>Cordialement,</p>
-        <p>L’équipe de Apprendre à s’épanouir</p>
+        <p>Congratulations on completing the second session! We hope you found this session informative and that you are noticing your progress. </p>
+        <p>The next session is locked because there are a few tasks to practice this week. Don't forget to fill out the worksheets included in the program during this week to maximize what the tool offers you. You will receive an email in 6 to 7 days to remind you that you have access to the third session.</p>
+        <p>We would like to thank you for your continued commitment and we hope you are satisfied with your experience so far.</p>
+        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:zhangqixuan17@gmail.ccom">zhangqixuan17@gmail.com</a>.</p>
+        <p>Looking forward to seeing you next week!</p>
+        <p>Sincerely,</p>
+        <p>Learning To Thrive</p>
     </div>
 </body>
 </html>

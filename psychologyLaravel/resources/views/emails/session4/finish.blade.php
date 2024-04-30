@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Séance 4 – Fin du programme </title>
+    <title>Learning To Thrive Session 4</title>
     <style>
         /* Add your custom styles here */
         body {
@@ -73,15 +73,15 @@
 </head>
 <body>
 <div class="container">
-        <img src="http://35.182.37.175/images/montreallogo.jpg" alt="Website Logo" class="logo">
-        <p>Bonjour, </p>
+        <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
+        <p>Hello, </p>
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Excellent travail pour la troisième séance de l’outil Apprendre à s’épanouir de l’UdeM! Nous espérons sincèrement que tu as trouvé ceci utile pour diminuer ton inquiétude scolaire. </p>
-        <p>La dernière séance est bloquée jusqu’à la semaine prochaine puisqu’il y a des compétences à mettre en pratique. N’oublie pas de remplir les fiches incluses dans le programme pendant cette semaine pour maximiser ce que l’outil t’offre. Tu recevras un courriel dans 6 à 7 jours pour te rappeler que tu as accès à la dernière séance. </p>
-        <p>Si tu as des questions ou des préoccupations, n’hésite pas à nous laisser savoir, nous sommes là pour t’accompagner. Tu peux nous rejoindre au <a href="mailto:apprendreasepanouir@umontreal.ca">apprendreasepanouir@umontreal.ca</a>.</p>
-        <p>Nous te remercions encore de ta participation active et nous avons hâte de te voir la semaine prochaine pour notre dernière rencontre! </p>
-        <p>Cordialement,</p>
-        <p>L’équipe de Apprendre à s’épanouir</p>
+        <p>Great job on the fourth session of the Learning To Thrive! We sincerely hope that you found this helpful in reducing your academic anxiety. </p>
+        <p>The next session is locked until next week as there are skills to practice. Don't forget to fill out the worksheets included in the program during this week to maximize what the tool offers you. You will receive an email in 6 to 7 days to remind you that you have access to the last session. </p>
+        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:zhangqixuan17@gmail.ccom">zhangqixuan17@gmail.com</a>.</p>
+        <p>We thank you again for your active participation and look forward to seeing you next week for our next meeting!</p>
+        <p>Sincerely,</p>
+        <p>Learning To Thrive</p>
     </div>
 </body>
 </html>

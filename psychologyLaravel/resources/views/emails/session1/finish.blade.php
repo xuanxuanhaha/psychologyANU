@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Apprendre à s’épanouir -Séance 1</title>
+    <title>Learning To Thrive Session 1</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -46,15 +46,15 @@
 </head>
 <body>
     <div class="container">
-        <img src="http://35.182.37.175/images/montreallogo.jpg" alt="Website Logo" class="logo">
+        <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Bonjour, </p>
-        <p>Nous tenons à te féliciter d’avoir terminé la première séance! Nous espérons que ton expérience a été enrichissante et intéressante.</p>
-        <p>Si tu le souhaites, tu peux passer immédiatement à la séance suivante ou prendre une pause d’un ou deux jours. Nous t’enverrons des rappels par courriel pour que tu poursuives l’utilisation de l’outil.</p>
-        <p>Si tu as des questions sur l’outil ou sur la suite ,n’hésite pas à nous contacter au <a href="mailto:apprendreasepanouir@umontreal.ca">apprendreasepanouir@umontreal.ca</a>.</p>
-        <p>Encore une fois, félicitations d’avoir franchi la première étape, et nous sommes impatients de te retrouver à la prochaine séance.</p>
-        <p>Cordialement,</p>
-        <p>L’équipe de Apprendre à s’épanouir</p>
+        <p>Hello, </p>
+        <p>We would like to congratulate you on completing the first session! We hope your experience was enriching and interesting.</p>
+        <p>If you wish, you can immediately move on to the next session or take a break for a day or two. We will send you email reminders to continue using the tool.</p>
+        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:zhangqixuan17@gmail.ccom">zhangqixuan17@gmail.com</a>.</p>
+        <p>Once again, congratulations on reaching the first milestone, and we look forward to seeing you in the next session.</p>
+        <p>Sincerely,</p>
+        <p>Learning To Thrive</p>
     </div>
 </body>
 </html>
