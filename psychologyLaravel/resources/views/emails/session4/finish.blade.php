@@ -16,7 +16,7 @@
             max-width: 600px;
             margin: 20px auto;
             padding: 20px;
-            background: #ffffff;
+            background: #7358df;
             border: 1px solid #dddddd;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -61,7 +61,7 @@
             font-size: 16px; /* Adjust as needed */
             line-height: 1.5;
             margin-bottom: 10px;
-            color: #666; /* Slightly softer color */
+            color: white; /* Slightly softer color */
         }
         .footer {
             text-align: center;

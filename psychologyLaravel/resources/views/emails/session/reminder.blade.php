@@ -15,7 +15,7 @@
             max-width: 600px;
             margin: 20px auto;
             padding: 20px;
-            background: #ffffff;
+            background: #7358df;
             border: 1px solid #dddddd;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -34,7 +34,7 @@
             font-size: 16px; /* Adjust as needed */
             line-height: 1.5;
             margin-bottom: 10px;
-            color: #666; /* Slightly softer color */
+            color: white; /* Slightly softer color */
         }
         .footer {
             text-align: center;
@@ -46,12 +46,12 @@
 </head>
 <body>
     <div class="container">
-        <img src="http://3.25.76.79/images/montreallogo.jpg" alt="Website Logo" class="logo">
-        <p>Bonjour, </p>
-        <p>Ceci est un rappel que nous attendons que tu reviennes à Apprendre à s'épanouir pour terminer la session {{ $user->sessionid }}. Reviens et continue ton voyage avec nous afin de mieux vivre ton parcours académique.</p>
-        <p>Pour continuer, tu peux aller a <a href="http://3.25.76.79/dashboard">dashboard</a>.</p>
-        <p>Cordialement,</p>
-        <p>L’équipe de Apprendre à s’épanouir</p>
+        <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
+        <p>Hello, </p>
+        <p>This is a reminder that we are waiting for you to return to Learning To Thrive to complete session {{ $user->sessionid }}. Come back and continue your journey with us to better experience your academic path.</p>
+        <p>To continue, you can go to <a href="http://3.25.76.79/dashboard">dashboard</a>.</p>
+        <p>Sincerely,</p>
+        <p>Learning To Thrive</p>
     </div>
 </body>
 </html>

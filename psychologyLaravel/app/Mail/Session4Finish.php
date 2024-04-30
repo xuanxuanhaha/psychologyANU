@@ -30,7 +30,7 @@ class Session4Finish extends Mailable
      */
     public function build()
     {
-        return $this->subject('Séance 4 – Fin du programme')
+        return $this->subject('Learning To Thrive Session Session 4')
         ->view('emails.session4.finish');
     }
 }

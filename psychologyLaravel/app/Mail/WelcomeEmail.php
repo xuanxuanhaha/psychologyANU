@@ -29,7 +29,7 @@ class WelcomeEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Apprendre à s’épanouir -Tu es connecté.e!')
+        return $this->subject('Welcome to Learning To Thrive!')
                 ->view('emails.welcome');
     }
 }
