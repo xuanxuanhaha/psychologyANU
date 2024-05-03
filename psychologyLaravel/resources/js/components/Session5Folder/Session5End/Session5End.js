@@ -12,6 +12,7 @@ const Session5End = () => {
   const userData = useSelector(state => state.auth.user);
   const [sessionId, setSessionId] = useState(0);
   const language = userData.language
+  const [allowBack, setAllowBack] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,7 +34,8 @@ const Session5End = () => {
     axios.put(`/api/sessions/5`, data)
       .then(response => {
         console.log('uncaught response', response)
-        
+        setAllowBack(true)
+
       })
       .catch(error => {
         // Handle any errors
@@ -42,7 +44,9 @@ const Session5End = () => {
   };
 
   const gotodashboard = () => {
-    navigate(`/dashboard`);
+    if(allowBack){
+      navigate(`/dashboard`);
+    }
   };
 
   return (
@@ -83,7 +87,7 @@ const Session5End = () => {
             </div>
 
             <div className={styles.option_btn_div}>
-                  <button className={`${styles.btn} ${styles.button_word_style}`}  onClick={() => gotodashboard()}>
+                  <button className={allowBack ? `${styles.btn} ${styles.button_word_style}` : `${styles.button_word_style} ${styles.disabled}`}  onClick={() => gotodashboard()}>
                     {language === 'English' ? 'Back To Dashboard' : 'Retour au tableau de bord'} 
                   </button>
             </div>
