@@ -80,7 +80,7 @@ const Session1worksheet2Q1 = () => {
            
                   {
                     language === 'English' ?
-                    <p>These are but a few examples of the<b>resources that university groups can provide you </b>to help you succeed at your student goals and live your student values. Here are some additional examples of various groups and the resources they provide.</p>
+                    <p>These are but a few examples of the <b>resources that university groups can provide you </b>to help you succeed at your student goals and live your student values. Here are some additional examples of various groups and the resources they provide.</p>
                     :
                     <p>Ceux-ci ne sont que quelques exemples des <b>ressources que les groupes universitaires peuvent te fournir</b> pour t'aider à réussir dans tes objectifs étudiants et vivre tes valeurs étudiantes. Voici quelques exemples additionnels des différents groupes et des ressources qu’ils fournissent.</p>
                   }

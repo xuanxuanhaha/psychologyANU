@@ -264,7 +264,7 @@ const Session2Worksheet3Q2 = () => {
           <Typography title={'content'} position={'left'} contentwidth={'100%'} >
               {
                 language === 'English' ?
-                <p>The remaining timeslots indicate your free time. Consider the activities that you planned in Exercise 3, and select <b>up to TWO</b>activities that you are most confident in accomplishing,
+                <p>The remaining timeslots indicate your free time. Consider the activities that you planned in Exercise 3, and select <b>up to TWO</b> activities that you are most confident in accomplishing,
                  taking into account the group resources that you can use. You may select just one activity if you do not have two activities. Make sure you select activities that you are definitely able to accomplish with the help of your group resources.</p>
                 :
                 <p>Les cases vides indiquent ton temps libre. Observe les activités que tu avais planifiées dans l’exercice 3 et choisis <b>jusqu’à DEUX</b> activités que tu es le plus certain.e de pouvoir accomplir tout en prenant compte des ressources du groupe que tu anticipes utiliser. Tu peux choisir juste une activité si tu n’as pas deux activités. Assure-toi de choisir des activités que tu es absolument capable d’accomplir avec l’aide des ressources du groupe choisi.</p>

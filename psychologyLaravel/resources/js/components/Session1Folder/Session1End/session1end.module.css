@@ -249,3 +249,8 @@ text-align: center;
   text-align: center;
   margin: auto;
 }
+
+.disabled{
+  background-color: grey;
+  cursor: not-allowed !important;
+}
