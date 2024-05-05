@@ -122,8 +122,8 @@ const ForgetPassword = (props) => {
   
               <div className={styles.input_boxes_row}>
                 <button className={`${styles.btn} ${styles.sign_up_btn}`} onClick={send}>
-                  {/* Send */}
-                  Envoyer
+                  Send
+                  {/* Envoyer */}
                 </button>
               </div>
 

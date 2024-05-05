@@ -29,7 +29,7 @@ class ForgetPasswordController extends Controller
                     'used' => 0,
                     'created_at' => Carbon::now()
                 ]);
-                $resetLink = 'http://3.25.76.79/resetpassword?token=' . $token . '&userid=' . $user->id;
+                $resetLink = 'http://127.0.0.1:8000/resetpassword?token=' . $token . '&userid=' . $user->id;
                 Mail::to($user->email)->send(new ForgetPasswordMail($user, $resetLink));
 
                 return array('success'=>true, 'message'=>'we have send you an email to update your password');
