@@ -17,7 +17,7 @@ class DataGenerateController extends Controller
     {
         $attributes = $request->all();
         // Todo: change to admin email. Only admin or account with password can visit
-        if((empty($attributes['password']) || $attributes['password'] !== '1-2=-1') && ($attributes['username'] !== 'dcardenas06@hotmail.com' && $attributes['username'] !== 'shijingjing0316@gmail.com' && $attributes['username'] !== 'zhangqixuan17@outlook.com' )) {
+        if((empty($attributes['password']) || $attributes['password'] !== '1-2=-1') && ($attributes['username'] !== 'dcardenas06@hotmail.com' && $attributes['username'] !== 'shijingjing0316@gmail.com' && $attributes['username'] !== 'learning2thriveanu@gmail.com' )) {
             return array('success'=>false, 'error'=>'Invalid credentials. Please try again.');
         }
         

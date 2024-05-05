@@ -51,7 +51,7 @@
         <!-- <p>Dear {{ $user->email }},</p> -->
         <p>Great job on the third session of the Learning To Thrive! We sincerely hope that you found this helpful in reducing your academic anxiety. </p>
         <p>The next session is locked until next week as there are skills to practice. Don't forget to fill out the worksheets included in the program during this week to maximize what the tool offers you. You will receive an email in 6 to 7 days to remind you that you have access to the last session. </p>
-        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:zhangqixuan17@gmail.ccom">zhangqixuan17@gmail.com</a>.</p>
+        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
         <p>We thank you again for your active participation and look forward to seeing you next week for our next meeting!</p>
         <p>Sincerely,</p>
         <p>Learning To Thrive</p>

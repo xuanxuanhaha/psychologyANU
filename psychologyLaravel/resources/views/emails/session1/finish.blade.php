@@ -51,7 +51,7 @@
         <p>Hello, </p>
         <p>We would like to congratulate you on completing the first session! We hope your experience was enriching and interesting.</p>
         <p>If you wish, you can immediately move on to the next session or take a break for a day or two. We will send you email reminders to continue using the tool.</p>
-        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:zhangqixuan17@gmail.ccom">zhangqixuan17@gmail.com</a>.</p>
+        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
         <p>Once again, congratulations on reaching the first milestone, and we look forward to seeing you in the next session.</p>
         <p>Sincerely,</p>
         <p>Learning To Thrive</p>

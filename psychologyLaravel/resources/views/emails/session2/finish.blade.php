@@ -52,7 +52,7 @@
         <p>Congratulations on completing the second session! We hope you found this session informative and that you are noticing your progress. </p>
         <p>The next session is locked because there are a few tasks to practice this week. Don't forget to fill out the worksheets included in the program during this week to maximize what the tool offers you. You will receive an email in 6 to 7 days to remind you that you have access to the third session.</p>
         <p>We would like to thank you for your continued commitment and we hope you are satisfied with your experience so far.</p>
-        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:zhangqixuan17@gmail.ccom">zhangqixuan17@gmail.com</a>.</p>
+        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
         <p>Looking forward to seeing you next week!</p>
         <p>Sincerely,</p>
         <p>Learning To Thrive</p>

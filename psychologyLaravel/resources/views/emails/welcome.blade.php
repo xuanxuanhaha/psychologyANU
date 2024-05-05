@@ -50,7 +50,7 @@
         <!-- <p>Dear {{ $user->email }},</p> -->
         <p>Hello,</p>
         <p>Welcome to Learning To Thrive !</p>
-        <p>You have successfully logged into the tool. You can now start your first session. We hope this tool will help you achieve your goals related to academic anxiety. If you have any questions or concerns, do not hesitate to contact us at<a href="mailto:zhangqixuan17@gmail.com">zhangqixuan17@gmail.com</a>.</p>
+        <p>You have successfully logged into the tool. You can now start your first session. We hope this tool will help you achieve your goals related to academic anxiety. If you have any questions or concerns, do not hesitate to contact us at<a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
         <p>Sincerely</p>
         <p>Learning To Thrive</p>
         <!-- <div class="footer">

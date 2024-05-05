@@ -81,7 +81,7 @@
              <!-- Please go to <a href="http://ls.sondages.umontreal.ca/882837?lang=fr">Other Links</a>. -->
         </p>
         <p>Congratulations! You have just finished the last session of the Learning To Thrive! Thank you for participating. Through this tool, you have been able to develop skills and become aware of the resources available to you. We encourage you to continue using these skills and resources in your studies.</p>
-        <p>We wish you continued success in the rest of your studies! We hope you enjoyed our tool. If you have any questions or concerns, do not hesitate to contact us at <a href="mailto:zhangqixuan17@gmail.ccom">zhangqixuan17@gmail.com</a>.</p>
+        <p>We wish you continued success in the rest of your studies! We hope you enjoyed our tool. If you have any questions or concerns, do not hesitate to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
         <p>Sincerely,</p>
         <p>Learning To Thrive</p>
     </div>
