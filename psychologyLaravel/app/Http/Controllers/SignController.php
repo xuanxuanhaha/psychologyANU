@@ -27,6 +27,11 @@ class SignController extends Controller
                 $user = Users::where('username', $usernameid)->first();
                 $user->group = $userIdRecord->group;
             }
+            if(empty($user->group)){
+                $userNameId = $user->username;
+                $userGroup = UserIds::where('id', $userNameId)->first()->group;
+                $user->group = $userGroup;
+            }
             if($user){
                 if(Hash::check($attributes['password'], $user['password'])){
                     return array('success'=> true, 'user'=> $user);
