@@ -32,7 +32,7 @@ const Wordings = (props) => {
                         <i> GOALS </i> 
                         </u>
                     </b>
-                    written in Exercise B-4 in Session 2. What are some activities you can do to help you achieve each of those goals? You mentioned three groups
+                    written in Exercise B-1 in Session 2. What are some activities you can do to help you achieve each of those goals? You mentioned three groups
                     {groupA ? <b> {groupA}, </b> : ''} {groupB ? <b>{groupB}</b> : ''}{groupC ? ', and' : ''} {groupC ? <b>{groupC}</b> : null}
                     , which may have resources to help you achieve your goals. As such, when thinking about the activities below, consider what group resources
                     you could use to help you achieve your goal. The following questions should help you think about this: 

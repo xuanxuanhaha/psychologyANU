@@ -26,23 +26,23 @@ const Session2Worksheet1B = () => {
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
 
-    audioRef.current = new Audio(audioUrl); // Create audio object on mount
+    // audioRef.current = new Audio(audioUrl); // Create audio object on mount
   }, []);
 
-  useEffect(() => {
-    let interval = null;
-    if (seconds > 0) {
-      interval = setInterval(() => {
-        setSeconds(prevSeconds => prevSeconds - 1);
-      }, 1000);
-    }
+  // useEffect(() => {
+  //   let interval = null;
+  //   if (seconds > 0) {
+  //     interval = setInterval(() => {
+  //       setSeconds(prevSeconds => prevSeconds - 1);
+  //     }, 1000);
+  //   }
 
-    if (seconds === 60) {
-      audioRef.current.play().catch(error => console.log('Error playing the audio:', error));
-    }
+  //   if (seconds === 60) {
+  //     audioRef.current.play().catch(error => console.log('Error playing the audio:', error));
+  //   }
 
-    return () => clearInterval(interval);
-  }, [seconds, sessionStarted]);
+  //   return () => clearInterval(interval);
+  // }, [seconds, sessionStarted]);
 
   const formatTime = (totalSeconds) => {
     const minutes = Math.floor(totalSeconds / 60);
@@ -53,10 +53,10 @@ const Session2Worksheet1B = () => {
   const handleStartSession = () => {
     setLinkClicked(true)
 
-    audioRef.current.play().then(() => {
-      audioRef.current.pause(); // Play and pause to unlock further playback
-      setSessionStarted(true);
-    }).catch(err => console.error('Error unlocking audio:', err));
+    // audioRef.current.play().then(() => {
+    //   audioRef.current.pause(); // Play and pause to unlock further playback
+    //   setSessionStarted(true);
+    // }).catch(err => console.error('Error unlocking audio:', err));
   };
 
   const jump = () => {

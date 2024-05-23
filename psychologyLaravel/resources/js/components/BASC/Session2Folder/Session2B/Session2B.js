@@ -69,7 +69,16 @@ const Session2B = () => {
             <Typography title={'content'} position={'left'} color={'primary'} >
               {
                 language === 'English' ?
-                'Last session you learned how academic worry is a problem for many students, and that it leads to cognitive, affective and behavioural difficulties, which could impact your mental health.'
+                'In Session 1,  you learned how academic worry is a problem for many students, and that it leads to cognitive, affective and behavioural difficulties, which could impact your mental health. You also learned that worry functions as avoidance, although it may make you feel relieved in the short-term, it often leads to long-term negative consequences, and contributes to worry in the future.'
+                :
+                <p>Lors de cette séance, nous allons revoir les concepts et les exercices que nous avons appris lors des dernières séances.</p>
+              }
+            </Typography>
+            <br />
+            <Typography title={'content'} position={'left'} color={'primary'} >
+              {
+                language === 'English' ?
+                'In this session, you will learn some skills to cope with your worry.'
                 :
                 <p>Lors de cette séance, nous allons revoir les concepts et les exercices que nous avons appris lors des dernières séances.</p>
               }
@@ -87,7 +96,7 @@ const Session2B = () => {
             
             </div>
 
-            <HeadphoneSvg />
+            {/* <HeadphoneSvg /> */}
 
           <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
           </div>

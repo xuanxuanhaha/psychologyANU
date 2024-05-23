@@ -88,7 +88,7 @@ const Session4B = () => {
             
             </div>
 
-            <HeadphoneSvg />
+            {/* <HeadphoneSvg /> */}
 
           <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
           </div>

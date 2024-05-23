@@ -285,7 +285,7 @@ const Signup = () => {
                   }}
                   checked={isStudent}
                 />
-                <Typography className={styles.onlyStudentWording}>&nbsp;&nbsp;I am student</Typography>
+                <Typography className={styles.onlyStudentWording}>&nbsp;&nbsp;I am a student</Typography>
                 {/* <Typography className={styles.onlyStudentWording}>&nbsp;&nbsp;Je suis un.e étudiant.e</Typography> */}
 
               </Grid>

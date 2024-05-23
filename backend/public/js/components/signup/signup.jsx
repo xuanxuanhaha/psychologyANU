@@ -217,7 +217,7 @@ class SignUpComponent extends React.Component {
                     onChange={(e) => this.setState({ isStudent: !this.state.isStudent, isStudentError: false })}
                     checked={this.state.isStudent}
                   />
-                  &nbsp;&nbsp;I am student
+                  &nbsp;&nbsp;I am a student
                   </label>
                   
                 </div>

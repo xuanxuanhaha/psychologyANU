@@ -27,7 +27,7 @@ const HeadphoneSvg = () => {
 
             <Typography title={'description'} position={'center'}>
               {
-                'This session may include audios, please use your earphone.' 
+                'This session may include audios, please use your earphones.' 
               }
             </Typography>
             </div>
