@@ -13,14 +13,12 @@ const Dashboard = () => {
   const [language, setLanguage] = useState('French')
 
   const [userGroup, setUserGroup] = useState(0)
-  console.log('uncaught userData2', userData, state.auth.user)
 
 
   useEffect(() => {
     window.scrollTo(0, 0);
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
-    console.log('uncaught userData', userData, state.auth.user)
 
     if(userData){
       getUserSessionInfo
