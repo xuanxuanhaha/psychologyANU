@@ -69,7 +69,7 @@ const Session4C = () => {
             <Typography title={'content'} position={'left'}  >
               {
                 language === 'English' ?
-                'In this session you will learn about ways to look after your health and wellbeing. Being informed is an important place to start to maintain wellbeing. Below is a link to a website, please spend the next 20 minutes learning by reading through the information provided on the website. You will hear a timer when 20 minutes has past at which point you may finish what you are reading or click ‘Next’ to finish the session.'
+                'In this session you will learn about ways to look after your health and wellbeing. Knowledge is power! Being informed is an important way to manage your wellbeing. Please explore the information and resources on the below website, please spend the next 20 minutes learning by reading through the information provided on the website. You will hear a timer when 20 minutes has past at which point you may finish what you are reading or click ‘Next’ to finish the session.'
                 :
                 <p>Lors de cette séance, nous allons revoir les concepts et les exercices que nous avons appris lors des dernières séances.</p>
               }
@@ -77,7 +77,7 @@ const Session4C = () => {
             
             </div>
 
-            <HeadphoneSvg />
+            {/* <HeadphoneSvg /> */}
           <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
           </div>
         </div>

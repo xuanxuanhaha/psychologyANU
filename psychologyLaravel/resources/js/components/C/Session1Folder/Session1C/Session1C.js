@@ -64,8 +64,14 @@ const Session1C = () => {
                 Fiche 1 Comprendre le souci quant à la performance académique
               </Typography>
             }
+
+            <Typography title={'content'}  position={'center'} color={'primary'} contentwidth={'80%'}>
+              
+                Knowledge is power! Being informed is an important way to manage your wellbeing. Please explore the information and resources on the below website.
+              
+            </Typography>
           <IconWordGrid imgsrc={lockericon} word={'12-15 mins'} />
-          <HeadphoneSvg />
+          {/* <HeadphoneSvg /> */}
             
           <Button word={
               language === 'English' ?

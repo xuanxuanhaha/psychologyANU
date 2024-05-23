@@ -69,7 +69,7 @@ const Session1WorksheetQ3C = () => {
       <div className={styles.background_image} id="background_image">
         <div className={styles.whole_border}>
           <Typography title={'subtitle'} position={'left'}>
-            {language === 'English' ? 'Second Session' : 'Première session'}
+            {language === 'English' ? 'First Session' : 'Première session'}
           </Typography>
           <ProgressBar percentageNo={100} language={language} />
    
@@ -86,7 +86,7 @@ const Session1WorksheetQ3C = () => {
             <Typography title={'content'} position={'left'} >
             {
                   language === 'English' ?
-                  'Please choose any of the tasks and play them till you are told the session is over.'
+                  'Please select any of the tasks and work on it for 20 minutes.'
                   :
                   'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
                 }

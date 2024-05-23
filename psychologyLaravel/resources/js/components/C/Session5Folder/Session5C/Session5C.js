@@ -101,7 +101,7 @@ const Session5C = () => {
             <Typography title={'content'} position={'left'} >
             {
                   language === 'English' ?
-                  'In this session you will learn about ways to look after your health and wellbeing. Being informed is an important place to start to maintain wellbeing. Below is a link to a website, please spend the next 20 minutes learning by reading through the information provided on the website. You will hear a timer when 20 minutes has past at which point you may finish what you are reading or click ‘Next’ to finish the session.'
+                  'In this session you will learn about ways to look after your health and wellbeing. Knowledge is power! Being informed is an important way to manage your wellbeing. Please explore the information and resources on the below website, please spend the next 20 minutes learning by reading through the information provided on the website. You will hear a timer when 20 minutes has past at which point you may finish what you are reading or click ‘Next’ to finish the session.'
                   :
                   'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
                 }

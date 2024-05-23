@@ -86,7 +86,7 @@ const Session2Worksheet1C = () => {
             <Typography title={'content'} position={'left'} >
             {
                   language === 'English' ?
-                  'Please choose any of the tasks and play them till you are told the session is over.'
+                  'Please select any of the tasks and work on it for 20 minutes.'
                   :
                   'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
                 }
