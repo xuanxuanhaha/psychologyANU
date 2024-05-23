@@ -184,7 +184,7 @@ const Session5Worksheet3B = () => {
                     }
                 </Typography>
 
-                <ProgressBar percentageNo={50} language={language} />
+                <ProgressBar percentageNo={60} language={language} />
 
                 <Session5Worksheet3BWording
                     language={language} 

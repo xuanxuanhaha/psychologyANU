@@ -193,15 +193,15 @@ const Session4Worksheet2B = () => {
                     {
                         language === 'English' ?
                         <React.Fragment>
-                            <p> Isolation, Self-Judgment, Avoidance, and Over-Identification can be overcome. This exercise will introduce 3 concepts that oppose Isolation, Self-Judgment, Avoidance, and Over-Identification.</p>
+                            <p> This exercise will introduce 3 concepts that oppose Isolation, Self-Judgment, Avoidance, and Over-Identification to help you overcome them. </p>
                             <p>
-                                Community connection&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vs.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Isolation
+                                Common Humanity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vs.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Isolation
                                 <br />
-                                Kindness to all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vs.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Self-Judgment
+                                Self-Kindness&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vs.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Self-Judgment
                                 <br />
                                 Mindfulness&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vs.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoidance/ Over-Identification
                             </p>
-                            <p>
+                            {/* <p>
                                 You mentioned three groups as part of your university community: 
                                 {
                                     groupA !== '' ? ' ' + groupA : ''
@@ -213,7 +213,7 @@ const Session4Worksheet2B = () => {
                                     groupC !== '' ? ', and ' + groupC : ''
                                 }
                                 . In this exercise, the groups that you belong to can help you overcome Isolation, Self-Judgment, Avoidance, and Over-Identification. 
-                            </p>
+                            </p> */}
                         </React.Fragment>
                         :
                         <React.Fragment>
@@ -247,9 +247,9 @@ const Session4Worksheet2B = () => {
                         language === 'English' ?
                         <React.Fragment>
                             <Typography title={'content'}  position={'center'} color={'primary'}>
-                                <b><u>Community connection </u></b>
+                                <b><u>Common Humanity  </u></b>
                             </Typography>
-                            <p>In contrast to isolation, community connection involves recognising our connection to others, particularly in our confusion, worries, sorrows, imperfections, and weaknesses. </p>
+                            <p>In contrast to isolation, common humanity involves recognising our connection to others, particularly in our confusion, worries, sorrows, imperfections, and weaknesses. We can recognise our common humanity by relating personal experiences to the experiences of others who are also suffering, thus putting our own situation into a larger perspective. </p>
                         </React.Fragment>
                         :
                         <React.Fragment>
@@ -259,7 +259,7 @@ const Session4Worksheet2B = () => {
                             <p>Contrairement à l’isolement, faire partie d’une communauté implique de reconnaitre que nous sommes connectées aux autres, particulièrement dans notre confusion, nos inquiétudes, nos chagrins, nos imperfections et nos faiblesses.</p>
                         </React.Fragment>
                     }
-                    {
+                    {/* {
                         language === 'English' ?
                         <React.Fragment>
                             <p>As members of the university community, we are connected to this community. We can recognize our commonalities with other members of the university community by relating our personal experiences to the experiences of others in our university community who are also suffering, thus putting our own situation into a larger group perspective. </p>
@@ -268,7 +268,7 @@ const Session4Worksheet2B = () => {
                         <React.Fragment>
                             <p>En tant que membres de la communauté universitaire, nous faisons partie de cette communauté. Nous pouvons reconnaitre nos points communs avec les autres membres de la communauté universitaire en mettant en relation nos expériences personnelles avec les expériences d'autres membres de la communauté universitaire qui souffrent également, plaçant ainsi notre propre situation dans une perspective de groupe plus large.</p>
                         </React.Fragment>
-                    }
+                    } */}
                 </BorderContent>
                 <br />
                 {
@@ -280,7 +280,7 @@ const Session4Worksheet2B = () => {
                                     <i> issue </i>
                                 </u>
                             </b>
-                            written in Worksheet 1. In the space below, write about the various circumstances underlying the academic-related issue that would cause most members of the university community to react the way you did. Also, think about ways in which your experience was connected to the experience of most members of your university community. This might include acknowledging that being a member of your university community means being imperfect, and that all people have these sorts of distressing or upsetting experiences.</i></Typography>
+                            written in Worksheet 1. In the space below, write about the various circumstances underlying the academic-related issue that would cause most people to react the way you did. Also, think about ways in which your experience was connected to the larger human experience. This might include acknowledging that being human means being imperfect, and that all people have these sorts of distressing or upsetting experiences. </i></Typography>
                         </React.Fragment>
                         :
                         <React.Fragment>
@@ -298,7 +298,7 @@ const Session4Worksheet2B = () => {
                     }}
                     placeholder={
                         language === 'English' ?
-                        `e.g. “I think most members of my university community would feel overwhelmed if they had to deal with what I’m dealing with, it’s a normal feeling to have.”\n“It’s fine that I get distracted from studying every once in a while; no members of my university community can focus on studying forever.”\n“What matters is that I refocus after getting distracted. All of the members of my university community face struggles; if they can overcome, then so can I. “`
+                        `e.g. “I think most people would feel overwhelmed if they had to deal with what I’m dealing with, it’s a normal feeling to have.”\n“It’s fine that I get distracted from studying every once in awhile; no one can focus on studying forever.”\n“What matters is that I refocus after getting distracted. Everyone faces struggles; if they can overcome, then so can I. “`
                         :
                         'P. ex. « Je pense que la majorité des membres de ma communauté universitaire se sentiraient dépassés s’ils devaient faire face à ce que je fais face, c’est un sentiment normal à avoir. »\n« C’est correct que je me sente distrait.e de mes études de temps en temps; aucun membre de ma communauté universitaire ne peut toujours se concentrer sur les études. »\n« Ce qui importe est que je me reconcentre après que je me suis distrait. Tous les membres de ma communauté universitaire font face à des difficultés; s’ils peuvent les surmonter, je peux aussi. »'
                     }
@@ -314,10 +314,9 @@ const Session4Worksheet2B = () => {
                         language === 'English' ?
                         <React.Fragment>
                             <Typography title={'content'}  position={'center'} color={'primary'}>
-                                <b><u>Kindness to all</u></b>
+                                <b><u>Self-Kindness</u></b>
                             </Typography>
-                            <p>In contrast to self-judgment, kindness to all involves extending forgiveness, sensitivity, and patience to all, including <b>yourself</b>. </p>
-                            <p>Consider the kindness that you would extend to a fellow member of your university community. Kindness to all involves affirming that, you, as a member of your university community, deserve love, happiness, and affection, even after failure. As a member of the university community, you can extend forgiveness, sensitivity, and patience to <b>yourself</b>.</p>
+                            <p>In contrast to self-judgment, self-kindness involves extending forgiveness, sensitivity, and patience to all aspects of oneself. Self-kindness involves affirming that one deserves love, happiness, and affection, even after failure. </p>
                         </React.Fragment>
                         :
                         <React.Fragment>
@@ -334,13 +333,13 @@ const Session4Worksheet2B = () => {
                     language === 'English' ?
                     <React.Fragment>
                         <Typography title={'content'} position={'left'} contentwidth={'100%'}>
-                            <i>Think of yourself as a member of the university community. In the box below, write kind and understanding words towards yourself in relation to the academic-related 
+                            <i>Write some kind and understanding words towards yourself in relation to the academic-related 
                             <b className={styles.colorPrimary} onClick={openDialogWithTemplateRef}>
                                 <u>
                                     <i> issue </i>
                                 </u>
                             </b>
-                             written in Worksheet 1. This can be difficult, so imagine what you might say to another member of the university community if they confided the same situation and feelings to you. Alternatively, imagine what a kind and compassionate member of the university community might say to you. <i>(Write <b>at least THREE</b> sentences)</i>. </i>
+                            written in Worksheet 1. This can be difficult, so imagine what you might say to a close friend if they confided the same situation and feelings to you. Alternatively, imagine what a kind and compassionate person (e.g., the Dalai Lama, Jesus, Mother Theresa, someone you actually know) might say to you. <i>(Write <b>at least THREE</b> sentences)</i>. </i>
                         </Typography>
                     </React.Fragment>
                     :
@@ -361,7 +360,7 @@ const Session4Worksheet2B = () => {
                 }}
                 placeholder={
                     language === 'English' ?
-                    "e.g. “I understand that you are stressed, it is a very heavy workload after all.”\n“Your concern about this exam shows that you still care about your studies, and that you are still trying. I’m glad that you’re not giving up.”\n“I know that you ended up using TikTok the last time you tried to study, but it is okay to take a break from studying every once in awhile. If you really cannot concentrate because of Facebook, perhaps you could switch off your Internet the next time you study.”\n“Keep at it, I believe in you.”"
+                    "e.g. “I understand that you are stressed, it is a very heavy workload after all.”\n“Your concern about this exam shows that you still care about your studies, and that you are still trying. I’m glad that you’re not giving up.”\n“I know that you ended up using Facebook the last time you tried to study, but it is okay to take a break from studying every once in awhile. If you really cannot concentrate because of Facebook, perhaps you could switch off your Internet the next time you study.”\n“Keep at it, I believe in you.”"
                     :
                     'P. ex. « Je comprends que tu sois stressé.e, c’est une charge de travail très lourde. »\n« Ta préoccupation pour cet examen montre que tu es toujours investi.e dans tes études, et que tu essaies encore. Je suis content.e que tu n’abandonnes pas. »\n« Je sais que tu as fini par utiliser TikTok la dernière fois que tu as essayé d’étudier, mais c’est correct de prendre une pause de tes études de temps en temps. Si tu ne peux vraiment pas te concentrer à cause de TikTok, tu pourrais peut-être éteindre ton Internet. »\n« Continue, je crois en toi. »'
                 }

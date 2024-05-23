@@ -35,7 +35,7 @@ const Session5Worksheet4B = () => {
             Fifth Session
           </Typography>
 
-          <ProgressBar percentageNo={40} language={language} />
+          <ProgressBar percentageNo={80} language={language} />
 
 
           <div>

@@ -200,7 +200,7 @@ const Session4Review = () => {
             }
           </Typography>
 
-          <ProgressBar percentageNo={25} language={language} />
+          <ProgressBar percentageNo={20} language={language} />
 
           <Typography title={'content'} position={'left'}  contentwidth={'100%'}>
               {
@@ -302,7 +302,7 @@ const Session4Review = () => {
               <b>
                 {
                   language === 'English' ?
-                  'ACTIVITY (TIES) YOU PLACTICED PRIOR TO SESSION 4'
+                  'ACTIVITY (TIES) YOU PRACTICED PRIOR TO SESSION 4'
                   :
                   'ACTIVITÉ(S) QUE TU AS PRATIQUÉE(S) AVANT LA SÉANCE 4'
                 }

@@ -137,7 +137,7 @@ const Session5Worksheet1B = () => {
   const downloadCSV = () => {
     // Create a CSV content string (replace with your own data)
     // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
-    const csvHeader = ",Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Comments (How did you feel? What did you notice?)";
+    const csvHeader = ", Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Comments (How did you feel? What did you notice?)";
     const tableanswers = tableAnswers
     
     const csvContent1 = `6h,${tableanswers[6]['Sat'] || ''},${tableanswers[6]['Sun'] || ''},${tableanswers[6]['Mon'] || ''},${tableanswers[6]['Tue'] || ''},${tableanswers[6]['Wed'] || ''},${tableanswers[6]['Thu'] || ''},${tableanswers[6]['Fri'] || ''},${tableanswers[6]['Comm'] || ''}`;
@@ -195,7 +195,7 @@ const Session5Worksheet1B = () => {
             }
           </Typography>
 
-          <ProgressBar percentageNo={25} language={language} />
+          <ProgressBar percentageNo={20} language={language} />
 
           <Typography title={'content'} position={'left'}  contentwidth={'100%'}>
               {
@@ -297,7 +297,7 @@ const Session5Worksheet1B = () => {
               <b>
                 {
                   language === 'English' ?
-                  'ACTIVITY (TIES) YOU PLACTICED PRIOR TO SESSION 4'
+                  'ACTIVITY (TIES) YOU PRACTICED PRIOR TO SESSION 4'
                   :
                   'ACTIVITÉ(S) QUE TU AS PRATIQUÉE(S) AVANT LA SÉANCE 4'
                 }
@@ -325,13 +325,13 @@ const Session5Worksheet1B = () => {
               language === 'English' ?
                 <div className={styles.row}>
                     <div className={`${styles.small_div} ${styles.borderTrans}`}></div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Saturday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Sunday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Monday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Tuesday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Wednesday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Thursday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Sunday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Monday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Tuesday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Wednesday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Thursday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Saturday</div>
                     <div className={`${styles.small_div} ${styles.borderGGTG}`} >Comments (How did you feel? What did you notice?)</div>
                 </div>
                 :
@@ -469,12 +469,22 @@ const Session5Worksheet1B = () => {
                 }
                 
             </div>
+            <br />
+
+            <Typography title={'content'} position={'left'} color={'primary'} contentwidth={'100%'}>
+            {
+                  language === 'English' ?
+                  'You did a great job in practising Self-compassion skills, well done! '
+                  :
+                  "Tu as fait du bon travail dans ta pratique des compétences d’autocompassion, bravo !"
+                }
+            </Typography>
 
 
             {/* <Button word={'Exercise B-1'} onClick={next} position={'center'} outlook={'round'} /> */}
             <div className={styles.flex}>
                 <div className={styles.twoBtns}><Button word={language === 'English' ? 'Download Template' : 'Télécharger gabarit'} onClick={downloadCSV} controverse position={'left'} /></div>
-                <div className={styles.twoBtns}><Button word={language === 'English' ? 'Exercise C-1' : 'Suivant'} onClick={next} position={'right'} /></div>
+                <div className={styles.twoBtns}><Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'right'} /></div>
             </div>
             </div>
             </div>

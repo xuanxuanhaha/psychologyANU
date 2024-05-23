@@ -73,7 +73,7 @@ const Session3worksheet1q4Wording = (props) => {
                     </p>
                     <br />
                     <p><u><i>2.	Please complete this record sheet at the end of each day</i></u> </p>
-                    <p>We would like you to note how often you practice self-compassion. You can set a time each day to practice the thought exercise for the academic-related issue written in Worksheet 1 or you can practice it when negative thoughts come to mind.  At the end of the day, please record how <u>many times</u>, <u>for how long</u> in total you practice self-compassion in the correspondent columns to indicate whether you focus on the academic-related issue written in Worksheet 1 or other negative thoughts, and write down any comments you may have related to your practice. You can download this record sheet and record your practice.&nbsp;
+                    <p>We would like you to note how often you practice self-compassion. You can set a time each day to practice the thought exercise for the academic-related issue written in Worksheet 1 or you can practice it when negative thoughts come to mind.  At the end of the day, please record how <u>many time</u>, <u>for how long</u> in total you practice self-compassion in the correspondent columns to indicate whether you focus on the academic-related issue written in Worksheet 1 or other negative thoughts, and write down any comments you may have related to your practice. You can download this record sheet and record your practice.&nbsp;
                         <b><u>Please make sure you have this sheet filled out and with you for the next session, as you will fill this information in the program.</u></b>
                     </p>
                 </React.Fragment>

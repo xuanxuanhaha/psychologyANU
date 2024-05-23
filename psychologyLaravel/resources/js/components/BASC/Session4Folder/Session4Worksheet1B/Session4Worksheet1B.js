@@ -283,7 +283,7 @@ const Session4Worksheet1B = () => {
                         <p>Consider the 
                         <b onClick={openDialogThoughtWithTemplateRef} className={styles.modalWording}>
                           <u>
-                          <i>thoughts</i>
+                          <i> thoughts</i>
                           </u>
                         </b>
                         ,&nbsp;

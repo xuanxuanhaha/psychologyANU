@@ -59,7 +59,7 @@ const Session4Worksheet1Q1 = () => {
                     }
                 </Typography>
 
-                <ProgressBar percentageNo={75} language={language} />
+                <ProgressBar percentageNo={80} language={language} />
 
                 <Typography title={'content'} position={'center'} color={'primary'}>EXCERCISE E-1</Typography>
                 <br />

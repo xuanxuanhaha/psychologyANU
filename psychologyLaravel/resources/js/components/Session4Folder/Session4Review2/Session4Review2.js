@@ -188,7 +188,7 @@ const Session4Review2 = () => {
                     }
                 </Typography>
 
-                <ProgressBar percentageNo={50} language={language} />
+                <ProgressBar percentageNo={40} language={language} />
 
                 <Session4Review2Wording
                     language={language} 

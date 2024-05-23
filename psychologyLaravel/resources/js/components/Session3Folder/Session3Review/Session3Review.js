@@ -266,7 +266,7 @@ const Session3Review = () => {
               <b>
                 {
                   language === 'English' ?
-                  'ACTIVITY (TIES) YOU PLACTICED PRIOR TO SESSION 3'
+                  'ACTIVITY (TIES) YOU PRACTICED PRIOR TO SESSION 3'
                   :
                   'ACTIVITÉ(S) QUE TU AS PRATIQUÉE(S) AVANT LA SÉANCE 3'
                 }
