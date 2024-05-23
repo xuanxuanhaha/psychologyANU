@@ -158,22 +158,16 @@ const Session1worksheet3Q2 = () => {
                 <Helppop
                   label={
                     language === 'English' ?
-                    'How positive do your feel about this group?'
+                    'How positive do you feel about this group?'
                     :
                     'À quel point est ce groupe positif pour toi?'
                   }
                   helptext={
                     language === 'English' ?
                     <p>
-                      0: none
+                      1: Not positive at all 
                       <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
+                      7: Extremely positive
                     </p>
                     :
                     <p>
@@ -231,15 +225,9 @@ const Session1worksheet3Q2 = () => {
                   helptext={
                     language === 'English' ?
                     <p>
-                      0: none
+                      1: Not at all representative or typical
                       <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
+                      7: Extremely representative or typical
                     </p>
                     :
                     <p>
@@ -297,15 +285,9 @@ const Session1worksheet3Q2 = () => {
                   helptext={
                     language === 'English' ?
                     <p>
-                      0: none
+                      1: Extremely low levels of support 
                       <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
+                      7: Extremely high levels of support
                     </p>
                     :
                     <p>
@@ -360,24 +342,8 @@ const Session1worksheet3Q2 = () => {
                     :
                     'Combien de jours par mois consacres-tu à des activités liées à ce groupe ?'
                   }
-                  helptext={
-                    language === 'English' ?
-                    <p>
-                      0: none
-                      <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
-                    </p>
-                    :
-                    <p>
-                      nombre de jours
-                    </p>
-                  } />
+                  noHelppop
+                  />
               </div>
               <div className={styles.right}>
                 <div className={styles.right1}>
@@ -427,15 +393,9 @@ const Session1worksheet3Q2 = () => {
                   helptext={
                     language === 'English' ?
                     <p>
-                      0: none
+                      1: Not at aligned 
                       <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
+                      7: Extremely well aligned
                     </p>
                     :
                     <p>
@@ -493,15 +453,9 @@ const Session1worksheet3Q2 = () => {
                   helptext={
                     language === 'English' ?
                     <p>
-                      0: none
+                      1: Do not identify at all
                       <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
+                      7: Identify very strongly
                     </p>
                     :
                     <p>
@@ -559,15 +513,9 @@ const Session1worksheet3Q2 = () => {
                   helptext={
                     language === 'English' ?
                     <p>
-                      0: none
+                      1: Not at all important
                       <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
+                      7: Extremely important
                     </p>
                     :
                     <p>

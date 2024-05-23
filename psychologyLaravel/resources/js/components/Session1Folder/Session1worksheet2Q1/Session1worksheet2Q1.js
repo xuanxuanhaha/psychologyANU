@@ -4,7 +4,7 @@ import styles from './session1worksheet2q1.module.css';
 import Navbar from '../../Navbar/Navbar';
 import { useSelector } from 'react-redux';
 import lockericon from './../../../assets/assessment/oclock.jpg';
-import avoid_cycle from './../../../assets/surveys/avoid_cycle.png'
+import avoid_cycle_clear from './../../../assets/surveys/avoid_cycle_clear.jpg'
 import avoid_cycle_france from './../../../assets/surveys/avoid_cycle_france.png'
 import Button from '../../ReusableComponents/Button/Button';
 
@@ -170,7 +170,7 @@ const Session1worksheet2Q1 = () => {
                     <br />
                     {
                       language === 'English' ?
-                      <img src={avoid_cycle} className={styles.avoid_cycle_img} alt="Avoidance Cycle" />
+                      <img src={avoid_cycle_clear} className={styles.avoid_cycle_img} alt="Avoidance Cycle" />
                       :
                       <img src={avoid_cycle_france} className={styles.avoid_cycle_img} alt="Avoidance Cycle" />
                     }

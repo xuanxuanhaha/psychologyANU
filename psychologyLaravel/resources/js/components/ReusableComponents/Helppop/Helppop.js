@@ -4,7 +4,7 @@ import Typography from '../Typography/Typography';
 import Slider from '@mui/material/Slider';
 
 const Helppop = (props) => {
-  const { helptext, label, step, marks, min, max, onChange, slidervalue } = props
+  const { helptext, label, noHelppop, step, marks, min, max, onChange, slidervalue } = props
 
   return (  
         <div className={styles.answer_textarea}>
@@ -13,9 +13,16 @@ const Helppop = (props) => {
                     {label}
                 </Typography>
             </div>
-            <div className={styles.help_tip}>
+            {
+                noHelppop ?
+                <div ></div>
+                :
+                <div className={styles.help_tip}>
                 {helptext} 
             </div>
+
+            }
+            
         </div>
   );
 };

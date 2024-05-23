@@ -85,7 +85,7 @@ const Session1worksheet2Q2 = () => {
           <Typography title={'content'} position={'left'} color={'primary'} >
               {
                 language === 'English' ?
-                'In this section, you will learn some skills to cope with your worry.'
+                'In this session, you will learn some skills to cope with your worry.'
                 :
                 'Dans ce programme, tu apprendras des compétences pour faire face à ton inquiétude.'
               }

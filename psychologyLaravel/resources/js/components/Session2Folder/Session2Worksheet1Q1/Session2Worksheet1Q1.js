@@ -124,15 +124,9 @@ const Session2worksheet1Q1 = () => {
                   helptext={
                     language === 'English' ?
                     <p>
-                      0: none
+                      1: Extremely dissimilar
                       <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
+                      7: Extremely similar
                     </p>
                     :
                     <p>
@@ -190,15 +184,9 @@ const Session2worksheet1Q1 = () => {
                   helptext={
                     language === 'English' ?
                     <p>
-                      0: none
+                      1: Extremely incompatible
                       <br />
-                      1: mild
-                      <br />
-                      2: moderate
-                      <br />
-                      3: severe
-                      <br />
-                      4: extreme
+                      7: Extremely compatible
                     </p>
                     :
                     <p>

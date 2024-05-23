@@ -4,7 +4,7 @@ import styles from './session1worksheet4start.module.css';
 import Navbar from '../../Navbar/Navbar';
 import { useSelector } from 'react-redux';
 import lockericon from './../../../assets/assessment/oclock.jpg';
-import english_chart from './english_chart.jpg'
+import english_chart from './english_chart_v2.jpg'
 import french_chart from './french_chart.png'
 import avoid_cycle_france from './../../../assets/surveys/avoid_cycle_france.png'
 import Button from '../../ReusableComponents/Button/Button';
