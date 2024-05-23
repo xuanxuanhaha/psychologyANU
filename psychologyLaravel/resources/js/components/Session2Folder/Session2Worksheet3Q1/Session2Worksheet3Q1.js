@@ -494,7 +494,7 @@ const Session2Worksheet3Q1 = () => {
 
           <div className={styles.flex}>
               <div className={styles.twoBtns}><Button word={language === 'English' ? 'Download Template' : 'Télécharger gabarit'} onClick={downloadCSV} controverse position={'left'} /></div>
-              <div className={styles.twoBtns}><Button word={'Exercise C-1'} onClick={next} position={'right'} /></div>
+              <div className={styles.twoBtns}><Button word={'Exercise C-2'} onClick={next} position={'right'} /></div>
           </div>
 
         </div>

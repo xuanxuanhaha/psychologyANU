@@ -55,7 +55,7 @@ const Session4Intro = () => {
           </div>
 
 
-          <Button word={'Exercise C-1'} onClick={next} position={'center'} />
+          <Button word={'Exercise D-1'} onClick={next} position={'center'} />
 
         </div>
       </div>

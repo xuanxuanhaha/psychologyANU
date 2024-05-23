@@ -72,7 +72,7 @@ const Session2Worksheet3start = () => {
             </Typography>
           </div>
 
-          <HeadphoneSvg />
+          {/* <HeadphoneSvg /> */}
 
           <Button word={'Exercise C-1'} onClick={next} position={'center'} />
 

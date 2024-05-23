@@ -390,7 +390,7 @@ const Session3Worksheet1Q2 = () => {
                     }
                 </BorderContent>
 
-                <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
+                <Button word={language === 'English' ? 'Exercise D-3' : 'Suivant'} onClick={next} position={'center'} />
 
             </div>
             </div>

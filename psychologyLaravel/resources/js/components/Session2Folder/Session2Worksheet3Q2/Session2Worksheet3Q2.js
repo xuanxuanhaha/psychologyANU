@@ -130,7 +130,7 @@ const Session2Worksheet3Q2 = () => {
   const downloadCSV = () => {
     // Create a CSV content string (replace with your own data)
     // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
-    const csvHeader = ",Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Comments (How did you feel? What did you notice?)";
+    const csvHeader = ", Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Comments (How did you feel? What did you notice?)";
     
     
     const csvContent1 = `6h,${tableAnswers[6]['Sat'] || ''},${tableAnswers[6]['Sun'] || ''},${tableAnswers[6]['Mon'] || ''},${tableAnswers[6]['Tue'] || ''},${tableAnswers[6]['Wed'] || ''},${tableAnswers[6]['Thu'] || ''},${tableAnswers[6]['Fri'] || ''},${tableAnswers[6]['Comm'] || ''}`;
@@ -215,13 +215,13 @@ const Session2Worksheet3Q2 = () => {
             <div>
                 <div className={styles.row}>
                     <div className={`${styles.small_div} ${styles.borderTrans}`}></div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Saturday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Sunday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Monday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Tuesday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Wednesday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Thursday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Sunday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Monday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Tuesday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Wednesday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Thursday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Saturday</div>
                 </div>
                 <div className={styles.row}>
                     <div className={`${styles.small_div} ${styles.borderGTGG}`} >Example 6am</div>
@@ -296,13 +296,13 @@ const Session2Worksheet3Q2 = () => {
             <div>
                 <div className={styles.row}>
                     <div className={`${styles.small_div} ${styles.borderTrans}`}></div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Saturday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Sunday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Monday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Tuesday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Wednesday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Thursday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Sunday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Monday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Tuesday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Wednesday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Thursday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Saturday</div>
                 </div>
                 <div className={styles.row}>
                     <div className={`${styles.small_div} ${styles.borderGTGG}`} >Example 6am</div>
@@ -421,13 +421,13 @@ const Session2Worksheet3Q2 = () => {
               language === 'English' ?
                 <div className={styles.row}>
                     <div className={`${styles.small_div} ${styles.borderTrans}`}></div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Saturday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Sunday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Monday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Tuesday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Wednesday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Thursday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Sunday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Monday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Tuesday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Wednesday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Thursday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Saturday</div>
                     <div className={`${styles.small_div} ${styles.borderGGTG}`} >Comments (How did you feel? What did you notice?)</div>
                 </div>
                 :
