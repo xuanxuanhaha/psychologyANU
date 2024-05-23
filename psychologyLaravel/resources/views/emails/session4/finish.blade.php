@@ -76,12 +76,12 @@
         <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
         <p>Hello, </p>
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Great job on the fourth session of the Learning To Thrive! We sincerely hope that you found this helpful in reducing your academic anxiety. </p>
-        <p>The next session is locked until next week as there are skills to practice. Don't forget to fill out the worksheets included in the program during this week to maximize what the tool offers you. You will receive an email in 6 to 7 days to remind you that you have access to the last session. </p>
-        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
-        <p>We thank you again for your active participation and look forward to seeing you next week for our next meeting!</p>
-        <p>Sincerely,</p>
-        <p>Learning To Thrive</p>
+        <p><i>Great job on the fourth session of Learning To Thrive! We hope you found this session helpful and you are starting to put your new skills to use.</i></p>
+        <p><i>Please take time to practice what you have learnt over the next week, then you will be ready to continue with our final session. Don’t worry, we’ll remind you by email when the next session is available.</i></p>
+        <p><i>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learningtothrive.rsp@anu.edu.au">learningtothrive.rsp@anu.edu.au</a>.</p>
+        <p><i>We thank you again for your active participation and look forward to seeing you next week!</i></p>
+        <p><i>Sincerely,</i></p>
+        <p><i>Learning To Thrive</i></p>
     </div>
 </body>
 </html>

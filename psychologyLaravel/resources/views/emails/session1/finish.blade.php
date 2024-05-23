@@ -48,13 +48,14 @@
     <div class="container">
         <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Hello, </p>
-        <p>We would like to congratulate you on completing the first session! We hope your experience was enriching and interesting.</p>
-        <p>If you wish, you can immediately move on to the next session or take a break for a day or two. We will send you email reminders to continue using the tool.</p>
-        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
-        <p>Once again, congratulations on reaching the first milestone, and we look forward to seeing you in the next session.</p>
-        <p>Sincerely,</p>
-        <p>Learning To Thrive</p>
+        <p><i>Hello, </i></p>
+        <p><i>Congratulations on completing the second session! We hope you found this session informative and that you are noticing your progress.</i></p>
+        <p><i>We’ll remind you by email when the next session is available.</i></p>
+        <p><i>We would like to thank you for your continued commitment, and we hope you are satisfied with your experience so far.</i></p>
+        <p><i>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learningtothrive.rsp@anu.edu.au">learningtothrive.rsp@anu.edu.au</a>.</i></p>
+        <p><i>Looking forward to seeing you next week!</i></p>
+        <p><i>Sincerely,</i></p>
+        <p><i>Learning To Thrive</i></p>
     </div>
 </body>
 </html>

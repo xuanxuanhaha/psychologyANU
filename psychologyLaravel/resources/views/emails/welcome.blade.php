@@ -49,8 +49,9 @@
     <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
         <!-- <p>Dear {{ $user->email }},</p> -->
         <p>Hello,</p>
-        <p>Welcome to Learning To Thrive !</p>
-        <p>You have successfully logged into the tool. You can now start your first session. We hope this tool will help you achieve your goals related to academic anxiety. If you have any questions or concerns, do not hesitate to contact us at<a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
+        <p><i>Welcome to Learning to Thrive!</i></p>
+        <p><i>You have successfully logged into the platform and you can now start your first session. We hope this tool will help you manage academic worry and achieve your goals.<i></p>
+        <p><i>If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>. </i></p>
         <p>Sincerely</p>
         <p>Learning To Thrive</p>
         <!-- <div class="footer">

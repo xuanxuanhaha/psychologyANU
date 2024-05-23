@@ -74,16 +74,18 @@
 <body>
     <div class="container">
     <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
-        <p>Hello, </p>
+        <p><i>Hello, </i></p>
         <!-- <p>Dear {{ $user->email }},</p> -->
         <p class="content">
-            Congratulations on completing Session 5!
+            <i>Congratulations on completing session 5, you did it!</i>
              <!-- Please go to <a href="http://ls.sondages.umontreal.ca/882837?lang=fr">Other Links</a>. -->
         </p>
-        <p>Congratulations! You have just finished the last session of the Learning To Thrive! Thank you for participating. Through this tool, you have been able to develop skills and become aware of the resources available to you. We encourage you to continue using these skills and resources in your studies.</p>
-        <p>We wish you continued success in the rest of your studies! We hope you enjoyed our tool. If you have any questions or concerns, do not hesitate to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
-        <p>Sincerely,</p>
-        <p>Learning To Thrive</p>
+        <p><i>Thank you for participating in the Learning To Thrive program. Through this tool, you have been able to develop skills and become aware of the resources available to you. We encourage you to continue using these skills and resources in your studies.</i></p>
+        <p><i>Shortly our team will contact you to complete the final requirements of the program.</i></p>
+        <p><i>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learningtothrive.rsp@anu.edu.au">learningtothrive.rsp@anu.edu.au</a>.</i></p>
+        <p><i>We wish you continued success in the rest of your studies!</i></p>
+        <p><i>Sincerely,</i></p>
+        <p><i>Learning To Thrive</i></p>
     </div>
 </body>
 </html>

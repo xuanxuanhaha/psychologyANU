@@ -47,15 +47,15 @@
 <body>
     <div class="container">
         <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
-        <p>Hello, </p>
         <!-- <p>Dear {{ $user->email }},</p> -->
-        <p>Congratulations on completing the second session! We hope you found this session informative and that you are noticing your progress. </p>
-        <p>The next session is locked because there are a few tasks to practice this week. Don't forget to fill out the worksheets included in the program during this week to maximize what the tool offers you. You will receive an email in 6 to 7 days to remind you that you have access to the third session.</p>
-        <p>We would like to thank you for your continued commitment and we hope you are satisfied with your experience so far.</p>
-        <p>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>.</p>
-        <p>Looking forward to seeing you next week!</p>
-        <p>Sincerely,</p>
-        <p>Learning To Thrive</p>
+        <p><i>Hello, </i></p>
+        <p><i>Congratulations on completing the second session! We hope you found this session informative and that you are noticing your progress.</i></p>
+        <p><i>We’ll remind you by email when the next session is available.</i></p>
+        <p><i>We would like to thank you for your continued commitment, and we hope you are satisfied with your experience so far.</i></p>
+        <p><i>If you have any questions about the tool or what comes next, feel free to contact us at <a href="mailto:learningtothrive.rsp@anu.edu.au">learningtothrive.rsp@anu.edu.au</a>.</i></p>
+        <p><i>Looking forward to seeing you next week!</i></p>
+        <p><i>Sincerely,</i></p>
+        <p><i>Learning To Thrive</i></p>
     </div>
 </body>
 </html>
