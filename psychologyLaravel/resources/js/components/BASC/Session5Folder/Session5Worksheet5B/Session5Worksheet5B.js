@@ -54,7 +54,7 @@ const Session5Worksheet5B = () => {
                 <Typography title={'subtitle'} position={'left'}>
                     {
                         language === 'English' ? 
-                        'Third Session' :
+                        'Fifth Session' :
                         'Quatrième session'
                     }
                 </Typography>
@@ -90,14 +90,12 @@ const Session5Worksheet5B = () => {
                             <br />
                             <br />
                             <p>Take some time to consider how your current issue is connected to the larger human experience. Now, <i>silently say to yourself: </i></p>
-                            <ii><b><i>Suffering is a part of life as a member of the university community. </i></b></ii>
-                            <ii><b><i>I’m not alone. I am part of the university community.</i></b></ii>
-                            <ii><b><i>All members of my university community struggle in life, just like I do.</i></b></ii>
-                            <br />
+                            <li><b><i>Suffering is a part of life as a member of the university community. </i></b></li>
+                            <li><b><i>I’m not alone. I am part of the university community.</i></b></li>
+                            <li><b><i>All members of my university community struggle in life, just like I do.</i></b></li>
                             <br />
                             <p>Now, silently say to yourself: </p>
-                            <ii><b><i><u>May I be kind to myself as I am kind to other members of my university community.</u></i></b></ii>
-                            <br />
+                            <li><b><i><u>May I be kind to myself as I am kind to other members of my university community.</u></i></b></li>
                             <br />
                             <p>You can also ask yourself, “<i>What do I need to hear right now to express kindness to myself?</i>” Is there a phrase that speaks to you in your particular situation? </p>
                             <p>If you’re having trouble finding the right words, think back to the words of kindness that you wrote to yourself earlier, or imagine what you might say to another member of your university community who is struggling with a similar issue. Let those kind words roll gently through your mind. Here are some examples for you. </p>

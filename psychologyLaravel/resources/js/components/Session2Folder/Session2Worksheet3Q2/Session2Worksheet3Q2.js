@@ -224,7 +224,7 @@ const Session2Worksheet3Q2 = () => {
                     <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Saturday</div>
                 </div>
                 <div className={styles.row}>
-                    <div className={`${styles.small_div} ${styles.borderGTGG}`} >Example 6am</div>
+                    <div className={`${styles.small_div} ${styles.borderGTGG}`} >Example 9am</div>
                     <div className={`${styles.small_div_purple} ${styles.borderGTGG}`} ></div>
                     <div className={`${styles.small_div} ${styles.borderGTGG}`} ></div>
                     <div className={`${styles.small_div_purple} ${styles.borderGTGG}`} ></div>
@@ -305,7 +305,7 @@ const Session2Worksheet3Q2 = () => {
                     <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Saturday</div>
                 </div>
                 <div className={styles.row}>
-                    <div className={`${styles.small_div} ${styles.borderGTGG}`} >Example 6am</div>
+                    <div className={`${styles.small_div} ${styles.borderGTGG}`} >Example 6pm</div>
                     <div className={`${styles.small_div_purple} ${styles.borderGTGG}`} >Activity 1</div>
                     <div className={`${styles.small_div} ${styles.borderGTGG}`} >Activity 1</div>
                     <div className={`${styles.small_div_purple} ${styles.borderGTGG}`} >Activity 1</div>
