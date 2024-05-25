@@ -28,7 +28,7 @@ const Session3worksheet1q4Wording = (props) => {
                 language === 'English' ?
                 <React.Fragment>
                     <p><u><i>1.	Please practice the following self-compassion exercise over the next week before the final session:</i></u> </p>
-                    <p>This exercise can be used any time of day or night, and will help you remember community connection, kindness to all, and mindfulness when you need it most.</p>
+                    <p>This exercise can be used any time of day or night, and will help you remember common humanity, self-kindness, and mindfulness when you need it most.</p>
                     <ol>
                         <br />
                         <li>Think about the academic-related&nbsp;
@@ -48,15 +48,15 @@ const Session3worksheet1q4Wording = (props) => {
                         <br />
                         <li>Now, silently say to yourself:
                             <ul>
-                                <li>Suffering is a part of  life as a member of the university community.</li>
-                                <li>I’m not alone. I am part of the university community</li>
-                                <li>All members of my university community struggle in life, just like I do.</li>
+                                <li>Suffering is a part of life</li>
+                                <li>I’m not alone.</li>
+                                <li>We all struggle in our lives.</li>
                             </ul>
                         </li>
                         <br />
                         <li>Now, silently say to yourself:
                             <ul>
-                                <li>May I be kind to myself as I am kind to other members of my university community.</li>
+                                <li>May I be kind to myself.</li>
                             </ul>
                         </li>
                     </ol>
@@ -64,16 +64,16 @@ const Session3worksheet1q4Wording = (props) => {
                     <p>You can also ask yourself, “What do I need to hear right now to express kindness to myself?” Is there a phrase that speaks to you in your particular situation? </p>
                     <p>For example:
                         <ul>
-                            <li>Just as my university community, may I give myself the compassion that I need.</li>
-                            <li>Just as my university community, may I learn to accept myself as I am.</li>
-                            <li>Just as my university community, may I forgive myself.</li>
-                            <li>Just as my university community, may I be strong.</li>
-                            <li>Just as my university community, may I be patient.</li>
+                            <li>May I give myself the compassion that I need.</li>
+                            <li>My I learn to accept myself as I am.</li>
+                            <li>May I forgive myself.</li>
+                            <li>May I be strong.</li>
+                            <li>May I be patient.</li>
                         </ul>
                     </p>
                     <br />
                     <p><u><i>2.	Please complete this record sheet at the end of each day</i></u> </p>
-                    <p>We would like you to note how often you practice self-compassion. You can set a time each day to practice the thought exercise for the academic-related issue written in Worksheet 1 or you can practice it when negative thoughts come to mind.  At the end of the day, please record how <u>many time</u>, <u>for how long</u> in total you practice self-compassion in the correspondent columns to indicate whether you focus on the academic-related issue written in Worksheet 1 or other negative thoughts, and write down any comments you may have related to your practice. You can download this record sheet and record your practice.&nbsp;
+                    <p>We would like you to note how often you practice self-compassion. You can set a time each day to practice the thought exercise for the academic-related issue written in Worksheet 1 or you can practice it when negative thoughts come to mind.  At the end of the day, please record <u>how many times</u>, <u>for how long</u> in total you practice self-compassion in the correspondent columns to indicate whether you focus on the academic-related issue written in Worksheet 1 or other negative thoughts, and write down any comments you may have related to you practice. You can download this record sheet and record your practice.&nbsp;
                         <b><u>Please make sure you have this sheet filled out and with you for the next session, as you will fill this information in the program.</u></b>
                     </p>
                 </React.Fragment>
