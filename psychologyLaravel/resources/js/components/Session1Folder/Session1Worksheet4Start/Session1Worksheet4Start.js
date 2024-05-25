@@ -104,7 +104,7 @@ const Session1worksheet4Start = () => {
                 <p>The following exercise ... Need Translate!!!!</p>
               }
           </Typography>
-            <Button word={language === 'English' ? 'Question B-2' : 'Suivant'} onClick={next} position={'center'} outlook={'round'} />
+            <Button word={language === 'English' ? 'Exercise B-2' : 'Suivant'} onClick={next} position={'center'} outlook={'round'} />
 
             </div>
             </div>

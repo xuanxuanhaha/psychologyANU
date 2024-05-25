@@ -67,7 +67,7 @@ const Session4Worksheet1Q1 = () => {
                     <b>
                     {
                         language === 'English' ?
-                        'Script for Guided Thought Exercise'
+                        'Review of Guided Thought Exercise'
                         :
                         'Scripte pour l’exercice de pensée guidée'
                     }

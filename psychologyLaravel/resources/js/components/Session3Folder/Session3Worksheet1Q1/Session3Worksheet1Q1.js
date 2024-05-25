@@ -207,13 +207,13 @@ const Session3Worksheet1Q1 = () => {
                         ,&nbsp;
                         <b onClick={openDialogFeelingWithTemplateRef} className={styles.modalWording}>
                           <u>
-                          <i>Fellings</i>
+                          <i>feelings</i>
                           </u>
                         </b>
                         ,&nbsp;and&nbsp;
                         <b onClick={openDialogBehaviourWithTemplateRef} className={styles.modalWording}>
                           <u>
-                          <i>Behaviours</i>
+                          <i>behaviours</i>
                           </u>
                         </b>
                         &nbsp;in response in response to the academic-related issue written in Worksheet 1.
@@ -280,7 +280,7 @@ const Session3Worksheet1Q1 = () => {
                         </Typography>
                         <p>Many people feel cut off from others in times of worry, and feel that they are alone in their struggle with particular worries, inadequacies, or failures. Sometimes, people may intentionally withdraw from others and hide their “true selves” because they feel that others will not understand their worries, inadequacies, or failures. </p>
                         <p>Although isolation can sometimes feel “safe”, it often contributes to negative emotions such as anxiety and depression. This is because difficult situations often seem more difficult when you feel like you’re the only one who is struggling. </p>
-                        <p>Consider the 
+                        <p>Consider the&nbsp;
                         <b onClick={openDialogThoughtWithTemplateRef} className={styles.modalWording}>
                           <u>
                           <i>thoughts</i>

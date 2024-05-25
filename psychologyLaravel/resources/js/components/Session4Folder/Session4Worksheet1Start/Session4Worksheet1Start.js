@@ -42,7 +42,7 @@ const Session4Worksheet1Start = () => {
             <Typography title={'content'} position={'left'} color={'primary'}>
             {
                   language === 'English' ?
-                  'You did a great job in practising Self-compassion skills, well done! '
+                  'You did a great job in practising self-compassion skills, well done! '
                   :
                   "Tu as fait du bon travail dans ta pratique des compétences d’autocompassion, bravo !"
                 }

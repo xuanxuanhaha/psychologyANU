@@ -66,7 +66,7 @@ const Session1B = () => {
             }
           <IconWordGrid imgsrc={lockericon} word={'12-15 mins'} />
           
-          <HeadphoneSvg />
+          {/* <HeadphoneSvg /> */}
 
           <Button word={
               language === 'English' ?

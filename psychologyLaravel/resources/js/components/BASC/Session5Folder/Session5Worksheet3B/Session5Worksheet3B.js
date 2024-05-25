@@ -118,7 +118,7 @@ const Session5Worksheet3B = () => {
   };
 
   const downloadCSV = () => {
-    const csvHeader = "Date,Practice Self-compassion exercise,,,,Comments (How did you feel? What did you notice?)";
+    const csvHeader = "Date,Practice self-compassion exercise,,,,Comments (How did you feel? What did you notice?)";
     const csvContenHeaderDescription = ",Focus on the academic-related issue written in Worksheet 1,,Focus on other negative thoughts,"
     const csvContentSubHeader = ",How many times,How long in total (min),How many times,How long in total (min),"
     const csvContent1 = `Day 1,${tableAnswers[1]['A'] || ''},${tableAnswers[1]['B'] || ''},${tableAnswers[1]['C'] || ''},${tableAnswers[1]['D'] || ''},${tableAnswers[1]['Comm'] || ''}`
@@ -227,7 +227,7 @@ function s2ab(s) {
                         <th colspan="4" className={styles.each_column}>
                             <b>
                             {
-                                language === 'English' ?'Practice Self-compassion exercise':'Pratique de l’exercice d’autocompassion'
+                                language === 'English' ?'Practice self-compassion exercise':'Pratique de l’exercice d’autocompassion'
                             }
                             </b>
                         </th>
