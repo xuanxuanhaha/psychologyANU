@@ -119,7 +119,7 @@ const Session5Worksheet3B = () => {
   const downloadCSV = () => {
     const csvHeader = "Date,Practice Self-compassion exercise,,,,Comments (How did you feel? What did you notice?)";
     const csvContenHeaderDescription = ",Focus on the academic-related issue written in Worksheet 1,,Focus on other negative thoughts,"
-    const csvContentSubHeader = ",How many time,How long in total (min),How many time,How long in total (min),"
+    const csvContentSubHeader = ",How many times,How long in total (min),How many times,How long in total (min),"
     const csvContent1 = `Day 1,${tableAnswers[1]['A'] || ''},${tableAnswers[1]['B'] || ''},${tableAnswers[1]['C'] || ''},${tableAnswers[1]['D'] || ''},${tableAnswers[1]['Comm'] || ''}`
     const csvContent2 = `Day 2,${tableAnswers[2]['A'] || ''},${tableAnswers[2]['B'] || ''},${tableAnswers[2]['C'] || ''},${tableAnswers[2]['D'] || ''},${tableAnswers[2]['Comm'] || ''}`
     const csvContent3 = `Day 3,${tableAnswers[3]['A'] || ''},${tableAnswers[3]['B'] || ''},${tableAnswers[3]['C'] || ''},${tableAnswers[3]['D'] || ''},${tableAnswers[3]['Comm'] || ''}`
@@ -244,7 +244,7 @@ const Session5Worksheet3B = () => {
                             <b>
                                 {
                                     language === 'English' ?
-                                    'How many time' :
+                                    'How many times' :
                                     'Combien de fois'
                                 }
                             </b>
@@ -262,7 +262,7 @@ const Session5Worksheet3B = () => {
                             <b>
                                 {
                                     language === 'English' ?
-                                    'How many time' :
+                                    'How many times' :
                                     'Combien de fois'
                                 }
                             </b>
