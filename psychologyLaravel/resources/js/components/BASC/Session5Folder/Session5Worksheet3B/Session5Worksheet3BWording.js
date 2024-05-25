@@ -17,7 +17,7 @@ const Session5Worksheet3BWording = (props) => {
                 language === 'English' ?
                 <React.Fragment>
                     <p><u>Next, do you have the Self-compassion exercise record sheet with you for this session? If not, please get it ready as you will need it for the exercise below. </u> </p>
-                    <p>Please fill in the record sheet with the information you gathered about your self-compassion practice over the last week.  </p>
+                    <p>Please fill in the record sheet with the information you gathered about your self-compassion practice over the last week. </p>
                 </React.Fragment>
                 :
                 <React.Fragment>

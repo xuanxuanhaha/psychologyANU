@@ -69,6 +69,12 @@
             font-size: 14px;
             color: #999;
         }
+        .no_reply{
+            text-align: right;
+            color: lightgrey;
+            font-size: 14px;
+            font-weight: 800
+        }
     </style>
 </head>
 <body>
@@ -82,6 +88,9 @@
         <p><i>We thank you again for your active participation and look forward to seeing you next week!</i></p>
         <p><i>Sincerely,</i></p>
         <p><i>Learning To Thrive</i></p>
+        <div class="footer">
+            <p class="no_reply">* Please Do Not Reply to this Email.</p>
+        </div>
     </div>
 </body>
 </html>

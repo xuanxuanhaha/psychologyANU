@@ -39,6 +39,14 @@ const Session5Worksheet4B = () => {
 
 
           <div>
+          <Typography title={'content'} position={'left'} color={'primary'}>
+            {
+                  language === 'English' ?
+                  'You did a great job in practising self-compassion skills this week, well done!'
+                  :
+                  "Tu as fait du bon travail dans ta pratique des compétences d’autocompassion, bravo !"
+                }
+            </Typography>
             <Typography title={'content'} position={'left'} color={'primary'}>
             {
                   language === 'English' ?

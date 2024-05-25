@@ -502,14 +502,6 @@ function s2ab(s) {
             </div>
             <br />
 
-            <Typography title={'content'} position={'left'} color={'primary'} contentwidth={'100%'}>
-            {
-                  language === 'English' ?
-                  'You did a great job in practising Self-compassion skills, well done! '
-                  :
-                  "Tu as fait du bon travail dans ta pratique des compétences d’autocompassion, bravo !"
-                }
-            </Typography>
 
 
             {/* <Button word={'Exercise B-1'} onClick={next} position={'center'} outlook={'round'} /> */}

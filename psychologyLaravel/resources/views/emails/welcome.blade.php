@@ -42,6 +42,12 @@
             font-size: 14px;
             color: #999;
         }
+        .no_reply{
+            text-align: right;
+            color: lightgrey;
+            font-size: 14px;
+            font-weight: 800
+        }
     </style>
 </head>
 <body>
@@ -54,9 +60,10 @@
         <p><i>If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>. </i></p>
         <p>Sincerely</p>
         <p>Learning To Thrive</p>
-        <!-- <div class="footer">
-            <p>&copy; {{ date('Y') }} Your Website. All rights reserved.</p>
-        </div> -->
+
+        <div class="footer">
+            <p class="no_reply">* Please Do Not Reply to this Email.</p>
+        </div>
     </div>
 </body>
 </html>

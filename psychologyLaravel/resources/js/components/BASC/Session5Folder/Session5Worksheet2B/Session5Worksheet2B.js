@@ -44,14 +44,23 @@ const Session5Worksheet2B = () => {
 
 
           <div>
-            <Typography title={'content'} position={'left'} color={'primary'}>
+
+          <Typography title={'content'} position={'left'} color={'primary'}>
             {
                   language === 'English' ?
-                  'Next, do you have the Self-compassion exercise record sheet with you for this session? If not, please get it ready as you will need it for the exercises below.'
+                  'You did a great job in practising Behavioural Activation skills this week, well done!'
+                  :
+                  "Tu as fait du bon travail dans ta pratique des compétences d’autocompassion, bravo !"
+                }
+            </Typography>
+            {/* <Typography title={'content'} position={'left'} color={'primary'}>
+            {
+                  language === 'English' ?
+                  'Next, do you have the Self-compassion exercise record sheet with you for this session? If not, please get it ready as you will need it for the exercise below.'
                   :
                   'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
                 }
-            </Typography>
+            </Typography> */}
           </div>
 
           <Button word={language === 'English' ? 'NEXT' : 'Commencer Fiche 1'} onClick={goToSession1WorksheetQ1} position={'center'} />
