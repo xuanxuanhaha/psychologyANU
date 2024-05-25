@@ -15,6 +15,7 @@ import Typography from '../../ReusableComponents/Typography/Typography';
 import BorderContent from '../../ReusableComponents/BorderContent/BorderContent';
 import TextField from '../../ReusableComponents/TextField/TextField';
 import IconWordGrid from '../../ReusableComponents/IconWordGrid/IconWordGrid';
+import * as XLSX from 'xlsx';
 
 const Session3Review = () => {
   const navigate = useNavigate();
@@ -140,7 +141,7 @@ const Session3Review = () => {
   const downloadCSV = () => {
     // Create a CSV content string (replace with your own data)
     // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
-    const csvHeader = ",Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Comments (How did you feel? What did you notice?)";
+    const csvHeader = ", Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Comments (How did you feel? What did you notice?)";
     const tableanswers = tableAnswers
     
     const csvContent1 = `6h,${tableanswers[6]['Sat'] || ''},${tableanswers[6]['Sun'] || ''},${tableanswers[6]['Mon'] || ''},${tableanswers[6]['Tue'] || ''},${tableanswers[6]['Wed'] || ''},${tableanswers[6]['Thu'] || ''},${tableanswers[6]['Fri'] || ''},${tableanswers[6]['Comm'] || ''}`;
@@ -164,25 +165,57 @@ const Session3Review = () => {
 
     const csvHeaderF = ",Samedi, Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Commentaires (Qu'as-tu ressenti? Qu’as-tu remarqué ?)";
 
-    let csvContent = `${csvHeader}\n${csvContent1}\n${csvContent2}\n${csvContent3}\n${csvContent4}\n${csvContent5}\n${csvContent6}\n${csvContent7}\n${csvContent8}\n${csvContent9}\n${csvContent10}\n${csvContent11}\n${csvContent12}\n${csvContent13}\n${csvContent14}\n${csvContent15}\n${csvContent16}\n${csvContent17}\n${csvContent18}`;
-    const csvContentFrench = `${csvHeaderF}\n${csvContent1}\n${csvContent2}\n${csvContent3}\n${csvContent4}\n${csvContent5}\n${csvContent6}\n${csvContent7}\n${csvContent8}\n${csvContent9}\n${csvContent10}\n${csvContent11}\n${csvContent12}\n${csvContent13}\n${csvContent14}\n${csvContent15}\n${csvContent16}\n${csvContent17}\n${csvContent18}`;
-    csvContent = language === 'English' ? csvContent : csvContentFrench
+    const worksheetData = [];
 
-    // Create a Blob object containing the CSV data
-    const BOM = '\uFEFF';
-    const blob = new Blob([BOM + csvContent], { type: 'text/csv;charset=utf-8;' });
+    // Push headers
+    worksheetData.push(csvHeader.split(','));
+    worksheetData.push(csvContent1.split(','));
+    worksheetData.push(csvContent2.split(','));
+    worksheetData.push(csvContent3.split(','));
+    worksheetData.push(csvContent4.split(','));
+    worksheetData.push(csvContent5.split(','));
+    worksheetData.push(csvContent6.split(','));
+    worksheetData.push(csvContent7.split(','));
+    worksheetData.push(csvContent8.split(','));
+    worksheetData.push(csvContent9.split(','));
+    worksheetData.push(csvContent10.split(','));
+    worksheetData.push(csvContent11.split(','));
+    worksheetData.push(csvContent12.split(','));
+    worksheetData.push(csvContent13.split(','));
+    worksheetData.push(csvContent14.split(','));
+    worksheetData.push(csvContent15.split(','));
+    worksheetData.push(csvContent16.split(','));
+    worksheetData.push(csvContent17.split(','));
+    worksheetData.push(csvContent18.split(','));
+
+    const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+
+    // Convert workbook to binary string
+    const excelBinaryString = XLSX.write(workbook, { bookType: 'xlsx', type: 'binary' });
+
+    // Convert binary string to Blob
+    const blob = new Blob([s2ab(excelBinaryString)], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
 
     // Create a download link and trigger the download
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.setAttribute('download', 'Session3Review.csv');
+    link.setAttribute('download', 'Session3Review.xlsx');
     document.body.appendChild(link); // Required for Firefox
     link.click();
 
     // Clean up the URL object to free up memory
     URL.revokeObjectURL(link.href);
     document.body.removeChild(link); // Required for Firefox
-  };
+};
+
+function s2ab(s) {
+    const buf = new ArrayBuffer(s.length);
+    const view = new Uint8Array(buf);
+    for (let i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff;
+    return buf;
+}
 
   return (
     <div>
@@ -294,13 +327,13 @@ const Session3Review = () => {
               language === 'English' ?
                 <div className={styles.row}>
                     <div className={`${styles.small_div} ${styles.borderTrans}`}></div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Saturday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Sunday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Monday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Tuesday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Wednesday</div>
-                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Thursday</div>
-                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Sunday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Monday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Tuesday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Wednesday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Thursday</div>
+                    <div className={`${styles.small_div} ${styles.borderGTTG}`} >Friday</div>
+                    <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Saturday</div>
                     <div className={`${styles.small_div} ${styles.borderGGTG}`} >Comments (How did you feel? What did you notice?)</div>
                 </div>
                 :

@@ -12,6 +12,7 @@ import Wordings from './Wordings';
 import Helppop from '../../../ReusableComponents/Helppop/Helppop';
 import Scale from '../../../ReusableComponents/Scale/Scale';
 import TextField from '../../../ReusableComponents/TextField/TextField';
+import * as XLSX from 'xlsx';
 
 const Session3Worksheet2B = () => {
   const navigate = useNavigate();
@@ -139,25 +140,44 @@ const Session3Worksheet2B = () => {
 
     if (!allValuesNotEmpty) {
       setShowError(true);
-    }else{
-      let csvContent = `${csvHeader}\n${csvContent1}\n${csvContent2}`;
-      const csvContentFrench = `${csvHeaderF}\n${csvContent1F}\n${csvContent2F}`;
-      csvContent = language === 'English' ? csvContent : csvContentFrench
+    } else {
+      let worksheetData = [];
+      // Push headers
+      worksheetData.push(csvHeader.split(','));
+      worksheetData.push(csvContent1.split(','));
+      worksheetData.push(csvContent2.split(','));
 
-      let csvMainContents = csvContent
-      tableAnswers.map((answer) => {
-        const answerToString = `"${answer.q0}","${answer.q1}","${answer.q2}","${answer.q3}","${answer.q4}","${answer.q5}"`;
-        csvMainContents = `${csvMainContents}\n${answerToString}`;
+      // Push user answers
+      tableAnswers.forEach(answer => {
+          worksheetData.push([
+              answer.q0,
+              answer.q1,
+              answer.q2,
+              answer.q3,
+              answer.q4,
+              answer.q5
+          ]);
       });
 
-      // Include a BOM (Byte Order Mark) for UTF-8 to guide Excel on proper encoding
-      const BOM = '\uFEFF';
-      const blob = new Blob([BOM + csvMainContents], { type: 'text/csv;charset=utf-8;' });
+      const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+
+      // Convert workbook to binary string
+      const excelBinaryString = XLSX.write(workbook, {
+          bookType: 'xlsx',
+          type: 'binary'
+      });
+
+      // Convert binary string to Blob
+      const blob = new Blob([s2ab(excelBinaryString)], {
+          type: 'application/octet-stream'
+      });
 
       // Create a download link and trigger the download
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.setAttribute('download', 'Session2Worksheet3Q1.csv');
+      link.setAttribute('download', 'Session2Worksheet3Q1.xlsx');
       document.body.appendChild(link); // Required for Firefox
       link.click();
 
@@ -165,9 +185,14 @@ const Session3Worksheet2B = () => {
       URL.revokeObjectURL(link.href);
       document.body.removeChild(link); // Required for Firefox
     }
-
-
   };
+
+  function s2ab(s) {
+    const buf = new ArrayBuffer(s.length);
+    const view = new Uint8Array(buf);
+    for (let i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff;
+    return buf;
+}
 
   const changeTableAnwser =(rowIndex, columnIndex, value) => {
     if (!tableAnswers[rowIndex]) {

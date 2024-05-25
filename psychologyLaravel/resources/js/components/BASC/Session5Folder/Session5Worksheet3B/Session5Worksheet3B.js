@@ -10,6 +10,7 @@ import ProgressBar from '../../../ReusableComponents/ProgressBar/ProgressBar';
 import Typography from '../../../ReusableComponents/Typography/Typography';
 import TextField from '../../../ReusableComponents/TextField/TextField';
 import Session5Worksheet3BWording from './Session5Worksheet3BWording';
+import * as XLSX from 'xlsx';
 
 const Session5Worksheet3B = () => {
   const navigate = useNavigate();
@@ -140,25 +141,48 @@ const Session5Worksheet3B = () => {
     const csvContent7F = `Jour 7,${tableAnswers[7]['A'] || ''},${tableAnswers[7]['B'] || ''},${tableAnswers[7]['C'] || ''},${tableAnswers[7]['D'] || ''},${tableAnswers[7]['Comm'] || ''}`
 
 
-    let csvContent = `${csvHeader}\n${csvContenHeaderDescription}\n${csvContentSubHeader}\n${csvContent1}\n${csvContent2}\n${csvContent3}\n${csvContent4}\n${csvContent5}\n${csvContent6}\n${csvContent7}`;
-    const csvContentFrench = `${csvHeaderF}\n${csvContenHeaderDescriptionF}\n${csvContentSubHeaderF}\n${csvContent1F}\n${csvContent2F}\n${csvContent3F}\n${csvContent4F}\n${csvContent5F}\n${csvContent6F}\n${csvContent7F}`;
-    csvContent = language === 'English' ? csvContent : csvContentFrench
+    const worksheetData = [];
 
-    // Create a Blob object containing the CSV data
-    const BOM = '\uFEFF';
-    const blob = new Blob([BOM + csvContent], { type: 'text/csv;charset=utf-8;' });
+    // Push headers
+    worksheetData.push(csvHeader.split(','));
+    worksheetData.push(csvContenHeaderDescription.split(','));
+    worksheetData.push(csvContentSubHeader.split(','));
+    worksheetData.push(csvContent1.split(','));
+    worksheetData.push(csvContent2.split(','));
+    worksheetData.push(csvContent3.split(','));
+    worksheetData.push(csvContent4.split(','));
+    worksheetData.push(csvContent5.split(','));
+    worksheetData.push(csvContent6.split(','));
+    worksheetData.push(csvContent7.split(','));
+
+    const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+
+    // Convert workbook to binary string
+    const excelBinaryString = XLSX.write(workbook, { bookType: 'xlsx', type: 'binary' });
+
+    // Convert binary string to Blob
+    const blob = new Blob([s2ab(excelBinaryString)], { type: 'application/octet-stream' });
 
     // Create a download link and trigger the download
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.setAttribute('download', 'Session4Review2.csv');
+    link.setAttribute('download', 'Session5Worksheet3B.xlsx');
     document.body.appendChild(link); // Required for Firefox
     link.click();
 
     // Clean up the URL object to free up memory
     URL.revokeObjectURL(link.href);
     document.body.removeChild(link); // Required for Firefox
-  }
+};
+
+function s2ab(s) {
+    const buf = new ArrayBuffer(s.length);
+    const view = new Uint8Array(buf);
+    for (let i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff;
+    return buf;
+}
 
 
   const changeTableAnwser =(outerKey, innerKey, value) => {
