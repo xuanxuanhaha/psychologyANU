@@ -83,27 +83,27 @@ const Session5Worksheet5B = () => {
                         <React.Fragment>
                             <p> Please listen to the instructions carefully, and try to follow them as closely as you can. As you have learned in the previous session, this exercise can be used any time of day or night, and will help you remember community connection, kindness to all, and mindfulness when you need it most. </p>
                             <p>Settle into a comfortable position, and turn your attention to your breathing. Try to breathe slowly and deeply. </p>
-                            <p>Take a deep breath, and allow your breathing to relax you as you exhale fully. Feel free to close your eyes if you wish. </p>
+                            <p>Take a deep breath, and allow your bodyto relax you as you exhale fully. Feel free to close your eyes if you wish.  </p>
                             <p>Now, think about the academic worry that you have written down in Worksheet 1. Allow any feelings of stress or discomfort to flow through your body. Try not to avoid or over-identify with these feelings; instead, just be mindful of them; recognising, and accepting them for what they are. </p>
                             <p>Now, silently say to yourself: </p>
                             <ii><b><i>This is a moment of difficulty. </i></b></ii>
                             <br />
                             <br />
                             <p>Take some time to consider how your current issue is connected to the larger human experience. Now, <i>silently say to yourself: </i></p>
-                            <li><b><i>Suffering is a part of life as a member of the university community. </i></b></li>
-                            <li><b><i>I’m not alone. I am part of the university community.</i></b></li>
-                            <li><b><i>All members of my university community struggle in life, just like I do.</i></b></li>
+                            <li><b><i>Suffering is a part of life</i></b></li>
+                            <li><b><i>I’m not alone</i></b></li>
+                            <li><b><i>We all struggle in our lives.</i></b></li>
                             <br />
                             <p>Now, silently say to yourself: </p>
-                            <li><b><i><u>May I be kind to myself as I am kind to other members of my university community.</u></i></b></li>
+                            <li><b><i><u>May I be kind to myself.</u></i></b></li>
                             <br />
                             <p>You can also ask yourself, “<i>What do I need to hear right now to express kindness to myself?</i>” Is there a phrase that speaks to you in your particular situation? </p>
                             <p>If you’re having trouble finding the right words, think back to the words of kindness that you wrote to yourself earlier, or imagine what you might say to another member of your university community who is struggling with a similar issue. Let those kind words roll gently through your mind. Here are some examples for you. </p>
-                            <li><b><i>Just as my university community, may I give myself the compassion that I need.</i></b></li>
-                            <li><b><i>Just as my university community, may I learn to accept myself as I am.</i></b></li>
-                            <li><b><i>Just as my university community, may I forgive myself.</i></b></li>
-                            <li><b><i>Just as my university community, may I be strong.</i></b></li>
-                            <li><b><i>Just as my university community, may I be patient.</i></b></li>
+                            <li><b><i>May I give myself the compassion that I need</i></b></li>
+                            <li><b><i>May I learn to accept myself as I am</i></b></li>
+                            <li><b><i>May I forgive myself.</i></b></li>
+                            <li><b><i>May I be strong.</i></b></li>
+                            <li><b><i>May I be patient.</i></b></li>
                             <br />
                             <p>Now it is time to return to your day. Continue to breathe smoothly and regularly, feeling your energy increasing with each breath. When you are ready, open your eyes and return to your day, feeling alert and calm. </p>
                         </React.Fragment>
