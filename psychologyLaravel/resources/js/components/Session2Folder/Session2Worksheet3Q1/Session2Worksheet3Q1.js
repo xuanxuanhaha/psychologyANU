@@ -152,7 +152,6 @@ const Session2Worksheet3Q1 = () => {
       worksheetData.push(csvHeader.split(','));
       worksheetData.push(csvContent1.split(','));
       worksheetData.push(csvContent2.split(','));
-      worksheetData.push(csvContent2.split(','));
       tableAnswers.map((answer) => {
         const answerToString = `${answer.q0},${answer.q1},${answer.q2},${answer.q3},${answer.q4},${answer.q5}`;
         worksheetData.push(answerToString.split(','));

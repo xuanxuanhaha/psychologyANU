@@ -72,6 +72,9 @@ import Session1worksheet2startB from './BASC/Session1Folder/Session1worksheet2st
 import Session1worksheet2Q1B from './BASC/Session1Folder/Session1worksheet2Q1B/Session1worksheet2Q1B'
 import Session2B from './BASC/Session2Folder/Session2B/Session2B'
 import Session2Worksheet1B from './BASC/Session2Folder/Session2Worksheet1B/Session2Worksheet1B'
+import Session2Worksheet2B from './BASC/Session2Folder/Session2Worksheet2B/Session2Worksheet2B'
+import Session2Worksheet3B from './BASC/Session2Folder/Session2Worksheet3B/Session2Worksheet3B'
+
 import Session3B from './BASC/Session3Folder/Session3B/Session3B'
 import Session3Worksheet1B from './BASC/Session3Folder/Session3Worksheet1B/Session3Worksheet1B'
 import Session3Worksheet2B from './BASC/Session3Folder/Session3Worksheet2B/Session3Worksheet2B'
@@ -658,6 +661,26 @@ function Example() {
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               <Session2Worksheet1B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session2worksheet2b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session2Worksheet2B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session2worksheet3b"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session2Worksheet3B />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )

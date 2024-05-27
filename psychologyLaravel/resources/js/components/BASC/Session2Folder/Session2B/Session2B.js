@@ -83,16 +83,7 @@ const Session2B = () => {
                 <p>Lors de cette séance, nous allons revoir les concepts et les exercices que nous avons appris lors des dernières séances.</p>
               }
             </Typography>
-            <br />
-            <Typography title={'content'} position={'left'} color={'primary'} >
-              {
-                language === 'English' ?
-                <p>In this session you will learn about ways to look after your health and wellbeing. Being informed is an important place to start to maintain wellbeing. Below is a link to a website, please spend the next 20 minutes learning by reading through the information provided on the website. You will hear a timer when 20 minutes has past at which point you may finish what you are reading or click ‘Next’ to finish the session.                </p>
-                :
-                <p>Premièrement, as-tu ton planificateur d’activités avec toi pour cette séance ? Assure-toi de les avoir accessibles puisque tu en auras de besoin pour l’exercice ci-dessous.</p>
-              }
-            </Typography>
-            <br />
+            
             
             </div>
 

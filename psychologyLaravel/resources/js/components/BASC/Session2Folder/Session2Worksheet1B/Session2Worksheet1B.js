@@ -1,131 +1,382 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './session2worksheet1b.module.css';
 import Navbar from '../../../Navbar/Navbar';
 import { useSelector } from 'react-redux';
+import lockericon from './../../../../assets/assessment/oclock.jpg';
+import avoid_cycle from './../../../../assets/surveys/avoid_cycle.png'
+import avoid_cycle_france from './../../../../assets/surveys/avoid_cycle_france.png'
 import Button from '../../../ReusableComponents/Button/Button';
+
+
+import Modal from 'react-modal';
 import ProgressBar from '../../../ReusableComponents/ProgressBar/ProgressBar';
 import Typography from '../../../ReusableComponents/Typography/Typography';
-import CountdownTimer from '../../../ReusableComponents/CountdownTimer/CountdownTimer';
+import BorderContent from '../../../ReusableComponents/BorderContent/BorderContent';
+import TextField from '../../../ReusableComponents/TextField/TextField';
 
 const Session2Worksheet1B = () => {
   const navigate = useNavigate();
   const userData = useSelector(state => state.auth.user);
-  const language = userData.language;
+  const language = userData.language
 
   const [sessionId, setSessionId] = useState(0);
-  const [seconds, setSeconds] = useState(80);
-  const [sessionStarted, setSessionStarted] = useState(false);
-  const audioUrl = 'http://3.25.76.79/audios/BASC_guided_thought_script.wav';
-  const audioRef = useRef(null);
 
-  const [linkClicked, setLinkClicked] = useState(0)
+  const [questionA, setQuestionA] = useState('');
+  const [questionAError, setQuestionAError] = useState(false);
+  const [questionB, setQuestionB] = useState('');
+  const [questionBError, setQuestionBError] = useState(false);
+  const [questionC, setQuestionC] = useState('');
+  const [questionCError, setQuestionCError] = useState(false);
+
+  const [questionD, setQuestionD] = useState('');
+  const [questionDError, setQuestionDError] = useState(false);
+  const [questionE, setQuestionE] = useState('');
+  const [questionEError, setQuestionEError] = useState(false);
+  const [questionF, setQuestionF] = useState('');
+  const [questionFError, setQuestionFError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [questionIssue, setQuestionIssue] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
 
-    // audioRef.current = new Audio(audioUrl); // Create audio object on mount
+    axios.get(`/api/sessionresponse/1?userid=${userData.userid}&&questionno=session1worksheetq1b`).then(response => {
+      if(response.data){
+        if(response.data.sessionresponse.response){
+          const questionanswer = JSON.parse(response.data.sessionresponse.response)
+          setQuestionIssue(questionanswer.q1)
+        }
+      }
+    })
+    .catch(error => {
+      // Handle any errors
+      console.error(error);
+    });
+
+    axios.get(`/api/sessionresponse/2?userid=${userData.userid}&&questionno=session2worksheet1b`)
+    .then(response => {
+    if(response.data){
+        if(response.data.sessionresponse.response){
+            const questionanswer = JSON.parse(response.data.sessionresponse.response)
+            setQuestionA(questionanswer.q1)
+            setQuestionB(questionanswer.q2)
+            setQuestionC(questionanswer.q3)
+            setQuestionD(questionanswer.q4)
+            setQuestionE(questionanswer.q5)
+            setQuestionF(questionanswer.q6)
+        }
+    }
+    })
+    .catch(error => {
+    // Handle any errors
+    console.error(error);
+    });
   }, []);
 
-  // useEffect(() => {
-  //   let interval = null;
-  //   if (seconds > 0) {
-  //     interval = setInterval(() => {
-  //       setSeconds(prevSeconds => prevSeconds - 1);
-  //     }, 1000);
-  //   }
+  const next = () => {
+    if (questionA === '') {
+      setQuestionAError(true);
+    } else {
+      setQuestionAError(false);
+    }
+    if (questionB === '') {
+        setQuestionBError(true);
+    } else {
+        setQuestionBError(false);
+    }
+    if (questionC === '') {
+        setQuestionCError(true);
+    } else {
+        setQuestionCError(false);
+    }
 
-  //   if (seconds === 60) {
-  //     audioRef.current.play().catch(error => console.log('Error playing the audio:', error));
-  //   }
+    if (questionD === '') {
+      setQuestionDError(true);
+    } else {
+      setQuestionDError(false);
+    }
+    if (questionE === '') {
+        setQuestionEError(true);
+    } else {
+        setQuestionEError(false);
+    }
+    if (questionF === '') {
+        setQuestionFError(true);
+    } else {
+        setQuestionFError(false);
+    }
 
-  //   return () => clearInterval(interval);
-  // }, [seconds, sessionStarted]);
-
-  const formatTime = (totalSeconds) => {
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    if (questionA !== '' && questionB !== '' && questionC !== '' && questionD !== '' && questionE !== '' && questionF !== '') {
+      passData();
+    }
   };
 
-  const handleStartSession = () => {
-    setLinkClicked(true)
-
-    // audioRef.current.play().then(() => {
-    //   audioRef.current.pause(); // Play and pause to unlock further playback
-    //   setSessionStarted(true);
-    // }).catch(err => console.error('Error unlocking audio:', err));
+  const passData = () => {
+    console.log('data uncaught')
+    const data = {
+        'userid': userData.userid,
+        'sessionid': 2,
+        'questionno': 'session2worksheet1b',
+        'response': {'q1': questionA, 'q2': questionB, 'q3': questionC, 'q4': questionD, 'q5': questionE, 'q6': questionF}
+    }
+    axios.post(`/api/sessionresponse`, data)
+        .then(response => {
+            jumptonextpage()
+        })
+        .catch(error => {
+        // Handle any errors
+        console.error(error);
+    });
   };
 
-  const jump = () => {
-    navigate(`/session2end`);
+  const jumptonextpage = () => {
+    navigate(`/session2worksheet2b`);
   };
+
+  const openDialogWithTemplateRef = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+
 
   return (
     <div>
-      <Navbar />
+       <Navbar />
       <div className={styles.background_image} id="background_image">
         <div className={styles.whole_border}>
-          <Typography title={'subtitle'} position={'left'}>
-            {language === 'English' ? 'Second Session' : 'Première session'}
-          </Typography>
-          <ProgressBar percentageNo={100} language={language} />
-   
-            {/* <Button word="Start Session" onClick={handleStartSession} position={'center'} /> */}
-
-            {
-            <Typography title={'content'} position={'left'} color={'primary'}>
-              <CountdownTimer initialCount={80} /> {/* Start countdown from 60 seconds */}
+            <Typography title={'subtitle'} position={'left'}>
+                Session 3
             </Typography>
-          }
-          <br />
 
-            <div>
+            <ProgressBar percentageNo={33} language={language} />
+            <br />
             <Typography title={'content'} position={'left'} >
-            {
-                  language === 'English' ?
-                  'Please choose any of the tasks and play them till you are told the session is over.'
-                  :
-                  'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
-                }
+              {
+                language === 'English' ?
+                <p>One way of conquering avoidance is to have specific goals to work towards. By practising goal-oriented behaviours, you will be able to reduce avoidance related to academic worry. This is called <b>Behavioural Activation</b>.</p>
+                :
+                <p>Lors de cette séance, nous allons revoir les concepts et les exercices que nous avons appris lors des dernières séances.</p>
+              }
             </Typography>
-          </div>
-          <br />
-          <div>
-            <Typography title={'content'} position={'left'}>
-            {
-                  language === 'English' ?
-                  'Here is the link for the website.'
-                  :
-                  'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
-                }
-            </Typography>
-          </div>
-          <br />
+            <br />
 
           <div>
-            <Typography title={'content'} position={'left'}>
+            <Typography title={'content'} position={'center'} color={'primary'}>
             {
                   language === 'English' ?
-                  <u><li><a href="https://www.eatforhealth.gov.au/" target="_blank" className={styles.urlLink} onClick={handleStartSession}><u>Eat for Health</u></a></li></u>
+                  <b>EXERCISE B-1</b>
                   :
                   'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
                 }
             </Typography>
           </div>
-  
-          {
-            linkClicked ? 
-            <Button word={language === 'English' ? 'NEXT' : 'Commencer Fiche 1'} onClick={jump} position={'center'} />
-            :
-            <Button word={language === 'English' ? 'NEXT' : 'Commencer Fiche 1'} className={styles.disabled_button} position={'center'} />
-          }
-          
+
+            <BorderContent>
+                {
+                    language === 'English' ?
+                    <p> Think about some goals you might have in relation to academic-related
+                      <b onClick={openDialogWithTemplateRef}>
+                          <u>
+                          <i> ISSUE </i>
+                          </u>
+                      </b> written in Worksheet 1.  Write down <b>THREE </b>goals.</p>
+                    :
+                    <p> Maintenant, réfléchissons aux objectifs que tu peux avoir en relation avec la problématique universitaire écrite dans la 
+                      <b onClick={openDialogWithTemplateRef}>
+                          <u>
+                          <i> Fiche 1 </i>
+                          </u>
+                      </b>
+                      
+                      . Écris <b>TROIS</b> objectifs.</p>
+                }
+            </BorderContent>
+
+            <TextField 
+              rows="4"
+              cols="50"
+              title={''}
+              value={questionA}
+              onChange={(e) => {
+                setQuestionA(e.target.value)
+                setQuestionAError(false)
+              }}
+              placeholder={
+                language === 'English' ?
+                "e.g.  My goal is to finish studying for my upcoming exam."
+                :
+                'p. ex. Mon objectif est de finir d’étudier pour mon prochain examen.'
+              }
+              questionError={questionAError}
+              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+            />
+
+            <BorderContent>
+                {
+                    language === 'English' ?
+                    <p> Select <b>one goal </b>and consider how the goal relates to the questions below, and write down your responses in the spaces provided below. </p>
+                    :
+                    <p> Choisis <b>un objectif </b>et pense à son rapport avec les questions ci-dessous, puis écris tes réponses dans les espaces fournis ci-dessous.</p>
+                }
+            </BorderContent>
+
+            <TextField 
+              rows="4"
+              cols="50"
+              title={
+                language === 'English' ?
+                <i>What exactly do you want to accomplish? (Write one sentence to describe your goal.)</i>
+                :
+                <i>Que veux-tu accomplir exactement ? (Écris une phrase pour décrire ton objectif.)</i>
+              }
+              value={questionB}
+              onChange={(e) => {
+                setQuestionB(e.target.value)
+                setQuestionBError(false)
+              }}
+              placeholder={
+                language === 'English' ?
+                "e.g. My goal is to finish studying for my upcoming exam."
+                :
+                'p. ex. Mon objectif est de finir d’étudier pour mon prochain examen de biologie.'
+              }
+              questionError={questionBError}
+              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+            />
+
+            <TextField 
+              rows="4"
+              cols="50"
+              title={
+                language === 'English' ?
+                <i>What actions do you plan to take to accomplish your goal?</i>
+                :
+                <i>En quoi se relie ton objectif aux objectifs et aux valeurs de tes groupes ?</i>
+              }
+              value={questionC}
+              onChange={(e) => {
+                setQuestionC(e.target.value)
+                setQuestionCError(false)
+              }}
+              placeholder={
+                language === 'English' ?
+                "e.g. I want to study all the topics that will be tested, starting chapter 1 on Monday."
+                :
+                'p.ex. L’objectif de mon groupe de biologie est de m’aider à comprendre les concepts biologiques.'
+              }
+              questionError={questionCError}
+              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+            />
+            
+            <TextField 
+              rows="4"
+              cols="50"
+              title={
+                language === 'English' ?
+                <i>How will you know when you have accomplished your goal?</i>
+                :
+                <i>Quelles ressources de groupes prévois-tu utiliser pour atteindre ton objectif ?</i>
+              }
+              value={questionD}
+              onChange={(e) => {
+                setQuestionD(e.target.value)
+                setQuestionDError(false)
+              }}
+              placeholder={
+                language === 'English' ?
+                "e.g. I will know that I have accomplished my goal when I am able to summarise the topics without looking at my lecture notes of study material. "
+                :
+                'p. ex. Je pourrais créer un groupe d’étude avec deux autres membres de mon groupe de biologie. Nous pourrions nous rencontrer chaque semaine pour nous tester sur le contenu du cours.'
+              }
+              questionError={questionDError}
+              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+            />
+            
+            <TextField 
+              rows="4"
+              cols="50"
+              title={
+                language === 'English' ?
+                <i>When do you want to accomplish your goal? </i>
+                :
+                <i>Comment vas-tu savoir quand tu auras atteint ton objectif ?</i>
+              }
+              value={questionE}
+              onChange={(e) => {
+                setQuestionE(e.target.value)
+                setQuestionEError(false)
+              }}
+              placeholder={
+                language === 'English' ?
+                "e.g. I want to finish studying for my exam at least 1 day before the actual paper."
+                :
+                'p.ex. Je saurai que j’ai atteint mon objectif quand je vais être capable de résumer les sujets sans avoir à regarder mes notes de cours.'
+              }
+              questionError={questionEError}
+              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+            />
+            
+            <TextField 
+              rows="4"
+              cols="50"
+              title={
+                language === 'English' ?
+                <i>When do you want to accomplish your goal? </i>
+                :
+                <i>Quand veux-tu atteindre ton objectif ?</i>
+              }
+              value={questionF}
+              onChange={(e) => {
+                setQuestionF(e.target.value)
+                setQuestionFError(false)
+              }}
+              placeholder={
+                language === 'English' ?
+                "e.g. I want to finish studying for my exam at least 1 day before the actual exam. "
+                :
+                'p.ex. Je veux finir d’étudier pour mon examen au moins 1 jour avant l’examen.'
+              }
+              questionError={questionFError}
+              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+            />
+
+            <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
+
+            </div>
+            </div>
+
+            <Modal
+              isOpen={isModalOpen}
+              onRequestClose={closeModal}
+              contentLabel="Issue Dialog"
+              ariaHideApp={false}
+              style={{
+                overlay: {
+                  backgroundColor: 'rgba(0, 0, 0, 0.5)', // Background color of the overlay
+                },
+                content: {
+                  width: '300px', // Width of the modal content
+                  height: '300px',
+                  margin: 'auto', // Center the modal horizontally
+                  padding: '20px', // Padding inside the modal content
+                  borderRadius: '8px', // Rounded corners
+                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', // Box shadow
+                  backgroundColor: 'white', // Background color of the modal content
+                },
+              }}
+            >
+              {questionIssue}
+            </Modal>
         </div>
-      </div>
-    </div>
+    
   );
 };
 
