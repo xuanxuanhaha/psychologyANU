@@ -47,7 +47,7 @@ const Session2Worksheet3B = () => {
         });
 
         
-          axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session2worksheet3q1`)
+          axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session2worksheet3b`)
           .then(response => {
             if(response.data){
                 if(response.data.sessionresponse.response){
@@ -84,7 +84,7 @@ const Session2Worksheet3B = () => {
     const data = {
         'userid': userData.userid,
         'sessionid': 3,
-        'questionno': 'session2worksheet3q1',
+        'questionno': 'session2worksheet3b',
         'response': {'q1': tableAnswers}
     }
     axios.post(`/api/sessionresponse`, data)

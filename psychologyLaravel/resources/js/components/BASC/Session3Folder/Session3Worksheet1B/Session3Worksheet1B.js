@@ -7,6 +7,7 @@ import lockericon from './../../../../assets/assessment/oclock.jpg';
 import avoid_cycle from './../../../../assets/surveys/avoid_cycle.png'
 import avoid_cycle_france from './../../../../assets/surveys/avoid_cycle_france.png'
 import Button from '../../../ReusableComponents/Button/Button';
+import Helppop from '../../../ReusableComponents/Helppop/Helppop';
 
 
 import Modal from 'react-modal';
@@ -14,6 +15,8 @@ import ProgressBar from '../../../ReusableComponents/ProgressBar/ProgressBar';
 import Typography from '../../../ReusableComponents/Typography/Typography';
 import BorderContent from '../../../ReusableComponents/BorderContent/BorderContent';
 import TextField from '../../../ReusableComponents/TextField/TextField';
+import Scale from '../../../ReusableComponents/Scale/Scale';
+import * as XLSX from 'xlsx';
 
 const Session3Worksheet1B = () => {
   const navigate = useNavigate();
@@ -21,34 +24,23 @@ const Session3Worksheet1B = () => {
   const language = userData.language
 
   const [sessionId, setSessionId] = useState(0);
+  const defalut_value = {q0: '', q1: '', q2: '', q3: '', q4: '', q5: 0}
 
-  const [questionA, setQuestionA] = useState('');
-  const [questionAError, setQuestionAError] = useState(false);
-  const [questionB, setQuestionB] = useState('');
-  const [questionBError, setQuestionBError] = useState(false);
-  const [questionC, setQuestionC] = useState('');
-  const [questionCError, setQuestionCError] = useState(false);
-
-  const [questionD, setQuestionD] = useState('');
-  const [questionDError, setQuestionDError] = useState(false);
-  const [questionE, setQuestionE] = useState('');
-  const [questionEError, setQuestionEError] = useState(false);
-  const [questionF, setQuestionF] = useState('');
-  const [questionFError, setQuestionFError] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [questionIssue, setQuestionIssue] = useState('');
+  const [questionGoal, setQuestionGoal] = useState('');
+  const [tableAnswers, setTableAnswers] = useState([defalut_value]);
+  const [count, setCount] = useState(1)
+  const [showError, setShowError] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
 
-    axios.get(`/api/sessionresponse/1?userid=${userData.userid}&&questionno=session1worksheetq1b`).then(response => {
+    axios.get(`/api/sessionresponse/2?userid=${userData.userid}&&questionno=session2worksheet1b`).then(response => {
       if(response.data){
         if(response.data.sessionresponse.response){
           const questionanswer = JSON.parse(response.data.sessionresponse.response)
-          setQuestionIssue(questionanswer.q1)
+          setQuestionGoal(questionanswer.q1)
         }
       }
     })
@@ -57,93 +49,97 @@ const Session3Worksheet1B = () => {
       console.error(error);
     });
 
-    axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session3worksheet1b`)
-    .then(response => {
-    if(response.data){
-        if(response.data.sessionresponse.response){
-            const questionanswer = JSON.parse(response.data.sessionresponse.response)
-            setQuestionA(questionanswer.q1)
-            setQuestionB(questionanswer.q2)
-            setQuestionC(questionanswer.q3)
-            setQuestionD(questionanswer.q4)
-            setQuestionE(questionanswer.q5)
-            setQuestionF(questionanswer.q6)
-        }
-    }
-    })
-    .catch(error => {
-    // Handle any errors
-    console.error(error);
-    });
+    axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session2worksheet3b`)
+          .then(response => {
+            if(response.data){
+                if(response.data.sessionresponse.response){
+                    const questionanswer = JSON.parse(response.data.sessionresponse.response)
+                    setTableAnswers(questionanswer.q1)
+                    setCount(0)
+                }
+            }
+          })
+          .catch(error => {
+            // Handle any errors
+            console.error(error);
+          });
+
+    
   }, []);
 
   const next = () => {
-    if (questionA === '') {
-      setQuestionAError(true);
-    } else {
-      setQuestionAError(false);
-    }
-    if (questionB === '') {
-        setQuestionBError(true);
-    } else {
-        setQuestionBError(false);
-    }
-    if (questionC === '') {
-        setQuestionCError(true);
-    } else {
-        setQuestionCError(false);
-    }
+    jumptonextpage();
 
-    if (questionD === '') {
-      setQuestionDError(true);
-    } else {
-      setQuestionDError(false);
-    }
-    if (questionE === '') {
-        setQuestionEError(true);
-    } else {
-        setQuestionEError(false);
-    }
-    if (questionF === '') {
-        setQuestionFError(true);
-    } else {
-        setQuestionFError(false);
-    }
-
-    if (questionA !== '' && questionB !== '' && questionC !== '' && questionD !== '' && questionE !== '' && questionF !== '') {
-      passData();
-    }
-  };
-
-  const passData = () => {
-    console.log('data uncaught')
-    const data = {
-        'userid': userData.userid,
-        'sessionid': 3,
-        'questionno': 'session3worksheet1b',
-        'response': {'q1': questionA, 'q2': questionB, 'q3': questionC, 'q4': questionD, 'q5': questionE, 'q6': questionF}
-    }
-    axios.post(`/api/sessionresponse`, data)
-        .then(response => {
-            jumptonextpage()
-        })
-        .catch(error => {
-        // Handle any errors
-        console.error(error);
-    });
   };
 
   const jumptonextpage = () => {
     navigate(`/session3worksheet2b`);
   };
 
-  const openDialogWithTemplateRef = () => {
-    setIsModalOpen(true);
+  const downloadCSV = () => {
+
+    // Create a CSV content string (replace with your own data)
+    // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
+    const csvHeader = ",What exactly do you want to do?, What is the duration of the activity?, Where will you perform the activity?, When will you perform the activity?, Indicate your confidence";
+    const csvContent2 = "Exmaple 1 My goal is to finish studying for my upcoming exam, I want to study my Biology lecture notes with my fellow students of the biology tutor group (my connection with fellow biology students is the resource).,1 hour per day.,In the library at a booked group room (The library is a resource we can use).,Every Tuesday from 6pm to 7pm,10";
+    
+    const sentence = 'Dans la bibliothèque, dans une salle de groupe réservée (la bibliothèque est la ressource que nous pouvons utiliser)'
+    const csvHeaderF = ",Que vas-tu faire exactement ?, Quelle est la durée de l’activité ?, Où vas-tu faire l’activité ?, Quand vas-tu faire l’activité ?, Indique ton niveau de confiance.";
+    const csvContent2F = `Exemple 1 Mon objectif : Finir d’étudier pour mon prochain examen., Je veux étudier mes notes de cours avec mon groupe de biologie (faire partie de la même classe que mes camarades du cours de biologie est une ressource),1 heure par jour,"${sentence}",Chaque mardi de 18h à 19h.,8`;
+
+    const allValuesNotEmpty = tableAnswers.every(obj => {
+      return Object.values(obj).every(value => value !== '' || value === 0);
+    });
+
+    if (!allValuesNotEmpty) {
+      setShowError(true);
+    }else{
+      let csvContent = `${csvHeader}\n${csvContent2}`;
+      const csvContentFrench = `${csvHeaderF}\n${csvContent2F}`;
+      csvContent = language === 'English' ? csvContent : csvContentFrench
+
+
+      const worksheetData = [];
+
+      // Push headers
+      worksheetData.push(csvHeader.split(','));
+      worksheetData.push(csvContent2.split(','));
+      tableAnswers.map((answer) => {
+        const answerToString = `${answer.q0},${answer.q1},${answer.q2},${answer.q3},${answer.q4},${answer.q5}`;
+        worksheetData.push(answerToString.split(','));
+      });
+
+
+      const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+
+      // Convert workbook to binary string
+      const excelBinaryString = XLSX.write(workbook, { bookType: 'xlsx', type: 'binary' });
+
+      // Convert binary string to Blob
+      const blob = new Blob([s2ab(excelBinaryString)], { type: 'application/octet-stream' });
+
+      // Create a download link and trigger the download
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute('download', 'session2worksheet3b.xlsx');
+      document.body.appendChild(link); // Required for Firefox
+      link.click();
+
+      // Clean up the URL object to free up memory
+      URL.revokeObjectURL(link.href);
+      document.body.removeChild(link); // Required for Firefox
+      }
+
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  function s2ab(s) {
+      const buf = new ArrayBuffer(s.length);
+      const view = new Uint8Array(buf);
+      for (let i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff;
+      return buf;
+  }
 
 
 
@@ -157,44 +153,16 @@ const Session3Worksheet1B = () => {
             </Typography>
 
             <ProgressBar percentageNo={33} language={language} />
-            <br />
-            <Typography title={'content'} position={'left'} >
-              {
-                language === 'English' ?
-                <p>One way of conquering avoidance is to have specific goals to work towards. By practising goal-oriented behaviours, you will be able to reduce avoidance related to academic worry. This is called <b>Behavioural Activation</b>.</p>
-                :
-                <p>Lors de cette séance, nous allons revoir les concepts et les exercices que nous avons appris lors des dernières séances.</p>
-              }
-            </Typography>
+            
             <br />
 
-          <div>
-            <Typography title={'content'} position={'center'} color={'primary'}>
-            {
-                  language === 'English' ?
-                  <b>EXERCISE B-1</b>
-                  :
-                  'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
-                }
-            </Typography>
-          </div>
 
             <BorderContent>
                 {
                     language === 'English' ?
-                    <p> Think about some goals you might have in relation to academic-related
-                      <b onClick={openDialogWithTemplateRef}>
-                          <u>
-                          <i> ISSUE </i>
-                          </u>
-                      </b> written in Worksheet 1.  Write down <b>THREE </b>goals.</p>
+                    <p> Let’s look at the THREE goals you set in Session 2 Exercise B-1.</p>
                     :
                     <p> Maintenant, réfléchissons aux objectifs que tu peux avoir en relation avec la problématique universitaire écrite dans la 
-                      <b onClick={openDialogWithTemplateRef}>
-                          <u>
-                          <i> Fiche 1 </i>
-                          </u>
-                      </b>
                       
                       . Écris <b>TROIS</b> objectifs.</p>
                 }
@@ -204,177 +172,277 @@ const Session3Worksheet1B = () => {
               rows="4"
               cols="50"
               title={''}
-              value={questionA}
+              value={questionGoal}
               onChange={(e) => {
-                setQuestionA(e.target.value)
-                setQuestionAError(false)
               }}
+              disabled
               placeholder={
                 language === 'English' ?
                 "e.g.  My goal is to finish studying for my upcoming exam."
                 :
                 'p. ex. Mon objectif est de finir d’étudier pour mon prochain examen.'
               }
-              questionError={questionAError}
+              questionError={''}
               errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
             />
 
             <BorderContent>
                 {
                     language === 'English' ?
-                    <p> Select <b>one goal </b>and consider how the goal relates to the questions below, and write down your responses in the spaces provided below. </p>
+                    <p> You also learned to plan your activities in Exercise B-2.</p>
                     :
                     <p> Choisis <b>un objectif </b>et pense à son rapport avec les questions ci-dessous, puis écris tes réponses dans les espaces fournis ci-dessous.</p>
                 }
             </BorderContent>
 
-            <TextField 
-              rows="4"
-              cols="50"
-              title={
-                language === 'English' ?
-                <i>What exactly do you want to accomplish? (Write one sentence to describe your goal.)</i>
-                :
-                <i>Que veux-tu accomplir exactement ? (Écris une phrase pour décrire ton objectif.)</i>
-              }
-              value={questionB}
-              onChange={(e) => {
-                setQuestionB(e.target.value)
-                setQuestionBError(false)
-              }}
-              placeholder={
-                language === 'English' ?
-                "e.g. My goal is to finish studying for my upcoming exam in biology."
-                :
-                'p. ex. Mon objectif est de finir d’étudier pour mon prochain examen de biologie.'
-              }
-              questionError={questionBError}
-              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
-            />
 
-            <TextField 
-              rows="4"
-              cols="50"
-              title={
+            <table id="question_table" className={styles.table}>
+          <tr className={styles.table_header}>
+            <th className={styles.each_column}></th>
+            <th className={styles.each_column}><u><b>
+              {
                 language === 'English' ?
-                <i>How is this goal related your groups goals and values?</i>
+                'What exactly do you want to do?'
                 :
-                <i>En quoi se relie ton objectif aux objectifs et aux valeurs de tes groupes ?</i>
+                'Que vas-tu faire exactement ?'
               }
-              value={questionC}
-              onChange={(e) => {
-                setQuestionC(e.target.value)
-                setQuestionCError(false)
-              }}
-              placeholder={
+              </b></u>
+              
+            </th>
+            <th className={styles.each_column}><u><b>
+              {
                 language === 'English' ?
-                "e.g. The goal of my biology tutor group is to help me understand biological concepts."
+                ' What is the duration of the activity?'
                 :
-                'p.ex. L’objectif de mon groupe de biologie est de m’aider à comprendre les concepts biologiques.'
+                'Quelle est la durée de l’activité ?'
               }
-              questionError={questionCError}
-              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
-            />
-            
-            <TextField 
-              rows="4"
-              cols="50"
-              title={
+              </b></u>
+              
+            </th>
+            <th className={styles.each_column}><u><b>
+                {
+                  language === 'English' ?
+                  'Where will you perform the activity?'
+                  :
+                  'Où vas-tu faire l’activité ?'
+                }
+              </b></u>
+              
+            </th>
+            <th className={styles.each_column}><u><b>
+              {
                 language === 'English' ?
-                <i>What group resources do you plan to use to accomplish your goal?</i>
+                'When will you perform the activity?'
                 :
-                <i>Quelles ressources de groupes prévois-tu utiliser pour atteindre ton objectif ?</i>
+                'Quand vas-tu faire l’activité ?'
               }
-              value={questionD}
-              onChange={(e) => {
-                setQuestionD(e.target.value)
-                setQuestionDError(false)
-              }}
-              placeholder={
+              </b></u>
+            </th>
+            <th className={styles.scale_column}>
+              <Helppop
+                  label={
+                    language === 'English' ?
+                    <u><b>Indicate your confidence</b></u>
+                    :
+                    'Indique ton niveau de confiance.'
+                  }
+                  helptext={
+                    language === 'English' ?
+                    <p>
+                      0: not at all confident
+                      <br />
+                      10: extremely confident
+                    </p>
+                    :
+                    <p>
+                      0: aucun
+                      <br />
+                      10: extrême
+                    </p>
+                  } />
+            </th>
+            <th className={styles.delete_column}></th>
+          </tr>
+          <tr className={styles.table_row}>
+            <td> 
+              <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
+              {
                 language === 'English' ?
-                "e.g. I could create a study group with two other members of my tutor group. We could meet every week to quiz each other on the content of the course."
+                'Example 1 My goal: To finish studying for my upcoming exam'
                 :
-                'p. ex. Je pourrais créer un groupe d’étude avec deux autres membres de mon groupe de biologie. Nous pourrions nous rencontrer chaque semaine pour nous tester sur le contenu du cours.'
+                'Exemple 1 Mon objectif : Finir d’étudier pour mon prochain examen.'
               }
-              questionError={questionDError}
-              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
-            />
-            
-            <TextField 
-              rows="4"
-              cols="50"
-              title={
+              </textarea>
+            </td>
+            <td> <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
+              {
                 language === 'English' ?
-                <i>How will you know when you have accomplished your goal? </i>
+                'I want to study my Biology lecture notes with my fellow students of the biology tutor group (My connection with fellow biology students is the resource).'
                 :
-                <i>Comment vas-tu savoir quand tu auras atteint ton objectif ?</i>
+                'Je veux étudier mes notes de cours avec mon groupe de biologie (faire partie de la même classe que mes camarades du cours de biologie est uneressource).'
               }
-              value={questionE}
-              onChange={(e) => {
-                setQuestionE(e.target.value)
-                setQuestionEError(false)
-              }}
-              placeholder={
+              
+              </textarea>
+            </td>
+            <td> <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
+              {
                 language === 'English' ?
-                "e.g., I will know that I have accomplished my goal when I am able to summarise the topics without looking at my lecture notes of study material. "
+                '1 hour per day.'
                 :
-                'p.ex. Je saurai que j’ai atteint mon objectif quand je vais être capable de résumer les sujets sans avoir à regarder mes notes de cours.'
+                '1 heure par jour.'
               }
-              questionError={questionEError}
-              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
-            />
-            
-            <TextField 
-              rows="4"
-              cols="50"
-              title={
+              </textarea>
+            </td>
+            <td> <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
+              {
                 language === 'English' ?
-                <i>When do you want to accomplish your goal? </i>
+                'In the library at a booked group room (The library is a resource we can use).'
                 :
-                <i>Quand veux-tu atteindre ton objectif ?</i>
+                'Dans la bibliothèque, dans une salle de groupe réservée (la bibliothèque est la ressource que nous pouvons utiliser).'
               }
-              value={questionF}
-              onChange={(e) => {
-                setQuestionF(e.target.value)
-                setQuestionFError(false)
-              }}
-              placeholder={
+              </textarea>
+            </td>
+            <td> <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
+              {
                 language === 'English' ?
-                "e.g. I want to finish studying for my exam at least 1 day before the actual exam. "
+                'Every Tuesday from 6pm to 7pm.'
                 :
-                'p.ex. Je veux finir d’étudier pour mon examen au moins 1 jour avant l’examen.'
+                'Chaque mardi de 18h à 19h.'
               }
-              questionError={questionFError}
-              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
-            />
+            </textarea>
+            </td>
+            <td className={styles.scale}>
+              <div className={styles.scaleTop} />
+              <div className={styles.scaleWidth} >
+              <Scale
+                  slidervalue={8}
+                  step={1}
+                  marks={[{value: 0, label: 0}, {value: 10, label: 10}]}
+                  min={0}
+                  max={10}
+                  onChange={(value) => null} 
+                />
+                </div>
+            </td>
+            <td>
+            </td>
+          </tr>
+
+          {
+            tableAnswers.map((row, index) => {
+              return <tr className={styles.table_row}>
+                      <td>
+                        <TextField 
+                            className={styles.answer_textarea}
+                            rows="1"
+                            cols="10"
+                            disabled
+                            title={''}
+                            value={row.q0 || ''}
+                            onChange={(event)=>console.log('not able to change')}
+                            placeholder={language === 'English' ? `Activity ${index + 1}:` : `Activité ${index + 1}:`}
+                            questionError={(!row.q0 || row.q0 === '') && showError}
+                            errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+                            errorClassName={styles.answer_textarea_error}
+                          />
+                      </td>
+                      <td>
+                        <TextField 
+                          className={styles.answer_textarea}
+                          rows="1"
+                          cols="10"
+                          title={''}
+                          disabled
+                          value={row.q1 || ''}
+                          onChange={(event)=>console.log('not able to change')}
+                          placeholder={''}
+                          questionError={(!row.q1 || row.q1 === '') && showError}
+                          errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+                          errorClassName={styles.answer_textarea_error}
+                        />
+                      </td>
+                      <td>
+                        <TextField 
+                          className={styles.answer_textarea}
+                          rows="1"
+                          disabled
+                          cols="10"
+                          title={''}
+                          value={row.q2 || ''}
+                          onChange={(event)=>console.log('not able to change')}
+                          placeholder={''}
+                          questionError={(!row.q2 || row.q2 === '') && showError}
+                          errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+                          errorClassName={styles.answer_textarea_error}
+                        />
+                      </td>
+                      <td>
+                        <TextField 
+                          className={styles.answer_textarea}
+                          disabled
+                          rows="1"
+                          cols="10"
+                          title={''}
+                          value={row.q3 || ''}
+                          onChange={(event)=>console.log('not able to change')}
+                          placeholder={''}
+                          questionError={(!row.q3 || row.q3 === '') && showError}
+                          errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+                          errorClassName={styles.answer_textarea_error}
+                        />
+                      </td>
+                      <td>
+                        <TextField 
+                          className={styles.answer_textarea}
+                          rows="1"
+                          cols="10"
+                          disabled
+                          title={''}
+                          value={row.q4 || ''}
+                          onChange={(event)=>console.log('not able to change')}
+                          placeholder={''}
+                          questionError={(!row.q4 || row.q4 === '') && showError}
+                          errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
+                          errorClassName={styles.answer_textarea_error}
+                        />
+                      </td>
+                      <td>
+                        <div className={styles.scaleTop}/>
+                        <div className={styles.scaleWidth} >
+                          <Scale
+                            className={styles.scale}
+                            slidervalue={row.q5}
+                            step={1}
+                            marks={[{value: 0, label: 0}, {value: 10, label: 10}]}
+                            min={0}
+                            max={10}
+                            onChange={(value) => console.log('not able to change')}
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        {
+                          tableAnswers.length > 1 &&
+                          <Button className={styles.btn} disabled word={language === 'English' ? 'Delete' : 'Effacer'}  onClick={() => console.log('not able to change')} position={'center'} />
+                        }
+                      </td>
+                    </tr>
+            })
+          }
+          {/* <tr className={styles.table_header }>
+            <Button className={styles.addBtn} word={
+              language === 'English' ?
+              'Add' :
+              'Ajouter une activité'
+              }  onClick={() => addMoreRow()} position={'left'} />
+          </tr> */}
+    </table>
 
             <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
 
             </div>
             </div>
 
-            <Modal
-              isOpen={isModalOpen}
-              onRequestClose={closeModal}
-              contentLabel="Issue Dialog"
-              ariaHideApp={false}
-              style={{
-                overlay: {
-                  backgroundColor: 'rgba(0, 0, 0, 0.5)', // Background color of the overlay
-                },
-                content: {
-                  width: '300px', // Width of the modal content
-                  height: '300px',
-                  margin: 'auto', // Center the modal horizontally
-                  padding: '20px', // Padding inside the modal content
-                  borderRadius: '8px', // Rounded corners
-                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', // Box shadow
-                  backgroundColor: 'white', // Background color of the modal content
-                },
-              }}
-            >
-              {questionIssue}
-            </Modal>
         </div>
     
   );

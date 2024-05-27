@@ -69,20 +69,12 @@ const Session3B = () => {
             <Typography title={'content'} position={'left'} color={'primary'} >
               {
                 language === 'English' ?
-                'Last session we saw how academic worry is a problem for many students, and that it leads to cognitive, affective and behavioural difficulties. We also learned that worry functions as avoidance, although it may make you feel relieved in the short-term, it often leads to long-term negative consequences, and contributes to worry in the future. We also learned about the importance of eating for our physical health.'
+                <p>In the last sessions, you learned skills to manage academic worry through <b>Behavioural Activation</b>. <b>Behavioural Activation</b> can help you overcome avoidance in your academic performance. As Behavioural Activation encourages practising goal-oriented behaviours to overcome avoidance, the first step of undertaking Behavioural Activation is to set up your goals.</p>
                 :
                 <p>Lors de cette séance, nous allons revoir les concepts et les exercices que nous avons appris lors des dernières séances.</p>
               }
             </Typography>
-            <br />
-            <Typography title={'content'} position={'left'} color={'primary'} >
-              {
-                language === 'English' ?
-                <p>In this session, you will learn some skills to cope with your worry.</p>
-                :
-                <p>Premièrement, as-tu ton planificateur d’activités avec toi pour cette séance ? Assure-toi de les avoir accessibles puisque tu en auras de besoin pour l’exercice ci-dessous.</p>
-              }
-            </Typography>
+           
             <br />
             
             </div>
