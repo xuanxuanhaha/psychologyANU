@@ -13,6 +13,7 @@ import Typography from '../../ReusableComponents/Typography/Typography';
 import BorderContent from '../../ReusableComponents/BorderContent/BorderContent';
 import TextField from '../../ReusableComponents/TextField/TextField';
 import AudioPlayer from '../../ReusableComponents/AudioPlayer/AudioPlayer';
+import { jsPDF } from 'jspdf';
 
 
 const Session4Worksheet1Q1 = () => {
@@ -43,6 +44,78 @@ const Session4Worksheet1Q1 = () => {
 
   const jumptonextpage = () => {
     navigate(`/session4worksheet1end`);
+  };
+
+  const generatePDF = () => {
+    const doc = new jsPDF();
+    let yPosition = 10; // Initial y position
+    const lineHeight = 5; // Line height for spacing
+    const pageHeight = doc.internal.pageSize.height; // Get page height
+
+    // Function to check if new content exceeds page height
+    const isNewPageNeeded = (heightToAdd) => {
+        return yPosition + heightToAdd > pageHeight - 10; // Leave some margin at the bottom
+    };
+    doc.setFontSize(14); // Set default font size
+    doc.setFont('helvetica', 'normal'); // Set default font weight
+
+    // Add first text
+    doc.text('Review of Guided Thought Exercise', 15, yPosition);
+    yPosition += lineHeight + 5; // Increase y position
+
+  
+     // Reset font size and weight for subsequent text
+    doc.setFontSize(12); // Set default font size
+    doc.setFont('helvetica', 'normal'); // Set default font weight
+
+    // Add second text
+    const text2 = 'Please listen to the instructions carefully, and try to follow them as closely as you can. As you have learned in the previous session, this exercise can be used any time of day or night, and will help you remember community connection, kindness to all, and mindfulness when you need it most.' +
+    '\n\nSettle into a comfortable position, and turn your attention to your breathing. Try to breathe slowly and deeply. ' + 
+    '\n\nTake a deep breath, and allow your breathing to relax you as you exhale fully. Feel free to close your eyes if you wish.' +
+    '\n\nNow, think about the academic worry that you have written down in Worksheet 1. Allow any feelings of stress or discomfort to flow through your body. Try not to avoid or over-identify with these feelings; instead, just be mindful of them; recognising, and accepting them for what they are. '+
+    '\n\nNow, silently say to yourself: ' +
+    '\n\n• This is a moment of difficulty. ' +
+    '\n\n• Take some time to consider how your current issue is connected to the larger human experience.' +
+    '\n\nNow, silently say to yourself: ' +
+    '\n\n• Suffering is a part of life as a member of the university community.' +
+    '\n\n• I’m not alone. I am part of the university community.'+
+    '\n\n• All members of my university community struggle in life, just like I do.'+
+    '\n\nNow, silently say to yourself: '+
+    '\n\n• May I be kind to myself as I am kind to other members of my university community.' +
+    '\n\nYou can also ask yourself, “What do I need to hear right now to express kindness to myself?” Is there a phrase that speaks to you in your particular situation?'+
+    '\n\nIf you’re having trouble finding the right words, think back to the words of kindness that you wrote to yourself earlier, or imagine what you might say to another member of your university community who is struggling with a similar issue. Let those kind words roll gently through your mind. Here are some examples for you.'+
+    '\n\n• Just as my university community, may I give myself the compassion that I need.'+
+    '\n\n• Just as my university community, may I learn to accept myself as I am.'+
+    '\n\n• Just as my university community, may I forgive myself.'+
+    '\n\n• Just as my university community, may I be strong.'+
+    '\n\n• Just as my university community, may I be patient.'+
+    '\n\nNow it is time to return to your day. Continue to breathe smoothly and regularly, feeling your energy increasing with each breath. When you are ready, open your eyes and return to your day, feeling alert and calm.'               
+    ;
+
+  // Split text2 into lines to fit within page width
+  const text2Lines = doc.splitTextToSize(text2, doc.internal.pageSize.width - 20); // Adjust width based on page layout and font size
+
+  text2Lines.forEach(line => {
+    // Check if adding this line will exceed page height
+    if (isNewPageNeeded(lineHeight)) {
+      doc.addPage(); // Add new page
+      yPosition = 10; // Reset y position
+    }
+    doc.text(line, 15, yPosition);
+    yPosition += lineHeight;
+  });
+
+  
+//   const text2Lines = doc.splitTextToSize(text2, 180); // Split text into lines to fit in the page width
+//   doc.text(text2Lines, 10, yPosition);
+//   yPosition += text2Lines.length * lineHeight; // Increase y position based on the number of lines
+
+  return doc;
+  };
+
+  const handleDownload = () => {
+    const doc = generatePDF();
+    doc.save('document.pdf');
   };
 
 
@@ -78,6 +151,8 @@ const Session4Worksheet1Q1 = () => {
                     <AudioPlayer audioPath={'http://3.25.76.79/audios/BASC_guided_thought_script.wav'} />
                 </div>
                 <BorderContent className={styles.greyBorderContent}>
+                <button className={styles.downloadbtn} onClick={handleDownload}>Download Script</button>
+                
                     {
                         language === 'English' ?
                         <React.Fragment>
