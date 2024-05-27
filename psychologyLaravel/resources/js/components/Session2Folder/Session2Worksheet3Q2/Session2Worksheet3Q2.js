@@ -115,7 +115,6 @@ const Session2Worksheet3Q2 = () => {
   };
 
   const jumptonextpage = () => {
-    // navigate(`/session2summary`);
         navigate(`/session3End`);
 
   };

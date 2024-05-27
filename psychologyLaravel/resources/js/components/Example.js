@@ -49,7 +49,6 @@ import Session3Worksheet1Q3 from './Session3Folder/Session3Worksheet1Q3/Session3
 import Session3Worksheet1Q4 from './Session3Folder/Session3Worksheet1Q4/Session3Worksheet1Q4';
 import Session3Worksheet1end from './Session3Folder/Session3Worksheet1end/Session3Worksheet1end';
 import Session3End from './Session3Folder/Session3End/Session3End';
-
 import Session4 from './Session4Folder/Session4/Session4';
 import Session4Intro from './Session4Folder/Session4Intro/Session4Intro';
 import Session4Review from './Session4Folder/Session4Review/Session4Review';
@@ -106,6 +105,8 @@ import Session3C from './C/Session3Folder/Session3C/Session3C'
 import Session4C from './C/Session4Folder/Session4C/Session4C'
 import Session4Worksheet1C from './C/Session4Folder/Session4Worksheet1C/Session4Worksheet1C'
 import Session5C from './C/Session5Folder/Session5C/Session5C'
+import Session3EndC from './C/Session3Folder/Session3EndC/Session3EndC';
+import Session4EndC from './C/Session4Folder/Session4EndC/Session4EndC';
 
 
 
@@ -965,6 +966,27 @@ function Example() {
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               <Session5C />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+
+                      <Route
+                        path="/session3endc"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session3EndC />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session4endc"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              <Session4EndC />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )

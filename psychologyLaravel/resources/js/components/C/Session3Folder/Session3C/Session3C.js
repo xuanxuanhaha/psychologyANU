@@ -93,7 +93,7 @@ const Session3C = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session3end`);
+    navigate(`/session3endc`);
   };
 
   return (

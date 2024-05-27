@@ -79,7 +79,7 @@ const Session4Worksheet1C = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session4end`);
+    navigate(`/session4endc`);
   };
 
   return (

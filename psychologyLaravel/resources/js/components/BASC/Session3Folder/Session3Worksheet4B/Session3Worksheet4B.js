@@ -126,7 +126,6 @@ const closeModal = () => {
   };
 
   const jumptonextpage = () => {
-    // navigate(`/session2summary`);
         navigate(`/session3end`);
 
   };

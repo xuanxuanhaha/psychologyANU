@@ -8,12 +8,15 @@ use App\Models\Users;
 use App\Mail\Session1Finish;
 use App\Mail\Session2Finish;
 use App\Mail\Session3Finish;
+use App\Mail\Session3FinishC;
 use App\Mail\Session4Finish;
+use App\Mail\Session4FinishC;
 use App\Mail\Session5Finish;
 use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
 use App\Models\SessionReminderEmailStatus;
 use App\Mail\SessionStartReminderAuto;
+use App\Models\UserIds;
 
 class SessionController extends Controller
 {
@@ -135,9 +138,15 @@ class SessionController extends Controller
 
     public function sessionEnd($attributes = []) {
         $user = Users::find($attributes['userid']);
+        $username = $user->username;
+        $userGroup = UserIds::where('id', $username)->where('available', 0)->first();
         if(!$user) {
             return array('success' => false, 'error' => 'no user found');
         }
+        if(empty($userGroup)) {
+            return array('success' => false, 'error' => 'no user found');
+        }
+        $userGroupId = $userGroup->group;
 
         $userSessionRecord = UserSessions::where([['userid', $attributes['userid']], ['sessionid', $attributes['sessionid']]])->whereNull('endat')->first();
         $epochTime = time();
@@ -156,9 +165,17 @@ class SessionController extends Controller
                     }else if ($attributes['sessionid'] === 2){
                         Mail::to($user->email)->send(new Session2Finish($user));
                     }else if ($attributes['sessionid'] === 3){
-                        Mail::to($user->email)->send(new Session3Finish($user));
+                        if($userGroupId === 3){
+                            Mail::to($user->email)->send(new Session3FinishC($user));
+                        } else{
+                            Mail::to($user->email)->send(new Session3Finish($user));
+                        }
                     }else if ($attributes['sessionid'] === 4){
-                        Mail::to($user->email)->send(new Session4Finish($user));
+                        if($userGroupId === 3){
+                            Mail::to($user->email)->send(new Session4FinishC($user));
+                        } else{
+                            Mail::to($user->email)->send(new Session4Finish($user));
+                        }
                     }else if ($attributes['sessionid'] === 5){
                         Mail::to($user->email)->send(new Session5Finish($user));
                     }
@@ -205,13 +222,13 @@ class SessionController extends Controller
         } else if($sessionid === 2){
             return 0;
         } else if($sessionid === 3) { // session 2 -> 3: 6 days
-            return 120; // Todo: use 6 minutes to do testing
+            return 10; // Todo: use 6 minutes to do testing
             // return 518400;
         } else if($sessionid === 4) { // session 3 -> 4: 6 days
-            return 120; // Todo: use 6 minutes to do testing
+            return 10; // Todo: use 6 minutes to do testing
             // return 518400;
         } else if($sessionid === 5) { // session 4 -> 5: 6 days
-            return 120; // Todo: use 6 minutes to do testing
+            return 10; // Todo: use 6 minutes to do testing
             // return 518400;
         }
     }
