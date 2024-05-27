@@ -396,3 +396,11 @@ body {
     width: 100%;
     margin: auto;
   }
+
+  .downloadbtn{
+    background-color: #7758df;
+    color: white;
+    border-color: transparent;
+    padding: 2px 6px ;
+    margin-bottom: 8px;
+  }

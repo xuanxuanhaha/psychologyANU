@@ -172,6 +172,7 @@ function s2ab(s) {
 }
 
 
+
   const changeTableAnwser =(outerKey, innerKey, value) => {
     const tableanswers = tableAnswers
     tableanswers[outerKey][innerKey] = value
@@ -211,6 +212,7 @@ function s2ab(s) {
                 </Typography>
 
                 <br />
+
                 <Session4worksheet4bWording
                     language={language} 
                     questionIssue={questionIssue}

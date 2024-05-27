@@ -151,7 +151,7 @@ const Session4Worksheet1Q1 = () => {
                     <AudioPlayer audioPath={'http://3.25.76.79/audios/BASC_guided_thought_script.wav'} />
                 </div>
                 <BorderContent className={styles.greyBorderContent}>
-                <button className={styles.downloadbtn} onClick={handleDownload}>Download Script</button>
+                {/* <button className={styles.downloadbtn} onClick={handleDownload}>Download Script</button> */}
                 
                     {
                         language === 'English' ?

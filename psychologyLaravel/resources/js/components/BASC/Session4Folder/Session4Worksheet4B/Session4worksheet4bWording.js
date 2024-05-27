@@ -4,6 +4,7 @@ import styles from './session4worksheet4b.module.css';
 import Typography from '../../../ReusableComponents/Typography/Typography';
 import BorderContent from '../../../ReusableComponents/BorderContent/BorderContent';
 import Modal from 'react-modal';
+import { jsPDF } from 'jspdf';
 
 const Session3worksheet1q4Wording = (props) => {
 
@@ -19,11 +20,88 @@ const Session3worksheet1q4Wording = (props) => {
       const closeModal = () => {
         setIsModalOpen(false);
       };
+
+
+
+const generatePDF = () => {
+    const doc = new jsPDF();
+    let yPosition = 10; // Initial y position
+    const lineHeight = 5; // Line height for spacing
+    const pageHeight = doc.internal.pageSize.height; // Get page height
+
+    // Function to check if new content exceeds page height
+    const isNewPageNeeded = (heightToAdd) => {
+        return yPosition + heightToAdd > pageHeight - 10; // Leave some margin at the bottom
+    };
+    doc.setFontSize(14); // Set default font size
+    doc.setFont('helvetica', 'normal'); // Set default font weight
+
+    // Add first text
+    doc.text('Self-Compassion Homework Tasks', 10, yPosition);
+    yPosition += lineHeight + 5; // Increase y position
+
+    const pageWidth = doc.internal.pageSize.width; // Get page width
+  const textWidth = pageWidth - 30; // Adjust width to leave 15px padding on each side
+
+     // Reset font size and weight for subsequent text
+    doc.setFontSize(12); // Set default font size
+    doc.setFont('helvetica', 'normal'); // Set default font weight
+
+    // Add second text
+    const text2 = '1. Please practice the following self-compassion exercise over the next week before the final session:' +
+    '\n\nThis exercise can be used any time of day or night, and will help you remember common humanity, self-kindness, and mindfulness when you need it most.' + 
+    '\n\n1. Think about the academic-related issue written in Worksheet 1. Call the situation to mind, and see if you can actually feel the stress and emotional discomfort in your body.' +
+    '\n\n2. Now, silently say to yourself:'+
+    '\n\n• This is a moment of difficulty.' +
+    '\n\n• Ouch.' +
+    '\n\n3. Now, silently say to yourself:' +
+    '\n\n• Suffering is a part of life' +
+    '\n\n• I’m not alone. '+
+    '\n\n• We all struggle in our lives.'+
+    '\n\n4. Now, silently say to yourself:'+
+    '\n\n• May I be kind to myself.' +
+    '\n\nYou can also ask yourself, “What do I need to hear right now to express kindness to myself?” Is there a phrase that speaks to you in your particular situation?'+
+    '\n\nFor example:'+
+    '\n\n• May I give myself the compassion that I need.'+
+    '\n\n• My I learn to accept myself as I am.'+
+    '\n\n• May I forgive myself.'+
+    '\n\n• May I be strong.'+
+    '\n\n• May I be patient.'  
+    ;
+
+  // Split text2 into lines to fit within page width
+  const text2Lines = doc.splitTextToSize(text2, doc.internal.pageSize.width - 20); // Adjust width based on page layout and font size
+
+  text2Lines.forEach(line => {
+    // Check if adding this line will exceed page height
+    if (isNewPageNeeded(lineHeight)) {
+      doc.addPage(); // Add new page
+      yPosition = 10; // Reset y position
+    }
+    doc.text(line, 10, yPosition);
+    yPosition += lineHeight;
+  });
+
+  
+//   const text2Lines = doc.splitTextToSize(text2, 180); // Split text into lines to fit in the page width
+//   doc.text(text2Lines, 10, yPosition);
+//   yPosition += text2Lines.length * lineHeight; // Increase y position based on the number of lines
+
+  return doc;
+  };
+
+  const handleDownload = () => {
+    const doc = generatePDF();
+    doc.save('document.pdf');
+  };
+
     
   return (
     <React.Fragment>
          <br />
         <BorderContent className={styles.greyBorderContent}>
+        <button className={styles.downloadbtn} onClick={handleDownload}>Download Script</button>
+
             {
                 language === 'English' ?
                 <React.Fragment>
