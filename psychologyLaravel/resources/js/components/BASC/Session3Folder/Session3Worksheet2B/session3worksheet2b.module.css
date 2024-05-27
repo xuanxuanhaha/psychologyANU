@@ -1,314 +1,130 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .navbarSection{
+.navbarSection{
     z-index: 999;width: 100%
   }
-  .background-image {
+  .background_image {
     background: url('./../../../../assets/assessment/background_purple.jpg') no-repeat center;
     background-size: cover;
     position: relative;
   }
-  
   .whole_border{
     width: 81%;max-width: 1200px;margin: auto;padding-bottom: 30px;
   }
-  .first_session_b{
-    font-size: 40px;
-  }
-  .first_session_div{
-    padding-top: 50px
-  }
-  .progress_div{
-    font-size: 25px;
-    padding-top: 30px;
-  }
+  
   .question_content{
     color: #7758df;
     font-size: 22px;
     width: 100%;
     margin: auto;
   }
-  .progress_background{
-    background-color: #f1f1f1;
-  }
-  .option_inner_div{
-    font-size: 25px;
-  }
   .question_wording{
+    display: block;
+    text-align: left;
+    width: 100%;
     font-weight: 400;
     white-space: pre-line;
     border: 3px solid #7758df;
     border-radius: 10px;
     padding: 20px;
     margin-top: 30px;
-  }
-  .online_screening_questions_btn{
-    background: transparent;
-    font-size: 25px;
-    padding: 10px;
-    border: 4px solid #7758df;
-    color: #7758df;
-    font-weight: bold;
-    margin: auto;
-    margin-top: 70px;
     cursor: pointer;
-    border-radius: 10px;
-    display: block;
+    background-color: white;
   }
-  .qustion_btn_div{
-    width: 100%;
+  
+  .question_wording_disabled {
+    color: gray;
+    border-color: gray;
+    cursor: default;
+    background-color: #EEEEEE;
+    cursor: not-allowed !important;
   }
-  .next_section{
-    display: flex;
-  }
-  .next_btn{
-    width: 250px;
-    background: #7758df;
-    font-size: 25px;
-    padding: 10px;
-    border: 1px solid white;
-    color: white;
-    font-weight: 500;
-    border-radius: 0;
-    margin: auto;
-    margin-top: 70px;
-    cursor: pointer;
-    margin-right: 0;
-  }
-  .after_wording{
-    width: 100%;
-    position: relative;
-    font-size: 16px;
-  }
-  .click_next_instruction{
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-  }
-  .next_btn_div{
-    width: 100%;text-align: right;display: flex;
-  }
-  .progress_bar{
-    width:80%;height: 24px;font-size: 15px;text-align: center; background: #7758df;color: white;border-radius: 5px;padding: initial;
-  }
-  .w3-light-grey{
-    margin-top: 15px;
-  }
-  .explanation{
-    font-size: 18px;
-  }
+  
   .question_wording b{
     cursor: pointer;
   }
-  .question_session{
-    color: black;
-    margin-top: 50px;
-  }
-  .answer_textarea{
-    width: 100%;
-    font-size: 12px;
-    padding: 20px;
-  }
-  .error_message{
-    font-size: 20px;background: #7758df;width: 100%;padding-left: 20px;padding-left: 20px;margin-top: 0;color: white
-  }
-  .flex{
-    display: flex;
-  }
-  .twoBtns{
-    width: 50%;
-  }
-  .table{
-    border: 1px solid gray;
-  }
-  #question_table{
-    /*font-weight: 100;*/
-    margin-top: 10px;
-  }
-  #question_table th{
-    width: 20%;
-    padding-right: 20px;
-    padding-bottom: 20px;
-  }
-  .table_row{
-    /* height: 130px; */
-  }
-  /*.last_column_slider{*/
-  /*  width: 30%;*/
-  /*}*/
-  .table_header{
-    text-align: left;
-  
-    font-size: 20px;
-  }
-  .table_header th{
-    font-weight: lighter;
-  }
-  .table_input{
-    height: 100px;
-    word-break: break-all;
-  }
-  .answer_textarea{
-    font-size: 15px;
-    padding: 10px;
-    width: 90%;
-    height: 80px;
-    margin: auto;
-  }
-  .disabled{
-    cursor: not-allowed;
-  }
-  .scale{
-    padding-right: 15px;
-  }
-  .scale_column{
-    vertical-align: text-top;
-  }
-  .each_column{
-    width: 15%;
-    padding-left: 5px;
-    padding-right: 5px;
-    vertical-align: text-top;
-  }
-  .delete_column{
-    width: 20px;
-  }
-  .scaleTop{
-    height: 50px
-  }
-  .scaleWidth{
-    width: 90%;
-    margin-left: 5%
-  }
-  .answer_textarea_error{
-    font-size: 12px;background: #7758df;width: 90%;padding-left: 10px;margin-top: 0;color: white
-
-  }
-  .btn{
-    background: #7758df;
-    font-size: 15px;
-    padding: 4px;
-    border: 1px solid white;
-    color: white;
-    font-weight: bold;
-    border-radius: 0;
-    margin: auto;
-    margin-top: 20px;
-    margin-left: 20px;
-    cursor: pointer;
-  }
-  .addBtn{
-    background: #7758df;
-    font-size: 18px;
-    padding: 10px;
-    border: 1px solid white;
-    color: white;
-    font-weight: bold;
-    border-radius: 0;
-    margin: auto;
-    margin-top: 20px;
-    margin-left: 0;
-    cursor: pointer;
-    width: 100%;
-    min-width: 200px;
-    margin-bottom: 2px;
+  .question_wording_first{
+    margin-top: 0;
   }
   @media screen and (max-width: 1150px) {
-    .first_session_b{
-      font-size: 35px;
-    }
-    .question_content{
-      font-size: 22px;
-    }
-    .online_screening_questions_btn{
-      font-size: 22px;
-    }
-    .next_btn{
+    .question_content {
       font-size: 22px;
     }
   }
   @media screen and (max-width: 1000px) {
-    .question_content{
+    .question_content {
       font-size: 22px;
-    }
-  
-    .next_btn{
-      font-size: 25px;
-    }
-  }
-  @media screen and (max-width: 850px) {
-    .next_btn{
-      width: 200px;
     }
   }
   @media screen and (max-width: 768px) {
-    .first_session_b {
-      font-size: 30px;
-    }
-    .next_section{
-      display: initial;
-    }
-    .online_screening_questions_btn{
-      margin-left: 0;
-    }
-    .click_next_instruction{
-      position: relative;
-      margin-top: 50px;
-    }
-    .next_btn_div{
-      width: 100%;
-      text-align: left;
-    }
     .whole_border{
       padding-bottom: 50px;
     }
   }
   @media screen and (max-width: 620px) {
-    .question_content{
+    .question_content {
       font-size: 22px;
-    }
-    .online_screening_questions_btn{
-      font-size: 22px;
-    }
-    .next_btn{
-      font-size: 22px;
-    }
-    .progress_bar{
-      font-size: 12px;
-      padding-top: 3px;
     }
   }
   @media screen and (max-width: 552px) {
-    .question_content{
+    .question_content {
       font-size: 20px;
     }
-    .online_screening_questions_btn{
-      font-size: 18px;
-      margin-top: 40px;
-    }
-    .next_btn{
-      font-size: 18px;
-      width: 250px;
-      margin-top: 40px;
-    }
-    .click_next_instruction{
-      margin-top: 40px;
-    }
   }
-  @media screen and (max-width: 460px){
-    .whole_border{
+  @media screen and (max-width: 460px) {
+    .whole_border {
       width: 88%;
     }
-    .progress_bar{
-      font-size: 8px;
-      padding-top: 3px;
-    }
-    label{
-      display: flex;
-    }
-    .second_option{
-      margin-left: 0;
-    }
   }
+
+.academic_p1_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.containerheadset{
+  margin: auto;text-align: center;font-size: 20px;
+}
+
+
+
+.intro_container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.intro_style{
+  text-align: center;
+  font-size: 20px;
+  /*line-height: 20px;*/
+  width: 80%;
+  margin: auto;
+  max-width: 1000px;
+  padding-bottom: 30px;
+  margin-top: 3vh;
+}
+
+@media screen and (max-width: 620px) {
+  .whole_border{
+    width: 91%;
+  }
+
+  .intro_style{
+    font-size: 18px;
+  }
+}
+
+
+
+@media screen and (max-width: 410px){
+  .intro_style{
+    font-size: 15px;
+  }
+}
+.audioBtnBox{
+  text-align: right;
+  margin-right: 10px;
+}

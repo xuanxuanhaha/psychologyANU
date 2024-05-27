@@ -21,7 +21,8 @@ const Session3Worksheet3B = () => {
 
   const [questionA, setQuestionA] = useState('');
 
-  const [questionActivities, setQuestionActivities] = useState('');
+  const [questionB, setQuestionB] = useState('');
+  const [questionC, setQuestionC] = useState('');
 
   const [count, setCount] = useState(0)
 
@@ -55,20 +56,7 @@ const Session3Worksheet3B = () => {
     const screenHeight = window.innerHeight;
     document.getElementById('background_image').style.minHeight = `${screenHeight - 100}px`;
 
-    axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session3worksheet2b`)
-          .then(response => {
-            if(response.data){
-                if(response.data.sessionresponse.response){
-                    const questionanswer = JSON.parse(response.data.sessionresponse.response)
-                    setQuestionActivities(questionanswer.q1.map(item => item.q0))
-                    setCount(0)
-                }
-            }
-          })
-          .catch(error => {
-            // Handle any errors
-            console.error(error);
-          });
+   
 
     axios.get(`/api/sessionresponse/3?userid=${userData.userid}&&questionno=session3worksheet3b`)
           .then(response => {
@@ -76,7 +64,9 @@ const Session3Worksheet3B = () => {
                 if(response.data.sessionresponse.response){
                     const questionanswer = JSON.parse(response.data.sessionresponse.response)
                     setQuestionA(questionanswer.q1)
-                    setTableAnswers(questionanswer.q2)
+                    setQuestionB(questionanswer.q2)
+                    setQuestionC(questionanswer.q3)
+                    setTableAnswers(questionanswer.q4)
                     setCount(0)
                 }
             }
@@ -98,8 +88,8 @@ const Session3Worksheet3B = () => {
         'userid': userData.userid,
         'sessionid': 3,
         'questionno': 'session3worksheet3b',
-        'response': {'q1': questionA,
-         'q2': tableAnswers}
+        'response': {'q1': questionA, 'q2': questionB,'q3': questionC,  
+         'q4': tableAnswers}
     }
     axios.post(`/api/sessionresponse`, data)
         .then(response => {
@@ -411,19 +401,34 @@ function s2ab(s) {
             </u>
           </Typography>
             {
-              questionActivities && questionActivities.map((q)=>{
-                return <TextField 
+                <TextField 
                   rows="1"
                   cols="50"
                   titleClassName={styles.title_activitytextarea}
-                  value={q}
-                  onChange={(e) => {}}
-                  disabled
+                  value={questionB}
+                  onChange={(e) => {
+                    setQuestionB(e.target.value)
+                  }}
+                  
                   placeholder={''}
                   questionError={''}
                   errorWarningText={''}
                 />
-              })
+            }
+            {
+                <TextField 
+                rows="1"
+                cols="50"
+                titleClassName={styles.title_activitytextarea}
+                value={questionC}
+                onChange={(e) => {
+                  setQuestionC(e.target.value)
+                }}
+                
+                placeholder={''}
+                questionError={''}
+                errorWarningText={''}
+              />
             }
 
           <br />
