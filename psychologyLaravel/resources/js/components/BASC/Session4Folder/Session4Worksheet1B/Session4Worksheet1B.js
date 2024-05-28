@@ -243,7 +243,7 @@ const Session4Worksheet1B = () => {
                         <Typography title={'content'}  position={'center'} color={'primary'}>
                             <b><u>Recap: Avoidance</u></b>
                         </Typography>
-                        <p>As we saw in session 1, worry can be described as negative thoughts and emotions about a future task or event. In order to “escape” these negative thoughts and emotions, people often respond by trying to avoid the task or event that causes worry.</p>
+                        <p>Worry can be described as negative thoughts and emotions about a future task or event. In order to “escape” these negative thoughts and emotions, people often respond by trying to avoid the task or event that causes worry. </p>
                     </React.Fragment>
                     :
                     <React.Fragment>

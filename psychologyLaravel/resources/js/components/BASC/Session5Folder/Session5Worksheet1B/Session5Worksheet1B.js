@@ -382,7 +382,7 @@ function s2ab(s) {
                 {
                   Object.keys(default_value).map(outerKey => (
                     <div className={styles.row}>
-                      <div className={`${styles.small_div} ${styles.borderGTGG}`} >{outerKey}</div>
+                      <div className={`${styles.small_div} ${styles.borderGTGG}`} >{outerKey}h</div>
                       <div className={`${styles.small_div_purple} ${styles.borderGTGG}`}>
                           <TextField 
                             className={`${styles.purple} ${styles.answer_textarea}`}

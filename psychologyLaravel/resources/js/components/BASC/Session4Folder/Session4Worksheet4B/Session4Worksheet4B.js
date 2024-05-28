@@ -395,6 +395,24 @@ function s2ab(s) {
                     }
                 </table>
 
+                <Typography title={'content'} position={'left'} contentwidth={'100%'}>
+                    <b>
+                    {
+                        language === 'English' ?
+                        'Friendly Reminder before you end this session:'
+                        :
+                        'Devoirs d’autocompassion'
+                    }
+                    </b>
+                </Typography>
+                <Typography title={'content'} position={'left'} contentwidth={'100%'}>
+                    {
+                        language === 'English' ?
+                        <p>Please bring your filled-out Activity Planner with you to the<b> next (FINAL)</b> session, as you will fill this information in the program. </p>
+                        :
+                        <p>Devoirs d’autocompassion</p>
+                    }
+                </Typography>
 
                 
                 <div className={styles.flex}>
