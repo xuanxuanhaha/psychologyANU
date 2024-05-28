@@ -125,7 +125,7 @@ const Session5Worksheet1B = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session5worksheet2b`);
+    navigate(`/session5worksheet3b`);
   };
 
   const changeTableAnwser =(outerKey, innerKey, value) => {
@@ -226,7 +226,7 @@ function s2ab(s) {
             }
           </Typography>
 
-          <ProgressBar percentageNo={20} language={language} />
+          <ProgressBar percentageNo={25} language={language} />
 
           <Typography title={'content'} position={'left'}  contentwidth={'100%'}>
               {
