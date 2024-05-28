@@ -66,9 +66,9 @@ const closeModal = () => {
       <div className={styles.background_image} id="background_image">
         <div className={styles.whole_border}>
         <Typography title={'subtitle'} position={'left'}>
-            {language === 'English' ? 'Session 3' : 'Première session'}
+            {language === 'English' ? 'Third Session' : 'Première session'}
           </Typography>
-          <ProgressBar percentageNo={40} language={language} />
+          <ProgressBar percentageNo={50} language={language} />
 
             <br />
             

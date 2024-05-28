@@ -108,7 +108,7 @@ const Session2Worksheet3B = () => {
     // Create a CSV content string (replace with your own data)
     // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
     const csvHeader = ",What exactly do you want to do?, What is the duration of the activity?, Where will you perform the activity?, When will you perform the activity?, Indicate your confidence";
-    const csvContent2 = "Exmaple 1 My goal is to finish studying for my upcoming exam, I want to study my Biology lecture notes with my fellow students of the biology tutor group (my connection with fellow biology students is the resource).,1 hour per day.,In the library at a booked group room (The library is a resource we can use).,Every Tuesday from 6pm to 7pm,10";
+    const csvContent2 = "Exmaple 1 My goal is to finish studying for my upcoming exam, I want to study my lecture notes.,1 hour per day.,In the library.,Everyday at 6pm.,10";
     
     const sentence = 'Dans la bibliothèque, dans une salle de groupe réservée (la bibliothèque est la ressource que nous pouvons utiliser)'
     const csvHeaderF = ",Que vas-tu faire exactement ?, Quelle est la durée de l’activité ?, Où vas-tu faire l’activité ?, Quand vas-tu faire l’activité ?, Indique ton niveau de confiance.";
@@ -296,7 +296,7 @@ const Session2Worksheet3B = () => {
               <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
               {
                 language === 'English' ?
-                'Example 1 My goal: To finish studying for my upcoming exam'
+                'Example 1 My goal: To finish studying for my upcoming exam.'
                 :
                 'Exemple 1 Mon objectif : Finir d’étudier pour mon prochain examen.'
               }
@@ -305,7 +305,7 @@ const Session2Worksheet3B = () => {
             <td> <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
               {
                 language === 'English' ?
-                'I want to study my Biology lecture notes with my fellow students of the biology tutor group (My connection with fellow biology students is the resource).'
+                'I want to study my lecture notes.'
                 :
                 'Je veux étudier mes notes de cours avec mon groupe de biologie (faire partie de la même classe que mes camarades du cours de biologie est uneressource).'
               }
@@ -324,7 +324,7 @@ const Session2Worksheet3B = () => {
             <td> <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
               {
                 language === 'English' ?
-                'In the library at a booked group room (The library is a resource we can use).'
+                'In the library.'
                 :
                 'Dans la bibliothèque, dans une salle de groupe réservée (la bibliothèque est la ressource que nous pouvons utiliser).'
               }
@@ -333,7 +333,7 @@ const Session2Worksheet3B = () => {
             <td> <textarea disabled className={`${styles.answer_textarea} ${styles.disabled}`}>
               {
                 language === 'English' ?
-                'Every Tuesday from 6pm to 7pm.'
+                'Everyday at 6pm.'
                 :
                 'Chaque mardi de 18h à 19h.'
               }

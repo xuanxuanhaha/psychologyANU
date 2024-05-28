@@ -28,24 +28,24 @@ const Session3Worksheet4B = () => {
 
 
   const default_value = {
-    '6': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '7': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '8': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '9': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '10': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '11': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '12': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '13': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '14': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '15': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '16': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '17': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '18': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '19': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '20': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '21': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '22': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
-    '23': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': '', 'Comm': ''},
+    '6': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '7': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '8': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '9': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '10': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '11': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '12': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '13': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '14': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '15': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '16': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '17': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '18': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '19': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '20': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '21': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '22': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
+    '23': {'Sat': '', 'Sun': '', 'Mon': '', 'Tue': '', 'Wed': '', 'Thu': '', 'Fri': ''},
   }
 
   const [tableAnswers, setTableAnswers] = useState(default_value)
@@ -141,29 +141,29 @@ const closeModal = () => {
   const downloadCSV = () => {
     // Create a CSV content string (replace with your own data)
     // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
-    const csvHeader = ", Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Comments (How did you feel? What did you notice?)";
+    const csvHeader = ", Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday";
     
     
-    const csvContent1 = `6h,${tableAnswers[6]['Sat'] || ''},${tableAnswers[6]['Sun'] || ''},${tableAnswers[6]['Mon'] || ''},${tableAnswers[6]['Tue'] || ''},${tableAnswers[6]['Wed'] || ''},${tableAnswers[6]['Thu'] || ''},${tableAnswers[6]['Fri'] || ''},${tableAnswers[6]['Comm'] || ''}`;
-    const csvContent2 = `7h,${tableAnswers[7]['Sat'] || ''},${tableAnswers[7]['Sun'] || ''},${tableAnswers[7]['Mon'] || ''},${tableAnswers[7]['Tue'] || ''},${tableAnswers[7]['Wed'] || ''},${tableAnswers[7]['Thu'] || ''},${tableAnswers[7]['Fri'] || ''},${tableAnswers[7]['Comm'] || ''}`;
-    const csvContent3 = `8h,${tableAnswers[8]['Sat'] || ''},${tableAnswers[8]['Sun'] || ''},${tableAnswers[8]['Mon'] || ''},${tableAnswers[8]['Tue'] || ''},${tableAnswers[8]['Wed'] || ''},${tableAnswers[8]['Thu'] || ''},${tableAnswers[8]['Fri'] || ''},${tableAnswers[8]['Comm'] || ''}`;
-    const csvContent4 = `9h,${tableAnswers[9]['Sat'] || ''},${tableAnswers[9]['Sun'] || ''},${tableAnswers[9]['Mon'] || ''},${tableAnswers[9]['Tue'] || ''},${tableAnswers[9]['Wed'] || ''},${tableAnswers[9]['Thu'] || ''},${tableAnswers[9]['Fri'] || ''},${tableAnswers[9]['Comm'] || ''}`;
-    const csvContent5 = `10h,${tableAnswers[10]['Sat'] || ''},${tableAnswers[10]['Sun'] || ''},${tableAnswers[10]['Mon'] || ''},${tableAnswers[10]['Tue'] || ''},${tableAnswers[10]['Wed'] || ''},${tableAnswers[10]['Thu'] || ''},${tableAnswers[10]['Fri'] || ''},${tableAnswers[10]['Comm'] || ''}`;
-    const csvContent6 = `11h,${tableAnswers[11]['Sat'] || ''},${tableAnswers[11]['Sun'] || ''},${tableAnswers[11]['Mon'] || ''},${tableAnswers[11]['Tue'] || ''},${tableAnswers[11]['Wed'] || ''},${tableAnswers[11]['Thu'] || ''},${tableAnswers[11]['Fri'] || ''},${tableAnswers[11]['Comm'] || ''}`;
-    const csvContent7 = `12h,${tableAnswers[12]['Sat'] || ''},${tableAnswers[12]['Sun'] || ''},${tableAnswers[12]['Mon'] || ''},${tableAnswers[12]['Tue'] || ''},${tableAnswers[12]['Wed'] || ''},${tableAnswers[12]['Thu'] || ''},${tableAnswers[12]['Fri'] || ''},${tableAnswers[12]['Comm'] || ''}`;
-    const csvContent8 = `13h,${tableAnswers[13]['Sat'] || ''},${tableAnswers[13]['Sun'] || ''},${tableAnswers[13]['Mon'] || ''},${tableAnswers[13]['Tue'] || ''},${tableAnswers[13]['Wed'] || ''},${tableAnswers[13]['Thu'] || ''},${tableAnswers[13]['Fri'] || ''},${tableAnswers[13]['Comm'] || ''}`;
-    const csvContent9 = `14h,${tableAnswers[14]['Sat'] || ''},${tableAnswers[14]['Sun'] || ''},${tableAnswers[14]['Mon'] || ''},${tableAnswers[14]['Tue'] || ''},${tableAnswers[14]['Wed'] || ''},${tableAnswers[14]['Thu'] || ''},${tableAnswers[14]['Fri'] || ''},${tableAnswers[14]['Comm'] || ''}`;
-    const csvContent10 = `15h,${tableAnswers[15]['Sat'] || ''},${tableAnswers[15]['Sun'] || ''},${tableAnswers[15]['Mon'] || ''},${tableAnswers[15]['Tue'] || ''},${tableAnswers[15]['Wed'] || ''},${tableAnswers[15]['Thu'] || ''},${tableAnswers[15]['Fri'] || ''},${tableAnswers[15]['Comm'] || ''}`;
-    const csvContent11 = `16h,${tableAnswers[16]['Sat'] || ''},${tableAnswers[16]['Sun'] || ''},${tableAnswers[16]['Mon'] || ''},${tableAnswers[16]['Tue'] || ''},${tableAnswers[16]['Wed'] || ''},${tableAnswers[16]['Thu'] || ''},${tableAnswers[16]['Fri'] || ''},${tableAnswers[16]['Comm'] || ''}`;
-    const csvContent12 = `17h,${tableAnswers[17]['Sat'] || ''},${tableAnswers[17]['Sun'] || ''},${tableAnswers[17]['Mon'] || ''},${tableAnswers[17]['Tue'] || ''},${tableAnswers[17]['Wed'] || ''},${tableAnswers[17]['Thu'] || ''},${tableAnswers[17]['Fri'] || ''},${tableAnswers[17]['Comm'] || ''}`;
-    const csvContent13 = `18h,${tableAnswers[18]['Sat'] || ''},${tableAnswers[18]['Sun'] || ''},${tableAnswers[18]['Mon'] || ''},${tableAnswers[18]['Tue'] || ''},${tableAnswers[18]['Wed'] || ''},${tableAnswers[18]['Thu'] || ''},${tableAnswers[18]['Fri'] || ''},${tableAnswers[18]['Comm'] || ''}`;
-    const csvContent14 = `19h,${tableAnswers[19]['Sat'] || ''},${tableAnswers[19]['Sun'] || ''},${tableAnswers[19]['Mon'] || ''},${tableAnswers[19]['Tue'] || ''},${tableAnswers[19]['Wed'] || ''},${tableAnswers[19]['Thu'] || ''},${tableAnswers[19]['Fri'] || ''},${tableAnswers[19]['Comm'] || ''}`;
-    const csvContent15 = `20h,${tableAnswers[20]['Sat'] || ''},${tableAnswers[20]['Sun'] || ''},${tableAnswers[20]['Mon'] || ''},${tableAnswers[20]['Tue'] || ''},${tableAnswers[20]['Wed'] || ''},${tableAnswers[20]['Thu'] || ''},${tableAnswers[20]['Fri'] || ''},${tableAnswers[20]['Comm'] || ''}`;
-    const csvContent16 = `21h,${tableAnswers[21]['Sat'] || ''},${tableAnswers[21]['Sun'] || ''},${tableAnswers[21]['Mon'] || ''},${tableAnswers[21]['Tue'] || ''},${tableAnswers[21]['Wed'] || ''},${tableAnswers[21]['Thu'] || ''},${tableAnswers[21]['Fri'] || ''},${tableAnswers[21]['Comm'] || ''}`;
-    const csvContent17 = `22h,${tableAnswers[22]['Sat'] || ''},${tableAnswers[22]['Sun'] || ''},${tableAnswers[22]['Mon'] || ''},${tableAnswers[22]['Tue'] || ''},${tableAnswers[22]['Wed'] || ''},${tableAnswers[22]['Thu'] || ''},${tableAnswers[22]['Fri'] || ''},${tableAnswers[22]['Comm'] || ''}`;
-    const csvContent18 = `23h,${tableAnswers[23]['Sat'] || ''},${tableAnswers[23]['Sun'] || ''},${tableAnswers[23]['Mon'] || ''},${tableAnswers[23]['Tue'] || ''},${tableAnswers[23]['Wed'] || ''},${tableAnswers[23]['Thu'] || ''},${tableAnswers[23]['Fri'] || ''},${tableAnswers[23]['Comm'] || ''}`;
+    const csvContent1 = `6h,${tableAnswers[6]['Sat'] || ''},${tableAnswers[6]['Sun'] || ''},${tableAnswers[6]['Mon'] || ''},${tableAnswers[6]['Tue'] || ''},${tableAnswers[6]['Wed'] || ''},${tableAnswers[6]['Thu'] || ''},${tableAnswers[6]['Fri'] || ''}`;
+    const csvContent2 = `7h,${tableAnswers[7]['Sat'] || ''},${tableAnswers[7]['Sun'] || ''},${tableAnswers[7]['Mon'] || ''},${tableAnswers[7]['Tue'] || ''},${tableAnswers[7]['Wed'] || ''},${tableAnswers[7]['Thu'] || ''},${tableAnswers[7]['Fri'] || ''}`;
+    const csvContent3 = `8h,${tableAnswers[8]['Sat'] || ''},${tableAnswers[8]['Sun'] || ''},${tableAnswers[8]['Mon'] || ''},${tableAnswers[8]['Tue'] || ''},${tableAnswers[8]['Wed'] || ''},${tableAnswers[8]['Thu'] || ''},${tableAnswers[8]['Fri'] || ''}`;
+    const csvContent4 = `9h,${tableAnswers[9]['Sat'] || ''},${tableAnswers[9]['Sun'] || ''},${tableAnswers[9]['Mon'] || ''},${tableAnswers[9]['Tue'] || ''},${tableAnswers[9]['Wed'] || ''},${tableAnswers[9]['Thu'] || ''},${tableAnswers[9]['Fri'] || ''}`;
+    const csvContent5 = `10h,${tableAnswers[10]['Sat'] || ''},${tableAnswers[10]['Sun'] || ''},${tableAnswers[10]['Mon'] || ''},${tableAnswers[10]['Tue'] || ''},${tableAnswers[10]['Wed'] || ''},${tableAnswers[10]['Thu'] || ''},${tableAnswers[10]['Fri'] || ''}`;
+    const csvContent6 = `11h,${tableAnswers[11]['Sat'] || ''},${tableAnswers[11]['Sun'] || ''},${tableAnswers[11]['Mon'] || ''},${tableAnswers[11]['Tue'] || ''},${tableAnswers[11]['Wed'] || ''},${tableAnswers[11]['Thu'] || ''},${tableAnswers[11]['Fri'] || ''}`;
+    const csvContent7 = `12h,${tableAnswers[12]['Sat'] || ''},${tableAnswers[12]['Sun'] || ''},${tableAnswers[12]['Mon'] || ''},${tableAnswers[12]['Tue'] || ''},${tableAnswers[12]['Wed'] || ''},${tableAnswers[12]['Thu'] || ''},${tableAnswers[12]['Fri'] || ''}`;
+    const csvContent8 = `13h,${tableAnswers[13]['Sat'] || ''},${tableAnswers[13]['Sun'] || ''},${tableAnswers[13]['Mon'] || ''},${tableAnswers[13]['Tue'] || ''},${tableAnswers[13]['Wed'] || ''},${tableAnswers[13]['Thu'] || ''},${tableAnswers[13]['Fri'] || ''}`;
+    const csvContent9 = `14h,${tableAnswers[14]['Sat'] || ''},${tableAnswers[14]['Sun'] || ''},${tableAnswers[14]['Mon'] || ''},${tableAnswers[14]['Tue'] || ''},${tableAnswers[14]['Wed'] || ''},${tableAnswers[14]['Thu'] || ''},${tableAnswers[14]['Fri'] || ''}`;
+    const csvContent10 = `15h,${tableAnswers[15]['Sat'] || ''},${tableAnswers[15]['Sun'] || ''},${tableAnswers[15]['Mon'] || ''},${tableAnswers[15]['Tue'] || ''},${tableAnswers[15]['Wed'] || ''},${tableAnswers[15]['Thu'] || ''},${tableAnswers[15]['Fri'] || ''}`;
+    const csvContent11 = `16h,${tableAnswers[16]['Sat'] || ''},${tableAnswers[16]['Sun'] || ''},${tableAnswers[16]['Mon'] || ''},${tableAnswers[16]['Tue'] || ''},${tableAnswers[16]['Wed'] || ''},${tableAnswers[16]['Thu'] || ''},${tableAnswers[16]['Fri'] || ''}`;
+    const csvContent12 = `17h,${tableAnswers[17]['Sat'] || ''},${tableAnswers[17]['Sun'] || ''},${tableAnswers[17]['Mon'] || ''},${tableAnswers[17]['Tue'] || ''},${tableAnswers[17]['Wed'] || ''},${tableAnswers[17]['Thu'] || ''},${tableAnswers[17]['Fri'] || ''}`;
+    const csvContent13 = `18h,${tableAnswers[18]['Sat'] || ''},${tableAnswers[18]['Sun'] || ''},${tableAnswers[18]['Mon'] || ''},${tableAnswers[18]['Tue'] || ''},${tableAnswers[18]['Wed'] || ''},${tableAnswers[18]['Thu'] || ''},${tableAnswers[18]['Fri'] || ''}`;
+    const csvContent14 = `19h,${tableAnswers[19]['Sat'] || ''},${tableAnswers[19]['Sun'] || ''},${tableAnswers[19]['Mon'] || ''},${tableAnswers[19]['Tue'] || ''},${tableAnswers[19]['Wed'] || ''},${tableAnswers[19]['Thu'] || ''},${tableAnswers[19]['Fri'] || ''}`;
+    const csvContent15 = `20h,${tableAnswers[20]['Sat'] || ''},${tableAnswers[20]['Sun'] || ''},${tableAnswers[20]['Mon'] || ''},${tableAnswers[20]['Tue'] || ''},${tableAnswers[20]['Wed'] || ''},${tableAnswers[20]['Thu'] || ''},${tableAnswers[20]['Fri'] || ''}`;
+    const csvContent16 = `21h,${tableAnswers[21]['Sat'] || ''},${tableAnswers[21]['Sun'] || ''},${tableAnswers[21]['Mon'] || ''},${tableAnswers[21]['Tue'] || ''},${tableAnswers[21]['Wed'] || ''},${tableAnswers[21]['Thu'] || ''},${tableAnswers[21]['Fri'] || ''}`;
+    const csvContent17 = `22h,${tableAnswers[22]['Sat'] || ''},${tableAnswers[22]['Sun'] || ''},${tableAnswers[22]['Mon'] || ''},${tableAnswers[22]['Tue'] || ''},${tableAnswers[22]['Wed'] || ''},${tableAnswers[22]['Thu'] || ''},${tableAnswers[22]['Fri'] || ''}`;
+    const csvContent18 = `23h,${tableAnswers[23]['Sat'] || ''},${tableAnswers[23]['Sun'] || ''},${tableAnswers[23]['Mon'] || ''},${tableAnswers[23]['Tue'] || ''},${tableAnswers[23]['Wed'] || ''},${tableAnswers[23]['Thu'] || ''},${tableAnswers[23]['Fri'] || ''}`;
 
-    const csvHeaderF = ",Samedi, Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Commentaires (Qu'as-tu ressenti? Qu’as-tu remarqué ?)";
+    const csvHeaderF = ",Samedi, Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi";
 
     let csvContent = `${csvHeader}\n${csvContent1}\n${csvContent2}\n${csvContent3}\n${csvContent4}\n${csvContent5}\n${csvContent6}\n${csvContent7}\n${csvContent8}\n${csvContent9}\n${csvContent10}\n${csvContent11}\n${csvContent12}\n${csvContent13}\n${csvContent14}\n${csvContent15}\n${csvContent16}\n${csvContent17}\n${csvContent18}`;
     const csvContentFrench = `${csvHeaderF}\n${csvContent1}\n${csvContent2}\n${csvContent3}\n${csvContent4}\n${csvContent5}\n${csvContent6}\n${csvContent7}\n${csvContent8}\n${csvContent9}\n${csvContent10}\n${csvContent11}\n${csvContent12}\n${csvContent13}\n${csvContent14}\n${csvContent15}\n${csvContent16}\n${csvContent17}\n${csvContent18}`;
@@ -335,16 +335,6 @@ function s2ab(s) {
             </u>
           </Typography>
           <br />
-          <Typography title={'content'} position={'left'}  contentwidth={'100%'}>
-              {
-                language === 'English' ?
-                <p>By planning your schedule, you have now completed the first step of conquering avoidance. Over the next week, please practice the activity(ties) as you have scheduled. You can download this <b>Activity Planner</b> and check your practice. <b>Please make sure you have Activity Planner filled out for the next session, as you will fill this information in the program.</b> '</p>
-                :
-                <p>En planifiant ton horaire, tu as maintenant complété la première étape vers ta conquête de l’évitement. Au cours de la prochaine semaine, pratique les activités que tu as planifiées. Tu peux télécharger le Planificateur d’activités et vérifier ton progrès. <b>Assure-toi que ton Planificateur d’activités est rempli pour la prochaine séance, puisque tu vas remplir cette information dans le programme.</b></p>
-              }
-          </Typography>
-
-
 
           <div>
             {
@@ -358,7 +348,6 @@ function s2ab(s) {
                     <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Thursday</div>
                     <div className={`${styles.small_div} ${styles.borderGTTG}`} >Friday</div>
                     <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Saturday</div>
-                    <div className={`${styles.small_div} ${styles.borderGGTG}`} >Comments (How did you feel? What did you notice?)</div>
                 </div>
                 :
                 <div className={styles.row}>
@@ -370,14 +359,13 @@ function s2ab(s) {
                     <div className={`${styles.small_div_purple} ${styles.borderGTTG}`} >Mercredi</div>
                     <div className={`${styles.small_div} ${styles.borderGTTG}`} >Jeudi</div>
                     <div className={`${styles.small_div_purple} ${styles.borderGGTG}`}>Vendredi</div>
-                    <div className={`${styles.small_div} ${styles.borderGGTG}`} >Commentaires (Qu'as-tu ressenti? Qu’as-tu remarqué ?)</div>
                 </div>
             }
                 
                 {
                   Object.keys(default_value).map(outerKey => (
                     <div className={styles.row}>
-                      <div className={`${styles.small_div} ${styles.borderGTGG}`} >{outerKey}</div>
+                      <div className={`${styles.small_div} ${styles.borderGTGG}`} >{outerKey}h</div>
                       <div className={`${styles.small_div_purple} ${styles.borderGTGG}`}>
                           <TextField 
                             className={`${styles.purple} ${styles.answer_textarea}`}
@@ -476,26 +464,29 @@ function s2ab(s) {
                             errorWarningText={''}
                           />
                       </div>
-                      <div className={`${styles.small_div} ${styles.borderGTGG}`} >
-                        <TextField 
-                            className={`${styles.white} ${styles.answer_textarea}`}
-                            titleClassName={styles.title_textarea}
-                            rows="1"
-                            cols="10"
-                            title={''}
-                            value={tableAnswers[outerKey] ? tableAnswers[outerKey]['Comm'] : ''}
-                            onChange={(event)=>changeTableAnwser(outerKey, 'Comm', event.target.value)}
-                            placeholder={``}
-                            questionError={false}
-                            errorWarningText={''}
-                          />
-                      </div>
                     </div>
                   ))
                 }
                 
             </div>
 
+<br />
+            <Typography title={'content'} position={'left'}  contentwidth={'100%'}>
+              {
+                language === 'English' ?
+                <b>By planning your schedule, you have now completed the first step of conquering avoidance. </b>
+                :
+                <p>En planifiant ton horaire, tu as maintenant complété la première étape vers ta conquête de l’évitement. Au cours de la prochaine semaine, pratique les activités que tu as planifiées. Tu peux télécharger le Planificateur d’activités et vérifier ton progrès. <b>Assure-toi que ton Planificateur d’activités est rempli pour la prochaine séance, puisque tu vas remplir cette information dans le programme.</b></p>
+              }
+          </Typography>
+          <Typography title={'content'} position={'left'}  contentwidth={'100%'}>
+              {
+                language === 'English' ?
+                <p>Over the next week, please practice the activity(ties) as you have scheduled. You can download this Activity Planner and keep track of your practice. Please make sure you have your Activity Planner filled out and bring it with you to the <b>FIFTH (FINAL)</b> session, as you will fill out this information in the program.</p>
+                :
+                <p>En planifiant ton horaire, tu as maintenant complété la première étape vers ta conquête de l’évitement. Au cours de la prochaine semaine, pratique les activités que tu as planifiées. Tu peux télécharger le Planificateur d’activités et vérifier ton progrès. <b>Assure-toi que ton Planificateur d’activités est rempli pour la prochaine séance, puisque tu vas remplir cette information dans le programme.</b></p>
+              }
+          </Typography>
 
             {/* <Button word={'Exercise B-1'} onClick={next} position={'center'} outlook={'round'} /> */}
             <div className={styles.flex}>

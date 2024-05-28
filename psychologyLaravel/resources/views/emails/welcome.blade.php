@@ -57,7 +57,7 @@
         <p>Hello,</p>
         <p><i>Welcome to Learning to Thrive!</i></p>
         <p><i>You have successfully logged into the platform and you can now start your first session. We hope this tool will help you manage academic worry and achieve your goals.<i></p>
-        <p><i>If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:learning2thriveanu@gmail.com">learning2thriveanu@gmail.com</a>. </i></p>
+        <p><i>If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:learningtothrive.rsp@anu.edu.au">learningtothrive.rsp@anu.edu.au</a>. </i></p>
         <p>Sincerely</p>
         <p>Learning To Thrive</p>
 

@@ -149,10 +149,10 @@ const Session3Worksheet1B = () => {
       <div className={styles.background_image} id="background_image">
         <div className={styles.whole_border}>
             <Typography title={'subtitle'} position={'left'}>
-                Session 3
+                Third Session
             </Typography>
 
-            <ProgressBar percentageNo={33} language={language} />
+            <ProgressBar percentageNo={25} language={language} />
             
             <br />
 

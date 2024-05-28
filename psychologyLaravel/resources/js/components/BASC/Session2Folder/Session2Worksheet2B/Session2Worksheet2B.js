@@ -31,9 +31,6 @@ const Session2Worksheet2B = () => {
 
   const [questionD, setQuestionD] = useState('');
   const [questionDError, setQuestionDError] = useState(false);
-  const [questionE, setQuestionE] = useState('');
-  const [questionEError, setQuestionEError] = useState(false);
-
   
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,7 +78,6 @@ const Session2Worksheet2B = () => {
             setQuestionB(questionanswer.q2)
             setQuestionC(questionanswer.q3)
             setQuestionD(questionanswer.q4)
-            setQuestionE(questionanswer.q5)
         }
     }
     })
@@ -113,12 +109,7 @@ const Session2Worksheet2B = () => {
     } else {
       setQuestionDError(false);
     }
-    if (questionE === '') {
-        setQuestionEError(true);
-    } else {
-        setQuestionEError(false);
-    }
-    if (questionA !== '' && questionB !== '' && questionC !== '' && questionD !== '' && questionE !== '' ) {
+    if (questionA !== '' && questionB !== '' && questionC !== '' && questionD !== '' ) {
       passData();
     }
   };
@@ -129,7 +120,7 @@ const Session2Worksheet2B = () => {
         'userid': userData.userid,
         'sessionid': 2,
         'questionno': 'session2worksheet2b',
-        'response': {'q1': questionA, 'q2': questionB, 'q3': questionC, 'q4': questionD, 'q5': questionE,}
+        'response': {'q1': questionA, 'q2': questionB, 'q3': questionC, 'q4': questionD,}
     }
     axios.post(`/api/sessionresponse`, data)
         .then(response => {
@@ -204,7 +195,7 @@ const Session2Worksheet2B = () => {
               }}
               placeholder={
                 language === 'English' ?
-                "e.g. My goal is to finish studying for my upcoming exam."
+                "e.g. My goal is to complete my assignment by the due date."
                 :
                 'p. ex. Mon objectif est de finir d’étudier pour mon prochain examen de biologie.'
               }
@@ -228,7 +219,7 @@ const Session2Worksheet2B = () => {
               }}
               placeholder={
                 language === 'English' ?
-                "e.g. I want to study all the topics that will be tested, starting chapter 1 on Monday."
+                "e.g. I want to write the first three paragraphs on Monday. "
                 :
                 'p.ex. L’objectif de mon groupe de biologie est de m’aider à comprendre les concepts biologiques.'
               }
@@ -252,7 +243,7 @@ const Session2Worksheet2B = () => {
               }}
               placeholder={
                 language === 'English' ?
-                "e.g. I will know that I have accomplished my goal when I am able to summarise the topics without looking at my lecture notes of study material. "
+                "e.g. e.g. I will know that I have accomplished my goal when the written paragraphs are free from grammatical errors, spelling mistakes, and typos and are polished professionally."
                 :
                 'p. ex. Je pourrais créer un groupe d’étude avec deux autres membres de mon groupe de biologie. Nous pourrions nous rencontrer chaque semaine pour nous tester sur le contenu du cours.'
               }
@@ -276,7 +267,7 @@ const Session2Worksheet2B = () => {
               }}
               placeholder={
                 language === 'English' ?
-                "e.g. I want to finish studying for my exam at least 1 day before the actual paper."
+                "e.g. I want to finish the assignment at least 1 day before the due date. "
                 :
                 'p.ex. Je saurai que j’ai atteint mon objectif quand je vais être capable de résumer les sujets sans avoir à regarder mes notes de cours.'
               }
@@ -284,29 +275,6 @@ const Session2Worksheet2B = () => {
               errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
             />
             
-            <TextField 
-              rows="4"
-              cols="50"
-              title={
-                language === 'English' ?
-                <i>When do you want to accomplish your goal? </i>
-                :
-                <i>Quand veux-tu atteindre ton objectif ?</i>
-              }
-              value={questionE}
-              onChange={(e) => {
-                setQuestionE(e.target.value)
-                setQuestionEError(false)
-              }}
-              placeholder={
-                language === 'English' ?
-                "e.g. I want to finish studying for my exam at least 1 day before the actual exam. "
-                :
-                'p.ex. Je veux finir d’étudier pour mon examen au moins 1 jour avant l’examen.'
-              }
-              questionError={questionEError}
-              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
-            />
 
             <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
 
