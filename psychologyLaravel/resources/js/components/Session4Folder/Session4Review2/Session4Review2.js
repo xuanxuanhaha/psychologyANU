@@ -212,7 +212,7 @@ function s2ab(s) {
                     }
                 </Typography>
 
-                <ProgressBar percentageNo={40} language={language} />
+                <ProgressBar percentageNo={50} language={language} />
 
                 <Session4Review2Wording
                     language={language} 

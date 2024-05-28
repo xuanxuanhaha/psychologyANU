@@ -233,7 +233,7 @@ function s2ab(s) {
             }
           </Typography>
 
-          <ProgressBar percentageNo={20} language={language} />
+          <ProgressBar percentageNo={25} language={language} />
 
           <Typography title={'content'} position={'left'}  contentwidth={'100%'}>
               {

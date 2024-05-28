@@ -47,24 +47,24 @@ const Session3worksheet1q4Wording = (props) => {
     
         // Add second text
         const text2 = '1. Please practice the following self-compassion exercise over the next week before the final session:' +
-        '\n\nThis exercise can be used any time of day or night, and will help you remember common humanity, self-kindness, and mindfulness when you need it most.' + 
+        '\n\nThis exercise can be used any time of day or night, and will help you remember community connection, kindness to all, and mindfulness when you need it most.' + 
         '\n\n1. Think about the academic-related issue written in Worksheet 1. Call the situation to mind, and see if you can actually feel the stress and emotional discomfort in your body.' +
         '\n\n2. Now, silently say to yourself:'+
         '\n\n• This is a moment of difficulty.' +
         '\n\n• Ouch.' +
         '\n\n3. Now, silently say to yourself:' +
-        '\n\n• Suffering is a part of life' +
-        '\n\n• I’m not alone. '+
-        '\n\n• We all struggle in our lives.'+
+        '\n\n• Suffering is a part of life as a member of the university community.' +
+        '\n\n• I’m not alone. I am part of the university community.'+
+        '\n\n• All members of my university community struggle in life, just like I do.'+
         '\n\n4. Now, silently say to yourself:'+
-        '\n\n• May I be kind to myself.' +
+        '\n\n• May I be kind to myself as I am kind to other members of my university community.' +
         '\n\nYou can also ask yourself, “What do I need to hear right now to express kindness to myself?” Is there a phrase that speaks to you in your particular situation?'+
         '\n\nFor example:'+
-        '\n\n• May I give myself the compassion that I need.'+
-        '\n\n• My I learn to accept myself as I am.'+
-        '\n\n• May I forgive myself.'+
-        '\n\n• May I be strong.'+
-        '\n\n• May I be patient.'  
+        '\n\n• Just as my university community, may I give myself the compassion that I need.'+
+        '\n\n• Just as my university community, may I learn to accept myself as I am.'+
+        '\n\n• Just as my university community, may I forgive myself.'+
+        '\n\n• Just as my university community, may I be strong.'+
+        '\n\n• Just as my university community, may I be patient.'  
         ;
     
       // Split text2 into lines to fit within page width
@@ -125,7 +125,7 @@ const Session3worksheet1q4Wording = (props) => {
                         <li>Now, silently say to yourself:
                             <ul>
                                 <li>Suffering is a part of  life as a member of the university community.</li>
-                                <li>I’m not alone. I am part of the university community</li>
+                                <li>I’m not alone. I am part of the university community.</li>
                                 <li>All members of my university community struggle in life, just like I do.</li>
                             </ul>
                         </li>

@@ -43,7 +43,7 @@ const Session4Worksheet1Q1 = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session4worksheet1end`);
+    navigate(`/session5end`);
   };
 
   const generatePDF = () => {
@@ -132,7 +132,7 @@ const Session4Worksheet1Q1 = () => {
                     }
                 </Typography>
 
-                <ProgressBar percentageNo={80} language={language} />
+                <ProgressBar percentageNo={100} language={language} />
 
                 <Typography title={'content'} position={'center'} color={'primary'}>EXCERCISE E-1</Typography>
                 <br />
