@@ -65,11 +65,7 @@ const Session1C = () => {
               </Typography>
             }
 
-            <Typography title={'content'}  position={'center'} color={'primary'} contentwidth={'80%'}>
-              
-                Knowledge is power! Being informed is an important way to manage your wellbeing. Please explore the information and resources on the below website.
-              
-            </Typography>
+            
           <IconWordGrid imgsrc={lockericon} word={'12-15 mins'} />
           {/* <HeadphoneSvg /> */}
             

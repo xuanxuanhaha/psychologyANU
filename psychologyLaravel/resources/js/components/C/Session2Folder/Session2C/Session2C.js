@@ -66,10 +66,10 @@ const Session2C = () => {
             <br />
             <IconWordGrid imgsrc={lockericon} word={'20 mins'} />
             <br />
-            <Typography title={'content'} position={'left'}  >
+            <Typography title={'content'} position={'center'}  >
               {
                 language === 'English' ?
-                'In this session you will learn about ways to look after your health and wellbeing. Knowledge is power! Being informed is an important way to manage your wellbeing. Please explore the information and resources on the below website. You will hear a timer when 20 minutes has past at which point you may finish what you are reading or click ‘Next’ to finish the session.'
+                'In this session you will learn about ways to look after your health and wellbeing. '
                 :
                 <p>Lors de cette séance, nous allons revoir les concepts et les exercices que nous avons appris lors des dernières séances.</p>
               }

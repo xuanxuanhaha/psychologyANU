@@ -98,7 +98,7 @@ const Session4Worksheet1C = () => {
             <Typography title={'content'} position={'left'} >
             {
                   language === 'English' ?
-                  'Please select any of the tasks and work on it for 20 minutes.'
+                  ' Knowledge is power! Being informed is an important way to manage your wellbeing. Please explore the information and resources on the below website.'
                   :
                   'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
                 }
@@ -134,7 +134,7 @@ const Session4Worksheet1C = () => {
               <BorderContent>
                     {
                       language === 'English' ?
-                      'Take home exam'
+                      'Please take a moment to make note of three key takeaways which you can apply to your daily life'
                       :
                       "L’inquiétude peut être décrite comme des pensées et des émotions négatives quant à une tâche ou un événement futur. Pour « fuir » ces pensées et ces émotions négatives, les gens ont tendance à répondre en évitant la tâche ou l’événement qui est leur cause d’inquiétude."
                     }
@@ -146,11 +146,11 @@ const Session4Worksheet1C = () => {
                 title={
                   language === 'English' ?
                   <i>
-                      What you learned
+                      
                   </i>
                   :
                   <i>
-                      take home exam
+                      Please take a moment to make note of three key takeaways which you can apply to your daily life
                   </i>
                 }
                 value={questionA}
@@ -160,13 +160,22 @@ const Session4Worksheet1C = () => {
                 }}
                 placeholder={
                   language === 'English' ?
-                  "e.g. I learned that"
+                  "Take home messages from the website (write THREE dot points)"
                   :
                   'p.ex. Je finis toujours par naviguer TikTok quand j’essaie d’étudier.'
                 }
                 questionError={questionAError}
                 errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
               />
+                            
+                            <Typography title={'content'} position={'left'} contentwidth={'100%'}>
+                {
+                  language === 'English' ?
+                  <p>If you have any questions or concerns, please contact the research team at <a href="mailto:learningtothrive.rsp@anu.edu.au">learningtothrive.rsp@anu.edu.au</a></p>
+                  :
+                  'Pense à des problèmes reliés aux études dont tu t’es inquiété pendant la semaine dernière. Il peut s’agir d’un travail, un examen, un projet de groupe, arriver aux cours à temps, ou même rester éveillé lors des cours.'
+                }
+            </Typography>
             </div>
             :
             <div></div>
