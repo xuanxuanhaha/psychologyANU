@@ -212,7 +212,7 @@ const Session2Worksheet3B = () => {
           <Typography title={'subtitle'} position={'left'}>
             {
               language === 'English' ?
-              'Third Session'
+              'Session 2'
               :
               'Deuxième session'
             }  
