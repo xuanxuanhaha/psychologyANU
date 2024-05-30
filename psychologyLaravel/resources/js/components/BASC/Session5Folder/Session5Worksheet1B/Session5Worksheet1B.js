@@ -75,7 +75,7 @@ const Session5Worksheet1B = () => {
                 if(response.data.sessionresponse.response){
                     const questionanswer = JSON.parse(response.data.sessionresponse.response)
                     setQuestionA(questionanswer.q1)
-                    setPreviousTableAnswers(questionanswer.q2)
+                    setPreviousTableAnswers(questionanswer.q4)
                     setCount(0)
                 }
             }
@@ -134,7 +134,7 @@ const Session5Worksheet1B = () => {
     setTableAnswers(tableanswers)
     setCount(count + 1)
   }
-
+console.log('uncaught previousTableAnswers', previousTableAnswers)
   const downloadCSV = () => {
     // Create a CSV content string (replace with your own data)
     // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
