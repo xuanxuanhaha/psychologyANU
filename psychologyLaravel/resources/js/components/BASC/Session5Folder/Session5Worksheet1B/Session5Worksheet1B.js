@@ -134,7 +134,6 @@ const Session5Worksheet1B = () => {
     setTableAnswers(tableanswers)
     setCount(count + 1)
   }
-console.log('uncaught previousTableAnswers', previousTableAnswers)
   const downloadCSV = () => {
     // Create a CSV content string (replace with your own data)
     // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
