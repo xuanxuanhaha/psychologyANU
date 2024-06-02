@@ -289,7 +289,7 @@ const Session3Worksheet1Q1 = () => {
                         ,&nbsp;
                         <b onClick={openDialogFeelingWithTemplateRef} className={styles.modalWording}>
                           <u>
-                          <i>fellings</i>
+                          <i>feelings</i>
                           </u>
                         </b>
                         ,&nbsp;and&nbsp;
@@ -428,7 +428,7 @@ const Session3Worksheet1Q1 = () => {
                         ,&nbsp;
                         <b onClick={openDialogFeelingWithTemplateRef} className={styles.modalWording}>
                           <u>
-                          <i>fellings</i>
+                          <i>feelings</i>
                           </u>
                         </b>
                         ,&nbsp;and&nbsp;
