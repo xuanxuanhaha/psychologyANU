@@ -243,7 +243,7 @@ const Session2Worksheet2B = () => {
               }}
               placeholder={
                 language === 'English' ?
-                "e.g. e.g. I will know that I have accomplished my goal when the written paragraphs are free from grammatical errors, spelling mistakes, and typos and are polished professionally."
+                "e.g. I will know that I have accomplished my goal when the written paragraphs are free from grammatical errors, spelling mistakes, and typos and are polished professionally."
                 :
                 'p. ex. Je pourrais créer un groupe d’étude avec deux autres membres de mon groupe de biologie. Nous pourrions nous rencontrer chaque semaine pour nous tester sur le contenu du cours.'
               }

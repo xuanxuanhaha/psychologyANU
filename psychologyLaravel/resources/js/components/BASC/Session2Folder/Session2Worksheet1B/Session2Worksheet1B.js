@@ -33,8 +33,7 @@ const Session2Worksheet1B = () => {
   const [questionDError, setQuestionDError] = useState(false);
   const [questionE, setQuestionE] = useState('');
   const [questionEError, setQuestionEError] = useState(false);
-  const [questionF, setQuestionF] = useState('');
-  const [questionFError, setQuestionFError] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [questionIssue, setQuestionIssue] = useState('');
@@ -67,7 +66,6 @@ const Session2Worksheet1B = () => {
             setQuestionC(questionanswer.q3)
             setQuestionD(questionanswer.q4)
             setQuestionE(questionanswer.q5)
-            setQuestionF(questionanswer.q6)
         }
     }
     })
@@ -104,13 +102,8 @@ const Session2Worksheet1B = () => {
     } else {
         setQuestionEError(false);
     }
-    if (questionF === '') {
-        setQuestionFError(true);
-    } else {
-        setQuestionFError(false);
-    }
 
-    if (questionA !== '' && questionB !== '' && questionC !== '' && questionD !== '' && questionE !== '' && questionF !== '') {
+    if (questionA !== '' && questionB !== '' && questionC !== '' && questionD !== '' && questionE !== '') {
       passData();
     }
   };
@@ -121,7 +114,7 @@ const Session2Worksheet1B = () => {
         'userid': userData.userid,
         'sessionid': 2,
         'questionno': 'session2worksheet1b',
-        'response': {'q1': questionA, 'q2': questionB, 'q3': questionC, 'q4': questionD, 'q5': questionE, 'q6': questionF}
+        'response': {'q1': questionA, 'q2': questionB, 'q3': questionC, 'q4': questionD, 'q5': questionE}
     }
     axios.post(`/api/sessionresponse`, data)
         .then(response => {
@@ -324,30 +317,6 @@ const Session2Worksheet1B = () => {
               errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
             />
             
-            <TextField 
-              rows="4"
-              cols="50"
-              title={
-                language === 'English' ?
-                <i>When do you want to accomplish your goal? </i>
-                :
-                <i>Quand veux-tu atteindre ton objectif ?</i>
-              }
-              value={questionF}
-              onChange={(e) => {
-                setQuestionF(e.target.value)
-                setQuestionFError(false)
-              }}
-              placeholder={
-                language === 'English' ?
-                "e.g. I want to finish studying for my exam at least 1 day before the actual exam. "
-                :
-                'p.ex. Je veux finir d’étudier pour mon examen au moins 1 jour avant l’examen.'
-              }
-              questionError={questionFError}
-              errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
-            />
-
             <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
 
             </div>

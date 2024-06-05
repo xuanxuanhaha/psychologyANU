@@ -190,7 +190,7 @@ const Session2Worksheet2Q2 = () => {
               }}
               placeholder={
                 language === 'English' ?
-                "e.g.  My goal is to finish studying for my upcoming exam."
+                "e.g. My goal is to finish studying for my upcoming exam."
                 :
                 'p. ex. Mon objectif est de finir d’étudier pour mon prochain examen.'
               }
@@ -295,7 +295,7 @@ const Session2Worksheet2Q2 = () => {
               }}
               placeholder={
                 language === 'English' ?
-                "e.g., I will know that I have accomplished my goal when I am able to summarise the topics without looking at my lecture notes of study material. "
+                "e.g. I will know that I have accomplished my goal when I am able to summarise the topics without looking at my lecture notes of study material. "
                 :
                 'p.ex. Je saurai que j’ai atteint mon objectif quand je vais être capable de résumer les sujets sans avoir à regarder mes notes de cours.'
               }

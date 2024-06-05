@@ -361,9 +361,9 @@ const Session3Worksheet1Q2 = () => {
                 }}
                 placeholder={
                     language === 'English' ?
-                    "e.g. “I understand that you are stressed, it is a very heavy workload after all.”\n“Your concern about this exam shows that you still care about your studies, and that you are still trying. I’m glad that you’re not giving up.”\n“I know that you ended up using TikTok the last time you tried to study, but it is okay to take a break from studying every once in awhile. If you really cannot concentrate because of Facebook, perhaps you could switch off your Internet the next time you study.”\n“Keep at it, I believe in you.”"
+                    "e.g. “I understand that you are stressed, it is a very heavy workload after all.”\n“Your concern about this exam shows that you still care about your studies, and that you are still trying. I’m glad that you’re not giving up.”\n“I know that you ended up using TikTok the last time you tried to study, but it is okay to take a break from studying every once in awhile. If you really cannot concentrate because of Facebook, perhaps you could switch off your internet the next time you study.”\n“Keep at it, I believe in you.”"
                     :
-                    'P. ex. « Je comprends que tu sois stressé.e, c’est une charge de travail très lourde. »\n« Ta préoccupation pour cet examen montre que tu es toujours investi.e dans tes études, et que tu essaies encore. Je suis content.e que tu n’abandonnes pas. »\n« Je sais que tu as fini par utiliser TikTok la dernière fois que tu as essayé d’étudier, mais c’est correct de prendre une pause de tes études de temps en temps. Si tu ne peux vraiment pas te concentrer à cause de TikTok, tu pourrais peut-être éteindre ton Internet. »\n« Continue, je crois en toi. »'
+                    'P. ex. « Je comprends que tu sois stressé.e, c’est une charge de travail très lourde. »\n« Ta préoccupation pour cet examen montre que tu es toujours investi.e dans tes études, et que tu essaies encore. Je suis content.e que tu n’abandonnes pas. »\n« Je sais que tu as fini par utiliser TikTok la dernière fois que tu as essayé d’étudier, mais c’est correct de prendre une pause de tes études de temps en temps. Si tu ne peux vraiment pas te concentrer à cause de TikTok, tu pourrais peut-être éteindre ton internet. »\n« Continue, je crois en toi. »'
                 }
                 questionError={questionBError}
                 errorWarningText={ language === 'English' ? 'Please input your answer' : 'Ajoute une réponse.'}
@@ -377,7 +377,7 @@ const Session3Worksheet1Q2 = () => {
                                 <b><u>Mindfulness </u></b>
                             </Typography>
                             <p>In contrast to over-identification or avoidance, mindfulness involves being aware, attentive, and accepting of the present moment. It involves compassionately observing thoughts and emotions as they are, without suppressing or exaggerating them.</p>
-                            <p>Mindfulness is about being willing to observe our negative thoughts and emotions with openness and clarity. We cannot feel avoid our pain and feel compassion for it at the same time. At the same time, mindfulness requires that we do not "over-identify" with our thoughts and feelings.</p>
+                            <p>Mindfulness is about being willing to observe our negative thoughts and emotions with openness and clarity. We cannot feel or avoid our pain and feel compassion for it at the same time. At the same time, mindfulness requires that we do not "over-identify" with our thoughts and feelings.</p>
                         </React.Fragment>
                         :
                         <React.Fragment>

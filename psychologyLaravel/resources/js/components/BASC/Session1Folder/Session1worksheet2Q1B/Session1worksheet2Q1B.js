@@ -150,7 +150,7 @@ const Session1worksheet2Q1B = () => {
                   <br />
                   {
                     language === 'English' ?
-                    'People can engage in avoidance in many different ways. One student might procrastinate by surfing the Internet, or hanging out with friends. Another student might work on less urgent assignments so as to avoid working on a difficult assignment. Even worrying could be considered avoidance - people sometimes worry in an attempt to "think their way out of a difficult situation" instead of actually confronting and resolving the situation.'
+                    'People can engage in avoidance in many different ways. One student might procrastinate by surfing the internet, or hanging out with friends. Another student might work on less urgent assignments so as to avoid working on a difficult assignment. Even worrying could be considered avoidance - people sometimes worry in an attempt to "think their way out of a difficult situation" instead of actually confronting and resolving the situation.'
                     :
                     'Les gens peuvent adopter des comportements d’évitement de plusieurs différentes façons. Un étudiant peut procrastiner en navigant l’Internet ou en rencontrant des amis. Un autre peut travailler sur d’autres travaux moins urgents pour éviter de travailler sur devoir difficile. S’inquiéter peut même être considéré comme de l’évitement; certaines personnes s’inquiètent parfois pour tenter de « penser à une façon de s’en sortir d’une situation difficile » au lieu de l’affronter et la résoudre.'
                   }

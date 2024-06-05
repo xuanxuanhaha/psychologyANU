@@ -216,7 +216,7 @@ const Session4Worksheet1B = () => {
                           <i>behaviours</i>
                           </u>
                         </b>
-                        &nbsp;in response in response to the academic-related issue written in Worksheet 1.
+                        &nbsp;in response to the academic-related issue written in Worksheet 1.
                         </p>
                     </React.Fragment>
                     :
@@ -410,7 +410,7 @@ const Session4Worksheet1B = () => {
                         <Typography title={'content'}  position={'center'} color={'primary'}>
                             <b><u>Over-Identification</u></b>
                         </Typography>
-                        <p>While some people avoid negative experiences, others may over-identify with their negative experiences. Over- identification involves excessively thinking about one’s shortcomings. People who over-identify often magnify the significance of their failures, and think that they are worse than they really are. This further contributes to negative emotion and worry. </p>
+                        <p>While some people avoid negative experiences, others may over-identify with their negative experiences. Over-identification involves excessively thinking about one’s shortcomings. People who over-identify often magnify the significance of their failures, and think that they are worse than they really are. This further contributes to negative emotion and worry. </p>
                         <p>Consider the thoughts, feelings, and behaviours you’ve had in response to the academic-related issue written in Worksheet 1. Could any of those thoughts, feelings, or behaviours be described as over-identification? Write down those thoughts/ feelings/ behaviours in the space below. </p>
                     </React.Fragment>
                     :
