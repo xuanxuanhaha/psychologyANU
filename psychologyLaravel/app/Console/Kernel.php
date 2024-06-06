@@ -15,8 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
-        $schedule->command('send:session_start_reminder')->dailyAt('6:00')->timezone('America/New_York'); // Todo: change back
+        $schedule->command('send:session_start_reminder')->dailyAt('22:00')->timezone('Australia/Sydney'); // Todo: change back
         // $schedule->command('send:session_start_reminder')->everyHour();
     }
 

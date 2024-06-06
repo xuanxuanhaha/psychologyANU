@@ -23,7 +23,7 @@ class SendSessionStartReminderEmail extends Command
      *
      * @var string
      */
-    protected $description = 'Send a session start reminder email at 20:00 PM';
+    protected $description = 'Send a session start reminder email at 21:00 AM';
 
     /**
      * Create a new command instance.

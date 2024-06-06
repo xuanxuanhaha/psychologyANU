@@ -388,7 +388,22 @@ const Session4Worksheet2B = () => {
                         </React.Fragment>
                     }
                 </BorderContent>
-
+                <br />
+                {
+                    language === 'English' ?
+                    <React.Fragment>
+                        <Typography title={'content'} position={'left'} contentwidth={'100%'}>
+                            <i>In the next session we will practice common humanity, self-kindness, and mindfulness. </i>
+                            
+                        </Typography>
+                    </React.Fragment>
+                    :
+                    <React.Fragment>
+                        <Typography title={'content'} position={'left'} contentwidth={'100%'}>
+                            Pense à toi-même en tant que membre de la communauté universitaire. Dans la case ci-dessous, écris des mots bienveillants et compréhensifs envers toi-même en lien avec les problèmes liés aux études décrits dans la fiche 1. Cela peut être difficile, donc imagine ce que tu dirais à un autre membre de la communauté universitaire s’il/elle te confie la même situation et les mêmes sentiments. Sinon, imagine ce qu’un membre bienveillant et compatissant de la communauté universitaire pourrait vous dire. (Écris <b>au moins TROIS</b> phrases).
+                            </Typography>
+                    </React.Fragment>
+                }
                 <Button word={language === 'English' ? 'NEXT' : 'Suivant'} onClick={next} position={'center'} />
 
             </div>
