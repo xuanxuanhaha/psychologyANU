@@ -42,16 +42,26 @@
             font-size: 14px;
             color: #999;
         }
+        .no_reply{
+            text-align: right;
+            color: lightgrey;
+            font-size: 14px;
+            font-weight: 800
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="http://3.25.76.79//images/ANUlogo.jpg" alt="Website Logo" class="logo">
-        <p>Hello, </p>
-        <p>This is a reminder that we are waiting for you to return to Learning To Thrive to complete session {{ $user->sessionid }}. Come back and continue your journey with us to better experience your academic path.</p>
-        <p>To continue, you can go to <a href="http://3.25.76.79/dashboard">dashboard</a>.</p>
-        <p>Sincerely,</p>
-        <p>Learning To Thrive</p>
+        <p><i>Hello, </i></p>
+        <p><i>This is a reminder that we are waiting for you to return to Learning To Thrive to complete session {{ $user->sessionid }}. Come back and continue your journey with us to better experience your academic path.</i></p>
+        <p><i>To continue, you can go to <a href="http://3.25.76.79/dashboard">dashboard</a>.</i></p>
+        <p><i>Sincerely,</i></p>
+        <p><i>Learning To Thrive</i></p>
+
+        <div class="footer">
+            <p class="no_reply">* Please Do Not Reply to this Email.</p>
+        </div>
     </div>
 </body>
 </html>

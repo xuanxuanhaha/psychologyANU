@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('send:session_start_reminder')->dailyAt('22:00')->timezone('Australia/Sydney'); // Todo: change back
+        $schedule->command('send:session_start_reminder')->dailyAt('22:30')->timezone('Australia/Sydney'); // Todo: change back
         // $schedule->command('send:session_start_reminder')->everyHour();
     }
 
