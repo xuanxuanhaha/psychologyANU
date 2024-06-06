@@ -222,13 +222,13 @@ class SessionController extends Controller
         } else if($sessionid === 2){
             return 0;
         } else if($sessionid === 3) { // session 2 -> 3: 6 days
-            return 10; // Todo: use 6 minutes to do testing
+            return 3600*24; // Todo: use 6 minutes to do testing
             // return 518400;
         } else if($sessionid === 4) { // session 3 -> 4: 6 days
-            return 10; // Todo: use 6 minutes to do testing
+            return 3600*24; // Todo: use 6 minutes to do testing
             // return 518400;
         } else if($sessionid === 5) { // session 4 -> 5: 6 days
-            return 10; // Todo: use 6 minutes to do testing
+            return 3600*24; // Todo: use 6 minutes to do testing
             // return 518400;
         }
     }
