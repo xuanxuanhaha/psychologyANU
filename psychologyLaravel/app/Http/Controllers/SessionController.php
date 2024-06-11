@@ -221,15 +221,15 @@ class SessionController extends Controller
             return 0;
         } else if($sessionid === 2){
             return 0;
-        } else if($sessionid === 3) { // session 2 -> 3: 6 days
-            return 3600*24; // Todo: use 6 minutes to do testing
-            // return 518400;
-        } else if($sessionid === 4) { // session 3 -> 4: 6 days
-            return 3600*24; // Todo: use 6 minutes to do testing
-            // return 518400;
-        } else if($sessionid === 5) { // session 4 -> 5: 6 days
-            return 3600*24; // Todo: use 6 minutes to do testing
-            // return 518400;
+        } else if($sessionid === 3) { // session 2 -> 3: 7 days
+            // return 3600*24; // Todo: use 6 minutes to do testing
+            return 604800;
+        } else if($sessionid === 4) { // session 3 -> 4: 7 days
+            // return 3600*24; // Todo: use 6 minutes to do testing
+            return 604800;
+        } else if($sessionid === 5) { // session 4 -> 5: 7 days
+            // return 3600*24; // Todo: use 6 minutes to do testing
+            return 604800;
         }
     }
 
