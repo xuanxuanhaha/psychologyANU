@@ -23,7 +23,7 @@ class SendSessionStartReminderEmail extends Command
      *
      * @var string
      */
-    protected $description = 'Send a session start reminder email at 21:00 AM';
+    protected $description = 'Send a session start reminder email at 9:00 AM';
 
     /**
      * Create a new command instance.
@@ -67,6 +67,7 @@ class SendSessionStartReminderEmail extends Command
         $usersNeedStartReminder = UserSessions::whereNotNull('startat')
                 ->whereNull('endat')
                 ->whereNull('sessionfinishemailsenttime')
+                ->where('startat', '<', $epochTime)
                 ->where('startat', '>', $epochTimeSevenDaysAgo)
                 ->join('c_users', 'c_users.id', '=', 'c_user_progress_status.userid')
                 ->get();
