@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\ForgetPasswordMail;
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
+use App\Models\UserIds;
 
 class ResetPasswordController extends Controller
 {
@@ -58,6 +59,10 @@ class ResetPasswordController extends Controller
                 $updatedUser = \DB::table('c_users')
                     ->where('email', $attributes['useremail'])
                     ->first();
+
+                $userIdRecord = UserIds::where('id', $updatedUser->username)->first();
+                $updatedUser->group = $userIdRecord->group;
+
                 return array('success'=> true,'user'=>$updatedUser);
             }
         }
