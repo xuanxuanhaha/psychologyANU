@@ -66,7 +66,7 @@ const ResetPassword = (props) => {
                     localStorage.setItem('isAuthenticated', 'true');
                     navigate('/dashboard');
 
-                    const userData = { username: useremail, userid: response.data.user.id, language: response.data.user.language };
+                    const userData = { username: useremail, userid: response.data.user.id, language: response.data.user.language, group: response.data.user.group };
 
                     props.loginSuccess(userData);
                 } else {
