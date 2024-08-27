@@ -41,7 +41,7 @@ const Session3 = () => {
 
   const next = () => {
     // navigate(`/session3review`);
-    navigate('/session4intro');
+    navigate('/session4pre');
 
   };
   return (

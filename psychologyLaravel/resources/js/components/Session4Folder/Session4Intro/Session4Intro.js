@@ -40,7 +40,7 @@ const Session4Intro = () => {
             }
           </Typography>
 
-          <ProgressBar percentageNo={20} language={language} />
+          <ProgressBar percentageNo={34} language={language} />
 
 
           <div>
