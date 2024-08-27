@@ -97,7 +97,7 @@ const Session4PreB = () => {
           <BorderContent>
             {
               language === 'English' ?
-                  "The following questions will check whether you worry about academic performance. Pleaserate the degree to which you have experienced each of the following in the PAST WEEK:"
+                  "The following questions will check whether you worry about academic performance. Please rate the degree to which you have experienced each of the following in the PAST WEEK:"
                 :
                   'Des études démontrent que 25 à 40% des personnes étudiantes vivent de l’inquiétude par rapport à leur performance et leur compétence académique. Nous appelons ce souci l’inquiétude scolaire. Les questions suivantes vérifieront ton inquiétude par rapport à la performance académique. Évalue le degré auquel tu as vécu les aspects suivants au courant de la SEMAINE DERNIÉRE:'
             }
