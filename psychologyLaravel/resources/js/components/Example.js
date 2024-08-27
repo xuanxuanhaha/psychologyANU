@@ -81,6 +81,7 @@ import Session3Worksheet2B from './BASC/Session3Folder/Session3Worksheet2B/Sessi
 import Session3Worksheet3B from './BASC/Session3Folder/Session3Worksheet3B/Session3Worksheet3B'
 import Session3Worksheet4B from './BASC/Session3Folder/Session3Worksheet4B/Session3Worksheet4B'
 import Session4B from './BASC/Session4Folder/Session4B/Session4B'
+import Session4PreB from './BASC/Session4Folder/Session4PreB/Session4PreB'
 import Session4Worksheet1B from './BASC/Session4Folder/Session4Worksheet1B/Session4Worksheet1B'
 import Session4Worksheet2B from './BASC/Session4Folder/Session4Worksheet2B/Session4Worksheet2B'
 import Session4Worksheet3B from './BASC/Session4Folder/Session4Worksheet3B/Session4Worksheet3B'
@@ -755,6 +756,17 @@ function Example() {
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               <Session4B />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session4preb"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              // <Session4 />
+                              <Session4PreB />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
