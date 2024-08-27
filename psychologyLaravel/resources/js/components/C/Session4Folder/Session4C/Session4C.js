@@ -47,7 +47,7 @@ const Session4C = () => {
   };
 
   const jumptonextpage = () => {
-    navigate(`/session4worksheet1c`);
+    navigate(`/session4prec`);
   };
 
   return (

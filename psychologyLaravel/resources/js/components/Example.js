@@ -105,6 +105,7 @@ import Session2C from './C/Session2Folder/Session2C/Session2C'
 import Session2Worksheet1C from './C/Session2Folder/Session2Worksheet1C/Session2Worksheet1C'
 import Session3C from './C/Session3Folder/Session3C/Session3C'
 import Session4C from './C/Session4Folder/Session4C/Session4C'
+import Session4PreC from './C/Session4Folder/Session4PreC/Session4PreC'
 import Session4Worksheet1C from './C/Session4Folder/Session4Worksheet1C/Session4Worksheet1C'
 import Session5C from './C/Session5Folder/Session5C/Session5C'
 import Session3EndC from './C/Session3Folder/Session3EndC/Session3EndC';
@@ -970,6 +971,17 @@ function Example() {
                         element={
                             isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
                               <Session4C />
+                            ) : (
+                              <Navigate to="/login" replace state={{ from: '/protected' }} />
+                            )
+                          }
+                        />
+                      <Route
+                        path="/session4prec"
+                        element={
+                            isAuthenticated || localStorage.getItem('isAuthenticated') === 'true' ? (
+                              // <Session4 />
+                              <Session4PreC />
                             ) : (
                               <Navigate to="/login" replace state={{ from: '/protected' }} />
                             )
