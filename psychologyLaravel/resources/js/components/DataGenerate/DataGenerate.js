@@ -165,10 +165,10 @@ const DataGenerate = () => {
                         {data && data.map((item, index) => (
                         <tr key={index}>
                             <td>{item.userid}</td>
-                            <td>{item.useremail}</td>
+                            <td className={styles.maxwidth}>{item.useremail}</td>
                             <td>{item.sessionid}</td>
                             <td>{item.questionno}</td>
-                            <td>{item.response}</td>
+                            <td className={styles.maxwidth}>{item.response}</td>
                             <td>{item.firstopenat ? TimestampToDateTime(item.firstopenat) : '-'}</td>
                             <td>{item.endat ? TimestampToDateTime(item.endat) : '-'}</td>
                         </tr>

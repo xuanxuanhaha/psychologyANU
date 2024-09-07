@@ -20,4 +20,7 @@ table {
   tr:nth-child(even) {
     background-color: #f9f9f9;
   }
-  
+.maxwidth {
+  max-width: 50px;
+  line-break: anywhere;
+}
