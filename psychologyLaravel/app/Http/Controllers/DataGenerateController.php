@@ -23,7 +23,7 @@ class DataGenerateController extends Controller
         
         $existResponse = SessionResponse::join('c_users', 'c_session_response.userid', '=', 'c_users.id')
                         ->join('c_ids', 'c_users.username', '=', 'c_ids.id')
-                        ->join('c_user_progress_status', function($join) {
+                        ->rightJoin('c_user_progress_status', function($join) {
                             $join->on('c_user_progress_status.sessionid', '=', 'c_session_response.sessionid')
                                 ->on('c_user_progress_status.userid', '=', 'c_session_response.userid');
                         })
