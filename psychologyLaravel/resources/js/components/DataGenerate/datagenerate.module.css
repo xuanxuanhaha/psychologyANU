@@ -21,6 +21,9 @@ table {
     background-color: #f9f9f9;
   }
 .maxwidth {
-  max-width: 100px;
+  max-width: 200px;
   line-break: anywhere;
+}
+.smallmaxwidth{
+  max-width: 50px;
 }

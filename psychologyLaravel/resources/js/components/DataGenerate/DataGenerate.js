@@ -169,8 +169,8 @@ const DataGenerate = () => {
                             <td>{item.sessionid}</td>
                             <td>{item.questionno}</td>
                             <td className={styles.maxwidth}>{item.response}</td>
-                            <td>{item.firstopenat ? TimestampToDateTime(item.firstopenat) : '-'}</td>
-                            <td>{item.endat ? TimestampToDateTime(item.endat) : '-'}</td>
+                            <td className={styles.smallmaxwidth}>{item.firstopenat ? TimestampToDateTime(item.firstopenat) : '-'}</td>
+                            <td className={styles.smallmaxwidth}>{item.endat ? TimestampToDateTime(item.endat) : '-'}</td>
                         </tr>
                         ))}
                     </tbody>
