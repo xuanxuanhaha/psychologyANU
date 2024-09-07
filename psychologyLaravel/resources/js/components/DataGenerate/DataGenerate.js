@@ -163,6 +163,7 @@ const DataGenerate = () => {
                     </thead>
                     <tbody>
                         {data && data.map((item, index) => (
+                          item.userid !== null  ?
                         <tr key={index}>
                             <td>{item.userid}</td>
                             <td className={styles.maxwidth}>{item.useremail}</td>
@@ -172,6 +173,8 @@ const DataGenerate = () => {
                             <td className={styles.smallmaxwidth}>{item.firstopenat ? TimestampToDateTime(item.firstopenat) : '-'}</td>
                             <td className={styles.smallmaxwidth}>{item.endat ? TimestampToDateTime(item.endat) : '-'}</td>
                         </tr>
+                        :
+                        <></>
                         ))}
                     </tbody>
                 </table>
