@@ -83,7 +83,7 @@ const Session2Worksheet3B = () => {
   const passData = () => {
     const data = {
         'userid': userData.userid,
-        'sessionid': 3,
+        'sessionid': 2,
         'questionno': 'session2worksheet3b',
         'response': {'q1': tableAnswers}
     }
