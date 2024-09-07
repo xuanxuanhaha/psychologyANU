@@ -80,6 +80,15 @@ const DataGenerate = () => {
     document.body.removeChild(link); // Required for Firefox
   };
 
+  function TimestampToDateTime( timestamp ) {
+    // Convert the timestamp from seconds to milliseconds
+    const date = new Date(timestamp * 1000);
+    
+    // Format the date and time
+    const formattedDate = date.toLocaleString(); // This will give you a localized string, e.g., "9/7/2024, 4:30:00 PM"
+    
+    return <div>{formattedDate}</div>;
+  }
 
   return (
       <div>
@@ -143,19 +152,25 @@ const DataGenerate = () => {
                 <table>
                     <thead>
                         <tr>
+                        <th>User Id</th>
                         <th>User Email</th>
                         <th>Session ID</th>
                         <th>Question No</th>
                         <th>Response</th>
+                        <th>first open at</th>
+                        <th>last open at</th>
                         </tr>
                     </thead>
                     <tbody>
                         {data && data.map((item, index) => (
                         <tr key={index}>
+                            <td>{item.userid}</td>
                             <td>{item.useremail}</td>
                             <td>{item.sessionid}</td>
                             <td>{item.questionno}</td>
                             <td>{item.response}</td>
+                            <td>{item.firstopenat ? TimestampToDateTime(item.firstopenat) : '-'}</td>
+                            <td>{item.endat ? TimestampToDateTime(item.endat) : '-'}</td>
                         </tr>
                         ))}
                     </tbody>

@@ -22,7 +22,12 @@ class DataGenerateController extends Controller
         }
         
         $existResponse = SessionResponse::join('c_users', 'c_session_response.userid', '=', 'c_users.id')
-                        ->select('c_users.email as useremail', 'c_session_response.sessionid', 'c_session_response.questionno', 'c_session_response.response')
+                        ->join('c_ids', 'c_users.username', '=', 'c_ids.id')
+                        ->join('c_user_progress_status', function($join) {
+                            $join->on('c_user_progress_status.sessionid', '=', 'c_session_response.sessionid')
+                                ->on('c_user_progress_status.userid', '=', 'c_session_response.userid');
+                        })
+                        ->select('c_ids.code as userid', 'c_users.email as useremail', 'c_session_response.sessionid', 'c_session_response.questionno', 'c_session_response.response', 'c_user_progress_status.firstopenat', 'c_user_progress_status.endat')
                         ->when(!empty($attributes['filterUserEmail']), function ($query) use ($attributes) {
                             return $query->where('c_users.email', '=', $attributes['filterUserEmail']);
                         })
