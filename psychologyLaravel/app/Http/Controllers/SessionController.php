@@ -180,7 +180,7 @@ class SessionController extends Controller
                     }else if ($attributes['sessionid'] === 5){
                         $user->code = $user->join('c_ids', 'c_ids.id', '=', 'c_users.username')->where('c_users.id', $user->id)->first()->code;
                         Mail::to($user->email)->send(new Session5Finish($user));
-                        Mail::to('learning2thriveanu@gmail.com')->send(new Session5FinishToAdmin($user));
+                        Mail::to('learningtothrive.rsp@anu.edu.au')->send(new Session5FinishToAdmin($user));
                     }
                     $mailSentTime = time();
 
