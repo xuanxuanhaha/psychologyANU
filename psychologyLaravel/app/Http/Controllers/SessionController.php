@@ -12,6 +12,7 @@ use App\Mail\Session3FinishC;
 use App\Mail\Session4Finish;
 use App\Mail\Session4FinishC;
 use App\Mail\Session5Finish;
+use App\Mail\Session5FinishToAdmin;
 use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
 use App\Models\SessionReminderEmailStatus;
@@ -177,7 +178,9 @@ class SessionController extends Controller
                             Mail::to($user->email)->send(new Session4Finish($user));
                         }
                     }else if ($attributes['sessionid'] === 5){
+                        $user->code = $user->join('c_ids', 'c_ids.id', '=', 'c_users.username')->where('c_users.id', $user->id)->first()->code;
                         Mail::to($user->email)->send(new Session5Finish($user));
+                        Mail::to('shijingjing0316@gmail.com')->send(new Session5FinishToAdmin($user));
                     }
                     $mailSentTime = time();
 
