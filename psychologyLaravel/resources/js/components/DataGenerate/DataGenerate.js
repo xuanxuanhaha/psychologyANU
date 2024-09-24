@@ -55,12 +55,14 @@ const DataGenerate = () => {
   const downloadCSV = () => {
     // Create a CSV content string (replace with your own data)
     // const csvContent = "Name,Email\nJohn Doe,johndoe@example.com\nJane Smith,janesmith@example.com";
-    const csvHeader = "email, sessionid, question, response";
+    const csvHeader = "code, email, sessionid, question, response, first_open, end_time";
     let csvContent = csvHeader
 
     data.map((answer) => {
-        const answerToString = `"${answer.useremail.replace(/"/g, '""')}","${answer.sessionid}","${answer.questionno.replace(/"/g, '""')}","${answer.response.replace(/"/g, '""')}"`;
-        csvContent = `${csvContent}\n${answerToString}`;
+          if(answer.useremail) {
+            const answerToString = `"${answer.userid}","${answer.useremail ? answer.useremail.replace(/"/g, '""') : '-'}","${answer.sessionid}","${answer.questionno ? answer.questionno.replace(/"/g, '""') : '-'}","${answer.response ? answer.response.replace(/"/g, '""') : '-'}","${answer.firstopenat ? TimestampToDateTimeExcel(answer.firstopenat) : '-'}","${answer.endat ? TimestampToDateTimeExcel(answer.endat) : '-'}"`;
+            csvContent = `${csvContent}\n${answerToString}`;
+          }
       });
 
 
@@ -88,6 +90,16 @@ const DataGenerate = () => {
     const formattedDate = date.toLocaleString(); // This will give you a localized string, e.g., "9/7/2024, 4:30:00 PM"
     
     return <div>{formattedDate}</div>;
+  }
+
+  function TimestampToDateTimeExcel( timestamp ) {
+    // Convert the timestamp from seconds to milliseconds
+    const date = new Date(timestamp * 1000);
+    
+    // Format the date and time
+    const formattedDate = date.toLocaleString(); // This will give you a localized string, e.g., "9/7/2024, 4:30:00 PM"
+    
+    return formattedDate
   }
 
   return (
