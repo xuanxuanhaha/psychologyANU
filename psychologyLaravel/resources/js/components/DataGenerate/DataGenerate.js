@@ -60,7 +60,7 @@ const DataGenerate = () => {
 
     data.map((answer) => {
           if(answer.useremail) {
-            const answerToString = `"${answer.userid}","${answer.groupcode === 1 ? 'BASC' : (answer.groupcode === 2 ? 'BASC' : 'C')}","${answer.useremail ? answer.useremail.replace(/"/g, '""') : '-'}","${answer.sessionid}","${answer.questionno ? answer.questionno.replace(/"/g, '""') : '-'}","${answer.response ? answer.response.replace(/"/g, '""') : '-'}","${answer.firstopenat ? TimestampToDateTimeExcel(answer.firstopenat) : '-'}","${answer.endat ? TimestampToDateTimeExcel(answer.endat) : '-'}"`;
+            const answerToString = `"${answer.userid}","${answer.groupcode === 1 ? 'BASCSI' : (answer.groupcode === 2 ? 'BASC' : 'C')}","${answer.useremail ? answer.useremail.replace(/"/g, '""') : '-'}","${answer.sessionid}","${answer.questionno ? answer.questionno.replace(/"/g, '""') : '-'}","${answer.response ? answer.response.replace(/"/g, '""') : '-'}","${answer.firstopenat ? TimestampToDateTimeExcel(answer.firstopenat) : '-'}","${answer.endat ? TimestampToDateTimeExcel(answer.endat) : '-'}"`;
             csvContent = `${csvContent}\n${answerToString}`;
           }
       });
