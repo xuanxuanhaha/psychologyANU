@@ -27,7 +27,7 @@ class DataGenerateController extends Controller
                             $join->on('c_user_progress_status.sessionid', '=', 'c_session_response.sessionid')
                                 ->on('c_user_progress_status.userid', '=', 'c_session_response.userid');
                         })
-                        ->select('c_ids.code as userid', 'c_users.email as useremail', 'c_users.username as groupcode', 'c_session_response.sessionid', 'c_session_response.questionno', 'c_session_response.response', 'c_user_progress_status.firstopenat', 'c_user_progress_status.endat')
+                        ->select('c_ids.code as userid', 'c_users.email as useremail', 'c_ids.group as groupcode', 'c_session_response.sessionid', 'c_session_response.questionno', 'c_session_response.response', 'c_user_progress_status.firstopenat', 'c_user_progress_status.endat')
                         ->when(!empty($attributes['filterUserEmail']), function ($query) use ($attributes) {
                             return $query->where('c_users.email', '=', $attributes['filterUserEmail']);
                         })
